@@ -1,18 +1,30 @@
+"use client"
 import style from './ColorTheme.module.scss'
-import Image from "next/image";
+import {Sun, Moon} from '@/src/components/icons'
+import useTheme from "@/src/hooks/useTheme";
+import {useRef} from "react";
 
-import Sun from '@/public/sun-svgrepo-com.svg'
-import Moon from '@/public/moon-svgrepo-com.svg'
 
 
 
 const ColorTheme = () => {
+    const ref = useRef<HTMLInputElement>(null);
+    const {theme, setTheme} = useTheme();
+    const toggleThemeHandler = (ref:any) => {
+
+        if(ref.current.checked) {
+            setTheme('dark')
+        } else {
+            setTheme('light');
+        }
+
+    }
     return (
         <div className={style.colorThemeToggle_container}>
-            <input type="checkbox" id="darkmode-toggle"/>
+            <input ref={ref} onClick={() => { toggleThemeHandler(ref) }} defaultChecked={ theme ==='dark' ? true : false } type="checkbox" id="darkmode-toggle"/>
             <label htmlFor="darkmode-toggle">
-                <img src={Sun}/>
-                <Image className={style.moon} src={Moon} alt={'light mode'} width={16} height={16}/>
+                <Sun className={style.sun}/>
+                <Moon className={style.moon}/>
             </label>
         </div>
     )
