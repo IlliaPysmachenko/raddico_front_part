@@ -18,13 +18,99 @@ img{vertical-align: top;}
 h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
 /*--------------------*/
 
+:root{
+  //Brand Color
+  --colorPrimaryBg: #111a2c;
+  --colorPrimaryBgHover: #112545;
+  --colorPrimaryBorder: #15325b;
+  --colorPrimaryBorderHover: #15417e;
+  --colorPrimaryHover: #3c89e8;
+  --colorPrimary: #1668dc;
+  --colorPrimaryActive: #1554ad;
+  --colorPrimaryTextHover: #3c89e8;
+  --colorPrimaryText: #1668dc;
+  --colorPrimaryTextActive: #1554ad;
+
+  //Success Color
+  --colorSuccessBg: #162312;
+  --colorSuccessBgHover: #1d3712;
+  --colorSuccessBorder: #274916;
+  --colorSuccessBorderHover: #306317;
+  --colorSuccessHover: #306317;
+  --colorSuccess: #49aa19;
+  --colorSuccessActive: #3c8618;
+  --colorSuccessTextHover: #6abe39;
+  --colorSuccessText: #49aa19;
+  --colorSuccessTextActive: #3c8618;
+
+  //Warning Color
+  --colorWarningBg: #2b2111;
+  --colorWarningBgHover: #443111;
+  --colorWarningBorder: #594214;
+  --colorWarningBorderHover: #7c5914;
+  --colorWarningHover: #7c5914;
+  --colorWarning: #d89614;
+  --colorWarningActive: #aa7714;
+  --colorWarningTextHover: #e8b339;
+  --colorWarningText: #d89614;
+  --colorWarningTextActive: #aa7714;
+
+  //Error Color
+  --colorErrorBg: #2c1618;
+  --colorErrorBgHover: #451d1f;
+  --colorErrorBorder: #5b2526;
+  --colorErrorBorderHover: #7e2e2f;
+  --colorErrorHover: #e86e6b;
+  --colorError: #dc4446;
+  --colorErrorActive: #ad393a;
+  --colorErrorTextHover: #e86e6b;
+  --colorErrorText: #dc4446;
+  --colorErrorTextActive: #ad393a;
+
+  //Info Color
+  --colorInfoBg: #111a2c;
+  --colorInfoBgHover: #112545;
+  --colorInfoBorder: #15325b;
+  --colorInfoBorderHover: #15417e;
+  --colorInfoHover: #15417e;
+  --colorInfo: #1668dc;
+  --colorInfoActive: #1554ad;
+  --colorInfoTextHover: #3c89e8;
+  --colorInfoText: #1668dc;
+  --colorInfoTextActive: #1554ad;
+
+  //Neutral Color
+  --colorText: rgba(255, 255, 255, 0.85);
+  --colorTextSecondary: rgba(255, 255, 255, 0.65);
+  --colorTextTertiary: rgba(255, 255, 255, 0.45);
+  --colorTextQuaternary: rgba(255, 255, 255, 0.25);
+
+  --colorBorder: #606060;
+  --colorBorderSecondary: #4e4e4e;
+
+  --colorFill: rgba(255, 255, 255, 0.18);
+  --colorFillSecondary: rgba(255, 255, 255, 0.12);
+  --colorFillTertiary: rgba(255, 255, 255, 0.08);
+  --colorFillQuaternary: rgba(255, 255, 255, 0.04);
+
+  --colorBgContainer: #323232;
+  --colorBgElevated: #3d3d3d;
+  --colorBgLayout: #1e1e1e;
+  --colorBgSpotlight: #606060;
+  --colorBgMask: rgba(0, 0, 0, 0.45);
+
+}
+
 body{
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   font-size: 16px;
+  color:var(--colorText);
+  background: var(--colorBgLayout);
 }
 
 .container{
-  max-width: 1400px;
+  max-width: 1360px;
+  padding: 0 20px;
   margin: 0 auto;
 }

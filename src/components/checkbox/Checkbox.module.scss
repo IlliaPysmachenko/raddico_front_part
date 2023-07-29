@@ -10,7 +10,9 @@
 
         &:before{
             content: '';
-            display: inline-block;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             width: 16px;
             height: 16px;
             margin-right: 10px;
@@ -32,6 +34,9 @@
 
         &:checked{
             &+label:before{
+                content: '\2713';
+
+                color: white;
                 background: #1890FF;
             }
         }

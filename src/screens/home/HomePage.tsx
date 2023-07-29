@@ -1,5 +1,6 @@
-import Checkbox from "@/src/components/checkbox/Checkbox";
 import {useState} from "react";
+import Checkbox from "@/src/components/checkbox/Checkbox";
+import style from './HomePage.module.scss';
 
 
 const checkboxArr = [
@@ -28,16 +29,23 @@ const HomePage = () => {
 
     return (
         <>
-            <h1>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur cupiditate debitis dicta, est
-                harum praesentium quod sapiente suscipit tempore ut.
-            </h1>
-            {checkboxArr.map( (checkbox) => {
-                return (
-                    <Checkbox key={checkbox.id} id={checkbox.id} name={checkbox.name} isChecked={checkbox.isChecked}/>
-                )
-            } )}
+            <div className={style.searchPanel_container}>
+                <div className={style.searchPanel_column}>
+                    <div className={style.searchPanel_title}>
+                        <h1>Advanced Search Panel</h1>
+                    </div>
 
+                    <div className={style.searchPanel_row}>
+
+                    </div>
+
+                    {/*{checkboxArr.map( (checkbox) => {*/}
+                    {/*    return (*/}
+                    {/*        <Checkbox key={checkbox.id} id={checkbox.id} name={checkbox.name} isChecked={checkbox.isChecked}/>*/}
+                    {/*    )*/}
+                    {/*})}*/}
+                </div>
+            </div>
 
         </>
     )

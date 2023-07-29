@@ -1,0 +1,23 @@
+.searchPanel_container{
+    display: flex;
+    background: var(--colorBgContainer);
+    min-height: 200px;
+    border: 2px solid var(--colorBorder);
+    border-radius: 10px;
+
+    .searchPanel_column{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    & .searchPanel_title{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: fit-content;
+        padding: 15px 0;
+        border-bottom: 1px solid var(--colorBorder);
+        border-radius: 10px 10px 0 0px ;
+    }
+}
