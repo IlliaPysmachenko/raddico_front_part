@@ -1,6 +1,6 @@
 .navRow{
     display: flex;
-    padding: 30px 0px;
+    padding: var(--paddingXL) 0px;
 
     &  li {
         padding: 5px 10px;

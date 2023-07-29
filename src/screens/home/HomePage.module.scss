@@ -3,7 +3,7 @@
     background: var(--colorBgContainer);
     min-height: 200px;
     border: 2px solid var(--colorBorder);
-    border-radius: 10px;
+    border-radius: var(--borderRadiusLG);
 
     .searchPanel_column{
         display: flex;
@@ -15,9 +15,10 @@
         display: flex;
         justify-content: center;
         width: 100%;
+        font-size: var(--fontSizeHeading4);
+        line-height: var(--lineHeightHeading4);
         height: fit-content;
-        padding: 15px 0;
+        padding: var(--padding) 0;
         border-bottom: 1px solid var(--colorBorder);
-        border-radius: 10px 10px 0 0px ;
     }
 }

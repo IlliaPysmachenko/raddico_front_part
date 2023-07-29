@@ -2,6 +2,7 @@ import {FC} from "react";
 import Link from "next/link";
 import {useRouter} from "next/router";
 import style from './Nav.module.scss';
+import ColorTheme from "@/src/components/colorTheme/ColorTheme";
 
 
 const Nav:FC = () => {
@@ -69,6 +70,8 @@ const Nav:FC = () => {
                         )
                     })}
                 </ul>
+
+                <ColorTheme/>
             </nav>
         </div>
     )

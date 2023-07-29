@@ -3,7 +3,7 @@
     align-items: center;
 
     & label.checkboxLabel{
-        font-size: 14px;
+        font-size: var(--fontSizeXL);
         cursor: pointer;
         display: flex;
         align-items: center;
@@ -16,8 +16,8 @@
             width: 16px;
             height: 16px;
             margin-right: 10px;
-            border: 1px solid black;
-            border-radius: 2px;
+            border: 1px solid var(--colorBorder);
+            border-radius: var(--borderRadiusXS);
         }
     }
 
@@ -28,7 +28,7 @@
 
         &:focus{
             &+label:before{
-                box-shadow: 2px 1px 6px #4c4c4c;
+                box-shadow: var(--boxShadow);
             }
         }
 
@@ -37,7 +37,7 @@
                 content: '\2713';
 
                 color: white;
-                background: #1890FF;
+                background: var(--colorPrimary);
             }
         }
     }
