@@ -4,11 +4,14 @@
     padding: var(--padding);
 
     h4 {
-        font-size: var(--fontSizeHeading4);
-        line-height: var(--lineHeightHeading4);
+        font-size: var(--fontSizeHeading5);
+        line-height: var(--lineHeightHeading5);
     }
 
     .checkboxes_block {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: fit-content;
         padding: var(--paddingXS);
         border: 2px solid var(--colorBorderSecondary);
         border-radius: var(--borderRadius);

@@ -4,7 +4,7 @@
     padding: var(--paddingXXS);
 
     & label.checkboxLabel {
-        font-size: var(--fontSize);
+        font-size: var(--fontSizeSM);
         cursor: pointer;
         display: flex;
         align-items: center;
@@ -17,6 +17,7 @@
         &:before {
             content: '';
             display: flex;
+            flex: 0 0 auto;
             justify-content: center;
             align-items: center;
             width: 16px;
@@ -52,6 +53,8 @@
         }
 
         &:checked {
+
+
             & + label {
                 &:before {
                     content: '\2713';

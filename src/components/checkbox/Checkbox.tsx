@@ -3,7 +3,7 @@ import {FC} from "react";
 import style from './Checkbox.module.scss'
 
 
-type CheckboxPropsType = {
+export type CheckboxPropsType = {
     id: any;
     name: string;
     isChecked: boolean;

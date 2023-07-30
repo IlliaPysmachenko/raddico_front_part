@@ -1,14 +1,23 @@
+import { FC } from 'react';
 import style from './CheckboxGroup.module.scss'
-import Checkbox from "@/src/components/checkbox/Checkbox";
+import Checkbox, {CheckboxPropsType} from "@/src/components/checkbox/Checkbox";
 
-const CheckboxGroup = () => {
+
+
+type CheckboxGroupPropsType = {
+    title: string;
+    checkboxArr: Array<CheckboxPropsType>;
+
+}
+
+const CheckboxGroup:FC<CheckboxGroupPropsType> = ({title, checkboxArr}) => {
     return (
         <div className={style.checkboxGroup_container}>
-            <h4>Title</h4>
+            <h5>{title}</h5>
             <div className={style.checkboxes_block}>
-                <Checkbox id={`id1`} name={`Checkbox1`} isChecked={false}/>
-                <Checkbox id={`id2`} name={`Checkbox2`} isChecked={true}/>
-                <Checkbox id={`id3`} name={`Checkbox3`} isChecked={false}/>
+                {checkboxArr.map((item) => (
+                    <Checkbox key={item.id} id={item.id} name={item.name} isChecked={item.isChecked}/>)
+                )}
             </div>
         </div>
     )
