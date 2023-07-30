@@ -1,0 +1,16 @@
+.checkboxGroup_container {
+    max-width: fit-content;
+    background: var(--colorBgContainer);
+    padding: var(--padding);
+
+    h4 {
+        font-size: var(--fontSizeHeading4);
+        line-height: var(--lineHeightHeading4);
+    }
+
+    .checkboxes_block {
+        padding: var(--paddingXS);
+        border: 2px solid var(--colorBorderSecondary);
+        border-radius: var(--borderRadius);
+    }
+}

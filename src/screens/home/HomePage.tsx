@@ -1,6 +1,7 @@
 import {useState} from "react";
 import Checkbox from "@/src/components/checkbox/Checkbox";
 import style from './HomePage.module.scss';
+import CheckboxGroup from "@/src/components/checkboxGroup/CheckboxGroup";
 
 
 const checkboxArr = [
@@ -32,11 +33,11 @@ const HomePage = () => {
             <div className={style.searchPanel_container}>
                 <div className={style.searchPanel_column}>
                     <div className={style.searchPanel_title}>
-                        <h1>Advanced Search Panel</h1>
+                        <h3>Advanced Search Panel</h3>
                     </div>
 
                     <div className={style.searchPanel_row}>
-
+                        <CheckboxGroup/>
                     </div>
 
                     {/*{checkboxArr.map( (checkbox) => {*/}

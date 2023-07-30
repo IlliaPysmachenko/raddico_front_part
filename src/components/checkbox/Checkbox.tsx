@@ -12,7 +12,7 @@ type CheckboxPropsType = {
 const Checkbox: FC<CheckboxPropsType> = ({id, name, isChecked}) => {
     return (
         <div className={style.checkboxContainer}>
-            <input type="checkbox" checked={isChecked} id={id}/>
+            <input type="checkbox" id={id}/>
             <label htmlFor={id} className={style.checkboxLabel}>{name}</label>
         </div>
     )

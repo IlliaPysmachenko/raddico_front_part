@@ -2,6 +2,7 @@
     display: flex;
     background: var(--colorBgContainer);
     min-height: 200px;
+    //padding: var(--padding);
     border: 2px solid var(--colorBorder);
     border-radius: var(--borderRadiusLG);
 
@@ -15,8 +16,8 @@
         display: flex;
         justify-content: center;
         width: 100%;
-        font-size: var(--fontSizeHeading4);
-        line-height: var(--lineHeightHeading4);
+        font-size: var(--fontSizeHeading3);
+        line-height: var(--lineHeightHeading3);
         height: fit-content;
         padding: var(--padding) 0;
         border-bottom: 1px solid var(--colorBorder);

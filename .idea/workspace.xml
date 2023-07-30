@@ -5,9 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b3bf699e-b4fb-49dd-ad56-118674db30a4" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/checkboxGroup/CheckboxGroup.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/checkboxGroup/CheckboxGroup.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/colorTheme/ColorTheme.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/colorTheme/ColorTheme.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layout/header/nav/Nav.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/header/nav/Nav.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/checkbox/Checkbox.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/checkbox/Checkbox.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/checkbox/Checkbox.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/checkbox/Checkbox.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/home/HomePage.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/HomePage.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/home/HomePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/HomePage.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/globals.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/globals.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -53,8 +57,8 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "ts.external.directory.path": "C:\\Users\\Алёна\\OneDrive\\Рабочий стол\\Илья\\Projects\\raddico_front_part\\node_modules\\typescript\\lib",
+    "settings.editor.selected.configurable": "settings.sync",
+    "ts.external.directory.path": "D:\\Projects\\Raddico front-end part\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -100,6 +104,17 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
