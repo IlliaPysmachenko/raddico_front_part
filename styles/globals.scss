@@ -242,27 +242,29 @@ html[data-theme='light'] {
 
 :root {
     //Font
-    --fontSize: 16px;
-    --fontSizeSM: 14px;
-    --fontSizeLG: 18px;
-    --fontSizeXL: 22px;
-    --fontSizeHeading1: 42px;
-    --fontSizeHeading2: 34px;
-    --fontSizeHeading3: 28px;
-    --fontSizeHeading4: 22px;
-    --fontSizeHeading5: 18px;
+    --fontSize: 14px;
+    --fontSizeSM: 12px;
+    --fontSizeXS: 10px;
+    --fontSizeLG: 16px;
+    --fontSizeXL: 20px;
+    --fontSizeHeading1: 38px;
+    --fontSizeHeading2: 30px;
+    --fontSizeHeading3: 24px;
+    --fontSizeHeading4: 20px;
+    --fontSizeHeading5: 16px;
 
     //Line Height
-    --lineHeight: 1.5;
-    --lineHeightSM: 1.5714285714285714;
-    --lineHeightLG: 1.4444444444444444;
-    --lineHeightHeading1: 1.1904761904761905;
-    --lineHeightHeading2: 1.2352941176470589;
-    --lineHeightHeading3: 1.2857142857142858;
-    --lineHeightHeading4: 1.3636363636363635;
-    --lineHeightHeading5: 1.4444444444444444;
+    --lineHeight: 1.5714285714285714;
+    --lineHeightSM: 1.6666666666666667;
+    --lineHeightLG: 1.5;
+    --lineHeightHeading1: 1.2105263157894737;
+    --lineHeightHeading2: 1.2666666666666666;
+    --lineHeightHeading3: 1.3333333333333333;
+    --lineHeightHeading4: 1.4;
+    --lineHeightHeading5: 1.5;
 
     //Margin
+    --marginXXS: 4px;
     --marginXS: 8px;
     --marginSM: 12px;
     --margin: 16px;
@@ -284,7 +286,7 @@ html[data-theme='light'] {
     --borderRadius: 8px;
     --borderRadiusSM: 6px;
     --borderRadiusLG: 10px;
-    --borderRadiusXS: 2px;
+    --borderRadiusXS: 4px;
 
     //Shadow
     --boxShadow: 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 9px 28px 8px rgba(0, 0, 0, 0.05);

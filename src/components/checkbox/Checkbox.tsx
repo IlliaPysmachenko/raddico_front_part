@@ -4,7 +4,7 @@ import style from './Checkbox.module.scss'
 
 
 export type CheckboxPropsType = {
-    id: any;
+    id: string;
     name: string;
     isChecked: boolean;
 }

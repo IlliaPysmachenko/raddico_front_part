@@ -1,10 +1,10 @@
 .checkboxContainer {
     display: flex;
     align-items: center;
-    padding: var(--paddingXXS);
+    padding: var(--paddingXXS) var(--paddingXS);
 
     & label.checkboxLabel {
-        font-size: var(--fontSizeSM);
+        font-size: var(--fontSizeXS);
         cursor: pointer;
         display: flex;
         align-items: center;
@@ -20,12 +20,12 @@
             flex: 0 0 auto;
             justify-content: center;
             align-items: center;
-            width: 16px;
-            height: 16px;
-            margin-right: 10px;
+            width: 12px;
+            height: 12px;
+            margin-right: var(--marginXXS);
             background: var(--colorBgContainer);
             border: 1px solid var(--colorBorder);
-            border-radius: var(--borderRadiusSM);
+            border-radius: var(--borderRadiusXS);
             transition: border ease .3s, background ease .3s;
 
         }
@@ -44,6 +44,7 @@
         &:focus {
             & + label:before {
                 box-shadow: var(--boxShadow);
+                border: 1px solid var(--colorPrimaryBorderHover);
             }
         }
 
@@ -53,7 +54,6 @@
         }
 
         &:checked {
-
 
             & + label {
                 &:before {

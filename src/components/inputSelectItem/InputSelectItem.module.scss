@@ -1,0 +1,22 @@
+.selectItem_container{
+    select {
+        padding: var(--paddingXXS )var(--paddingXXS);
+        color: var(--colorText);
+        background: var(--colorBgContainer);
+        border-radius: var(--borderRadiusSM);
+        border: 1px solid var(--colorBorder);
+
+        &:hover {
+            border: 1px solid var(--colorPrimaryBorderHover);
+        }
+
+        &:focus {
+            border: 1px solid var(--colorPrimaryActive);
+            box-shadow: var(--boxShadow);
+        }
+
+        & option {
+            box-shadow: var(--boxShadow);
+        }
+    }
+}

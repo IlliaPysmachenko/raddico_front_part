@@ -5,15 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b3bf699e-b4fb-49dd-ad56-118674db30a4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/inputFieldItem/InputField.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/inputFieldItem/InputField.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/inputFieldsGroup/InputFieldsGroup.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/inputFieldsGroup/InputFieldsGroup.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/inputSelectGroup/InputSelectGroup.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/inputSelectGroup/InputSelectGroup.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/inputSelectItem/InputSelectItem.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/inputSelectItem/InputSelectItem.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data/dataExamples.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/colorTheme/ColorTheme.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/colorTheme/ColorTheme.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/icons/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icons/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/icons/moonIcon.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icons/moonIcon.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/icons/sunIcon.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icons/sunIcon.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/checkbox/Checkbox.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/checkbox/Checkbox.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/checkbox/Checkbox.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/checkbox/Checkbox.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/checkboxGroup/CheckboxGroup.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/checkboxGroup/CheckboxGroup.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/inputFieldItem/InputField.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/inputFieldItem/InputField.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/home/HomePage.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/HomePage.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/screens/home/HomePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/HomePage.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/globals.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/globals.scss" afterDir="false" />
     </list>
@@ -71,9 +73,9 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Алёна\OneDrive\Рабочий стол\Илья\Projects\raddico_front_part\src\components" />
       <recent name="C:\Users\Алёна\OneDrive\Рабочий стол\Илья\Projects\raddico_front_part\src\assets" />
       <recent name="C:\Users\Алёна\OneDrive\Рабочий стол\Илья\Projects\raddico_front_part\src\components\icons" />
-      <recent name="C:\Users\Алёна\OneDrive\Рабочий стол\Илья\Projects\raddico_front_part\src\components" />
     </key>
   </component>
   <component name="RunManager">
@@ -107,7 +109,7 @@
       <workItem from="1690554318586" duration="432000" />
       <workItem from="1690554764011" duration="307000" />
       <workItem from="1690555111178" duration="41710000" />
-      <workItem from="1690735250545" duration="17805000" />
+      <workItem from="1690735250545" duration="33951000" />
     </task>
     <servers />
   </component>

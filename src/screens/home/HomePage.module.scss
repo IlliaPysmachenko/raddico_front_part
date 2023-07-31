@@ -16,16 +16,16 @@
         display: flex;
         justify-content: center;
         width: 100%;
-        font-size: var(--fontSizeHeading4);
-        line-height: var(--lineHeightHeading4);
+        font-size: var(--fontSizeHeading5);
+        line-height: var(--lineHeightHeading5);
         height: fit-content;
-        padding: var(--padding) 0;
+        padding: var(--paddingXXS) 0;
         border-bottom: 1px solid var(--colorBorder);
     }
 
     .searchPanel_row{
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
         grid-auto-flow: dense;
         justify-items: center;
     }
