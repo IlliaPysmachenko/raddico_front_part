@@ -1,6 +1,6 @@
 "use client"
 import style from './ColorTheme.module.scss'
-import {Sun, Moon} from '@/src/components/icons'
+import {Sun, Moon} from '@/src/assets/icons'
 import useTheme from "@/src/hooks/useTheme";
 import {useRef} from "react";
 

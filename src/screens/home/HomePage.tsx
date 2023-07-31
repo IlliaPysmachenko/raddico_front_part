@@ -1,7 +1,7 @@
 import {useState} from "react";
-import Checkbox from "@/src/components/checkbox/Checkbox";
 import style from './HomePage.module.scss';
 import CheckboxGroup from "@/src/components/checkboxGroup/CheckboxGroup";
+import InputFieldsGroup from "@/src/components/inputFieldsGroup/InputFieldsGroup";
 
 
 const facilities = [
@@ -205,6 +205,28 @@ const statuses = [
         isChecked: false,
     },
 ]
+const fieldsArr = [
+    {
+        id: 'MRN',
+        title: 'Patients MRN',
+    },
+    {
+        id: 'NAME',
+        title: 'Patients Name',
+    },
+    {
+        id: 'DOB',
+        title: 'Patients DOB',
+    },
+    {
+        id: 'Physician',
+        title: 'Referring Physician',
+    },
+    {
+        id: 'Action',
+        title: 'Action',
+    },
+]
 
 const HomePage = () => {
 
@@ -221,9 +243,11 @@ const HomePage = () => {
                     </div>
 
                     <div className={style.searchPanel_row}>
+                        <InputFieldsGroup title={`Searching Fields`} fieldsArr={fieldsArr}/>
                         <CheckboxGroup title={'Facilities'} checkboxArr={facilities}/>
                         <CheckboxGroup title={'Modality'} checkboxArr={modality}/>
                         <CheckboxGroup title={'Statuses'} checkboxArr={statuses}/>
+
                     </div>
 
                     {/*{checkboxArr.map( (checkbox) => {*/}
