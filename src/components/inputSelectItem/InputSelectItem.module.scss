@@ -1,10 +1,12 @@
 .selectItem_container{
+    display: inline-flex;
     select {
         padding: var(--paddingXXS )var(--paddingXXS);
         color: var(--colorText);
         background: var(--colorBgContainer);
         border-radius: var(--borderRadiusSM);
         border: 1px solid var(--colorBorder);
+        transition: all ease .3s;
 
         &:hover {
             border: 1px solid var(--colorPrimaryBorderHover);

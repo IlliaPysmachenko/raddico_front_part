@@ -156,6 +156,9 @@ html[data-theme='dark'] {
     --colorBgLayout: #1e1e1e;
     --colorBgSpotlight: #606060;
     --colorBgMask: rgba(0, 0, 0, 0.45);
+
+    //Google calendar change icon color
+    --invertIconColor: 100%;
 }
 
 html[data-theme='light'] {
@@ -238,6 +241,9 @@ html[data-theme='light'] {
     --colorBgLayout: #e6e6e6;
     --colorBgSpotlight: rgba(0, 0, 0, 0.85);
     --colorBgMask: rgba(0, 0, 0, 0.45);
+
+    //Google calendar change icon color
+    --invertIconColor: 0%;
 }
 
 :root {
@@ -306,4 +312,27 @@ body {
     max-width: 1880px;
     padding: 0 20px;
     margin: 0 auto;
+}
+
+input[type='date'] {
+    color: var(--colorText);
+    background: var(--colorBgContainer);
+    border: 1px solid var(--colorBorderSecondary);
+    padding: var(--paddingXXS);
+    border-radius: var(--borderRadiusXS);
+
+    &:hover {
+        border: 1px solid var(--colorPrimaryBorderHover);
+    }
+
+    &:focus {
+        box-shadow: 0 0 0 2px var(--colorPrimaryBorder);
+        border: 1px solid var(--colorPrimaryBorder);
+        background: var(--colorFillTertiary);
+    }
+
+    &::-webkit-calendar-picker-indicator {
+        filter: invert(var(--invertIconColor));
+        cursor: pointer;
+    }
 }

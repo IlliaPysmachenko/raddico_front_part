@@ -25,7 +25,8 @@
 
     .searchPanel_row{
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+        //grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+        grid-template-columns: repeat(6, min-content);
         grid-auto-flow: dense;
         justify-items: center;
     }

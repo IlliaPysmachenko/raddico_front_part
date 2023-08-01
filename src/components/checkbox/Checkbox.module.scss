@@ -53,22 +53,19 @@
             border: 1px solid var(--colorPrimaryBorderHover);
         }
 
-        &:checked {
+        &:checked + label {
+            &:before {
+                content: '\2713';
+                color: white;
+                background: var(--colorPrimary);
+                border: 1px solid var(--colorPrimaryBorder);
+            }
 
-            & + label {
-                &:before {
-                    content: '\2713';
-                    color: white;
-                    background: var(--colorPrimary);
-                    border: 1px solid var(--colorPrimaryBorder);
-                }
-
-                &:hover:before {
-                    content: '\2713';
-                    color: white;
-                    background: var(--colorPrimaryHover);
-                    border: 1px solid var(--colorPrimaryBorderHover);
-                }
+            &:hover:before {
+                content: '\2713';
+                color: white;
+                background: var(--colorPrimaryHover);
+                border: 1px solid var(--colorPrimaryBorderHover);
             }
         }
     }

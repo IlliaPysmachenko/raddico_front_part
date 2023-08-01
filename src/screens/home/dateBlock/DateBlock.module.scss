@@ -1,0 +1,22 @@
+.dateFilter_container {
+    padding: var(--padding);
+
+    .dateFilter_block {
+        display: grid;
+        grid-row-gap: 10px;
+        padding: var(--paddingSM);
+        border: 2px solid var(--colorBorderSecondary);
+        border-radius: var(--borderRadius);
+
+        .dateFilter_row {
+            display: grid;
+            grid-template-columns: 60px 1fr;
+            align-items: center;
+            grid-column-gap: 5px;
+
+            span {
+                //padding-right: var(--paddingSM);
+            }
+        }
+    }
+}

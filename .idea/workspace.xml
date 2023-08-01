@@ -5,16 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b3bf699e-b4fb-49dd-ad56-118674db30a4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/inputSelectGroup/InputSelectGroup.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/inputSelectGroup/InputSelectGroup.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/inputSelectItem/InputSelectItem.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/inputSelectItem/InputSelectItem.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/dataExamples.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/screens/home/dateBlock/DateBlock.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/screens/home/dateBlock/DateBlock.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/checkbox/Checkbox.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/checkbox/Checkbox.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/checkbox/Checkbox.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/checkbox/Checkbox.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/checkboxGroup/CheckboxGroup.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/checkboxGroup/CheckboxGroup.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/inputFieldItem/InputField.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/inputFieldItem/InputField.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/inputSelectItem/InputSelectItem.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/inputSelectItem/InputSelectItem.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/dataExamples.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/dataExamples.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/screens/home/HomePage.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/HomePage.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/screens/home/HomePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/HomePage.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/globals.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/globals.scss" afterDir="false" />
@@ -60,7 +56,7 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/Алёна/OneDrive/Рабочий стол/Илья/Projects/raddico_front_part",
+    "last_opened_file_path": "C:/Users/Алёна/OneDrive/Рабочий стол/Илья/Projects/Easy-shop-app/easy-shop_front",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -109,7 +105,7 @@
       <workItem from="1690554318586" duration="432000" />
       <workItem from="1690554764011" duration="307000" />
       <workItem from="1690555111178" duration="41710000" />
-      <workItem from="1690735250545" duration="33951000" />
+      <workItem from="1690735250545" duration="47854000" />
     </task>
     <servers />
   </component>

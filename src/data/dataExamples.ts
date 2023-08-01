@@ -73,12 +73,12 @@ export const facilities = [
 ]
 export const modality = [
     {
-        id: '1',
+        id: 'DC',
         name: 'DC',
         isChecked: false,
     },
     {
-        id: '2',
+        id: 'SC',
         name: 'SC',
         isChecked: false,
     },
@@ -225,69 +225,158 @@ export const fieldsArr = [
 //------------------------
 
 //Select items data example
-export const selectItem = {
-    id: 'fromMonth',
-    name: 'month',
+export const filterBy = {
+    id: 'filterBy',
+    name: 'filterBy',
     optionsArr: [
         {
-            value: '01',
-            title: '01',
+            value: 'DOE',
+            title: 'Date of Examination',
             checked: false,
         },
         {
-            value: '02',
-            title: '02',
+            value: 'DOM',
+            title: 'Date of Modification',
             checked: false,
         },
         {
-            value: '03',
-            title: '03',
+            value: 'DOA',
+            title: 'Date of Arrival',
             checked: false,
         },
         {
-            value: '04',
-            title: '04',
+            value: 'DOD',
+            title: 'Date of Dictation',
             checked: false,
         },
         {
-            value: '05',
-            title: '05',
-            checked: false,
-        },
-        {
-            value: '06',
-            title: '06',
-            checked: false,
-        },
-        {
-            value: '07',
-            title: '07',
-            checked: true,
-        },
-        {
-            value: '08',
-            title: '08',
-            checked: false,
-        },
-        {
-            value: '09',
-            title: '09',
-            checked: false,
-        },
-        {
-            value: '10',
-            title: '10',
-            checked: false,
-        },
-        {
-            value: '11',
-            title: '11',
-            checked: false,
-        },
-        {
-            value: '12',
-            title: '12',
+            value: 'DOT',
+            title: 'Date of Transcription',
             checked: false,
         },
     ]
 }
+export const filterByPeriod = {
+    id: 'filterByPeriod',
+    name: 'filterByPeriod',
+    optionsArr: [
+        {
+            value: '',
+            title: '*',
+            checked: true,
+        },
+        {
+            value: 'Y',
+            title: 'Yesterday',
+            checked: false,
+        },
+        {
+            value: 'TW',
+            title: 'This Week',
+            checked: false,
+        },
+        {
+            value: 'LW',
+            title: 'Last week',
+            checked: false,
+        },
+        {
+            value: 'TM',
+            title: 'This Month',
+            checked: false,
+        },
+        {
+            value: 'LM',
+            title: 'Last Month',
+            checked: false,
+        },
+    ]
+}
+export const lienStatus = {
+    id: 'lienStatus',
+    name: 'lienStatus',
+    optionsArr: [
+        {
+            value: '',
+            title: '*',
+            checked: true,
+        },
+        {
+            value: 'LU',
+            title: 'Lien UnSigned',
+            checked: false,
+        },
+        {
+            value: 'LPS',
+            title: 'Lien Pending Signature',
+            checked: false,
+        },
+    ]
+}
+
+// export const selectItem = {
+//     id: 'date',
+//     name: 'date',
+//     optionsArr: [
+//         {
+//             value: '01',
+//             title: '01',
+//             checked: false,
+//         },
+//         {
+//             value: '02',
+//             title: '02',
+//             checked: false,
+//         },
+//         {
+//             value: '03',
+//             title: '03',
+//             checked: false,
+//         },
+//         {
+//             value: '04',
+//             title: '04',
+//             checked: false,
+//         },
+//         {
+//             value: '05',
+//             title: '05',
+//             checked: false,
+//         },
+//         {
+//             value: '06',
+//             title: '06',
+//             checked: false,
+//         },
+//         {
+//             value: '07',
+//             title: '07',
+//             checked: true,
+//         },
+//         {
+//             value: '08',
+//             title: '08',
+//             checked: false,
+//         },
+//         {
+//             value: '09',
+//             title: '09',
+//             checked: false,
+//         },
+//         {
+//             value: '10',
+//             title: '10',
+//             checked: false,
+//         },
+//         {
+//             value: '11',
+//             title: '11',
+//             checked: false,
+//         },
+//         {
+//             value: '12',
+//             title: '12',
+//             checked: false,
+//         },
+//     ]
+// }
