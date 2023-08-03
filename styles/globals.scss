@@ -143,8 +143,8 @@ html[data-theme='dark'] {
     --colorTextTertiary: rgba(255, 255, 255, 0.45);
     --colorTextQuaternary: rgba(255, 255, 255, 0.25);
 
-    --colorBorder: #606060;
-    --colorBorderSecondary: #4e4e4e;
+    --colorBorder: #aaaaaa;
+    --colorBorderSecondary: #8c8c8c;
 
     --colorFill: rgba(255, 255, 255, 0.18);
     --colorFillSecondary: rgba(255, 255, 255, 0.12);
@@ -164,7 +164,7 @@ html[data-theme='dark'] {
 html[data-theme='light'] {
     //Brand Color
     --colorPrimaryBg: #e6f4ff;
-    --colorPrimaryBgHover: #bae0ff;
+    --colorPrimaryBgHover: #8fbaff;
     --colorPrimaryBorder: #91caff;
     --colorPrimaryBorderHover: #69b1ff;
     --colorPrimaryHover: #4096ff;
@@ -228,8 +228,8 @@ html[data-theme='light'] {
     --colorTextTertiary: rgba(0, 0, 0, 0.45);
     --colorTextQuaternary: rgba(0, 0, 0, 0.25);
 
-    --colorBorder: #cacaca;
-    --colorBorderSecondary: #e1e1e1;
+    --colorBorder: #9e9e9e;
+    --colorBorderSecondary: #bdbdbd;
 
     --colorFill: rgba(0, 0, 0, 0.15);
     --colorFillSecondary: rgba(0, 0, 0, 0.06);
@@ -317,7 +317,7 @@ body {
 input[type='date'] {
     color: var(--colorText);
     background: var(--colorBgContainer);
-    border: 1px solid var(--colorBorderSecondary);
+    border: 1px solid var(--colorBorder);
     padding: var(--paddingXXS);
     border-radius: var(--borderRadiusXS);
 

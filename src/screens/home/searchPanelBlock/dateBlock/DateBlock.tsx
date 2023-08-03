@@ -28,8 +28,6 @@ const DateBlock = () => {
                     <span>Lien Status:</span>
                     <InputSelectItem id={lienStatus.id} name={lienStatus.name} optionsArr={lienStatus.optionsArr}/>
                 </div>
-
-
             </div>
 
         </div>
@@ -37,3 +35,5 @@ const DateBlock = () => {
 }
 
 export default DateBlock;
+
+// document.querySelector("input[type='date']")

@@ -1,9 +1,10 @@
+import {ColorPicker} from "@/src/components/colorPicker/ColorPicker";
 
 const ConfigurationPage = () => {
     return(
         <>
             <h1>
-                Work in progress...
+                <ColorPicker/>
             </h1>
         </>
     )

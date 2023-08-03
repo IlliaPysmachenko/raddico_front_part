@@ -1,6 +1,5 @@
 .checkboxGroup_container {
     max-width: fit-content;
-    background: var(--colorBgContainer);
     padding: var(--padding);
     border-radius: var(--borderRadius);
 
@@ -11,10 +10,11 @@
 
     .checkboxes_block {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(2, minmax(max-content, 1fr));
         width: fit-content;
         padding: var(--paddingXS);
         border: 2px solid var(--colorBorderSecondary);
         border-radius: var(--borderRadius);
+        background: var(--colorBgContainer);
     }
 }

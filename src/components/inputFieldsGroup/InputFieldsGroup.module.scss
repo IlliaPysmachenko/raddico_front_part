@@ -1,6 +1,7 @@
 .inputFields_container {
     padding: var(--padding);
 
+
     .inputFields_block {
         display: grid;
         grid-template-columns: 1fr;
@@ -8,5 +9,7 @@
         padding: var(--paddingSM);
         border: 2px solid var(--colorBorderSecondary);
         border-radius: var(--borderRadius);
+        background: var(--colorBgContainer);
+        //box-shadow: var(--boxShadow);
     }
 }
