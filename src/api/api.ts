@@ -20,7 +20,7 @@ export const searchApi = {
         return instance.post(`search`, data)
             .then((response) => {
                 console.log(response)
-                return response.data
+                return response.data.data
             });
     }
 }
