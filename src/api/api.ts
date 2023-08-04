@@ -11,7 +11,7 @@ export const searchApi = {
         // debugger
         return instance.get(`search`)
             .then((response) => {
-                console.log(`getValues ${response}`)
+                // console.log(response)
                 return response.data
             });
         // debugger
@@ -19,7 +19,7 @@ export const searchApi = {
     getPatientStudies(data:any) {
         return instance.post(`search`, data)
             .then((response) => {
-                console.log(`getPatientStudies ${response}`)
+                console.log(response)
                 return response.data
             });
     }
