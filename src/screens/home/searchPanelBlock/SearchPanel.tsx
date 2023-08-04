@@ -7,6 +7,8 @@ import {useAppDispatch, useAppSelector} from "@/src/redux/hooks";
 import {toggleCheckboxModality} from "@/src/redux/modalitySlice/modalitySlice";
 import {toggleCheckboxInstitutions} from "@/src/redux/institutionsSlice/institutionsSlice";
 import {getStudiesThunk} from "@/src/redux/studiesSlice/studiesSlice";
+import {useEffect} from "react";
+import {searchApi} from "@/src/api/api";
 
 const SearchPanel = () => {
     const dispatch = useAppDispatch();
@@ -58,6 +60,10 @@ const SearchPanel = () => {
         // console.log(query);
         dispatch(getStudiesThunk({data}))
     }
+
+    useEffect(() => {
+        searchApi.getValues()
+    },[])
 
 
 

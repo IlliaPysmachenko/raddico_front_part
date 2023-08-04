@@ -1,12 +1,13 @@
 import style from './StudiesBlock.module.scss'
 import React from "react";
 import Checkbox from "@/src/components/checkbox/Checkbox";
+import {useAppSelector} from "@/src/redux/hooks";
 
 const studyTitles = [
-    {
-        id: 'icon',
-        title: 'icon',
-    },
+    // {
+    //     id: 'icon',
+    //     title: 'icon',
+    // },
     {
         id: 'Patient MRN',
         title: 'Patient MRN',
@@ -15,62 +16,64 @@ const studyTitles = [
         id: 'Name',
         title: 'Name',
     },
-    {
-        id: 'Sex',
-        title: 'Sex',
-    },
+    // {
+    //     id: 'Sex',
+    //     title: 'Sex',
+    // },
     {
         id: 'DOB',
         title: 'DOB',
-    },
-    {
-        id: 'Modality',
-        title: 'Modality',
-    },
-    {
-        id: 'Procedure',
-        title: 'Procedure',
-    },
-    {
-        id: 'Symptoms',
-        title: 'Symptoms',
-    },
-    {
-        id: 'Notes',
-        title: 'Notes',
-    },
-    {
-        id: '#lm',
-        title: '#lm',
-    },
-    {
-        id: 'Imaging Center',
-        title: 'Imaging Center',
-    },
-    {
-        id: 'Value',
-        title: 'Value',
     },
     {
         id: 'Study Date',
         title: 'Study Date',
     },
     {
+        id: 'Modality',
+        title: 'Modality',
+    },
+    {
         id: 'Referer',
         title: 'Referer',
     },
     {
-        id: 'Assignment',
-        title: 'Assignment',
+        id: 'images_count',
+        title: 'Images count',
     },
-    {
-        id: 'Status',
-        title: 'Status',
-    },
-    {
-        id: 'Need Proofreading by',
-        title: 'Need Proofreading by',
-    },
+    // {
+    //     id: 'Symptoms',
+    //     title: 'Symptoms',
+    // },
+    // {
+    //     id: 'Notes',
+    //     title: 'Notes',
+    // },
+    // {
+    //     id: '#lm',
+    //     title: '#lm',
+    // },
+    // {
+    //     id: 'Imaging Center',
+    //     title: 'Imaging Center',
+    // },
+    // {
+    //     id: 'Value',
+    //     title: 'Value',
+    // },
+    //
+    //
+    // {
+    //     id: 'Assignment',
+    //     title: 'Assignment',
+    // },
+    // {
+    //     id: 'Status',
+    //     title: 'Status',
+    // },
+    // {
+    //     id: 'Need Proofreading by',
+    //     title: 'Need Proofreading by',
+    // },
     // {
     //     id: 'Action',
     //     title: 'Action',
@@ -128,6 +131,7 @@ const patientsData = [
 ]
 
 const StudiesBlock = () => {
+    const patientsData = useAppSelector(state => state.study)
     return(
         <div className={`${style.study_container} ${style.study_grid}`}>
             {studyTitles.map( (item) => {
@@ -137,25 +141,25 @@ const StudiesBlock = () => {
 
             {patientsData.map( (item) => {
                 return (
-                    <React.Fragment key={item.id}>
-                        <div className={style.grid_item}>{item.icons}</div>
-                        <div className={style.grid_item}>{item.mrn}</div>
-                        <div className={style.grid_item}>{item.name}</div>
-                        <div className={style.grid_item}>{item.sex}</div>
-                        <div className={style.grid_item}>{item.dob}</div>
-                        <div className={style.grid_item}>{item.modality}</div>
-                        <div className={style.grid_item}>{item.procedure}</div>
-                        <div className={style.grid_item}>{item.symptoms}</div>
-                        <div className={style.grid_item}>{item.notes}</div>
-                        <div className={style.grid_item}>{item.lm}</div>
-                        <div className={style.grid_item}>{item.imgCenter}</div>
-                        <div className={style.grid_item}>{item.value}</div>
-                        <div className={style.grid_item}>{item.studyDate}</div>
-                        <div className={style.grid_item}>{item.referrer}</div>
-                        <div className={style.grid_item}>{item.assignment}</div>
-                        <div className={style.grid_item}>{item.status}</div>
-                        {/*<div className={style.grid_item}>{item.action}</div>*/}
-                        <div className={style.grid_item}>{item.proofreading}</div>
+                    <React.Fragment key={item.study_iuid}>
+                        <div className={style.grid_item}>{item.patient_id}</div>
+                        <div className={style.grid_item}>{item.patient_name}</div>
+                        <div className={style.grid_item}>{item.patient_dob}</div>
+                        <div className={style.grid_item}>{item.study_date}</div>
+                        <div className={style.grid_item}>{item.modalities}</div>
+                        <div className={style.grid_item}>{item.referral}</div>
+                        <div className={style.grid_item}>{item.images_count}</div>
+                        {/*<div className={style.grid_item}>{item.symptoms}</div>*/}
+                        {/*<div className={style.grid_item}>{item.notes}</div>*/}
+                        {/*<div className={style.grid_item}>{item.lm}</div>*/}
+                        {/*<div className={style.grid_item}>{item.imgCenter}</div>*/}
+                        {/*<div className={style.grid_item}>{item.value}</div>*/}
+                        {/*<div className={style.grid_item}>{item.studyDate}</div>*/}
+                        {/*<div className={style.grid_item}>{item.referrer}</div>*/}
+                        {/*<div className={style.grid_item}>{item.assignment}</div>*/}
+                        {/*<div className={style.grid_item}>{item.status}</div>*/}
+                        {/*/!*<div className={style.grid_item}>{item.action}</div>*!/*/}
+                        {/*<div className={style.grid_item}>{item.proofreading}</div>*/}
                         {/*<div className={style.grid_item}><Checkbox id={item.id} name={''} isChecked={item.checked}/></div>*/}
                     </React.Fragment>
                 )

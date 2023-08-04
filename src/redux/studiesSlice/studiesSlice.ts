@@ -48,48 +48,15 @@ import {searchApi} from "@/src/api/api";
 
 const initialState = [
     {
-        id: '1',
-        icons: 'i',
-        mrn: 'WDR01285',
-        name: 'GUTIERREZ, JUDITAS',
-        sex: 'M',
-        dob: '1992-11-02',
-        modality: 'MR',
-        procedure: 'CERVICAL SPINE',
-        symptoms: 'MVA NECK PAIN, EPIDURAL TREATMENT AROUND BACK 2017',
-        notes: '[PI LIEN] COMPARISON REPORT REQUESTED BY ATTY, MRN#SDR22538, PRIOR REPORT UPLOADED, YK',
-        lm: '110/110',
-        imgCenter: 'WESTERN DIAGNOSTIC RADIOLOGY',
-        value: '1',
-        studyDate: '2023-08-01 12:55:38',
-        referrer: 'MASROUR, ROUZBEH D.C.^^^^ ',
-        assignment: 'Dr A Bledin',
-        status: 'UNREAD',
-        proofreading: '',
-        action: '',
-        checked: false,
-    },
-    {
-        id: '2',
-        icons: 'i',
-        mrn: 'OMI23251',
-        name: 'LOPEZ, CORINA',
-        sex: 'F',
-        dob: '1987-05-11',
-        modality: 'MR',
-        procedure: 'CERVICAL SPINE',
-        symptoms: 'Neck pain due to injury',
-        notes: '[PRECISE] bb',
-        lm: '269/ 269',
-        imgCenter: 'OCEAN MEDICAL IMAGING',
-        value: '1',
-        studyDate: '2023-08-01 13:28:54',
-        referrer: 'KENLY, MICHAEL M.D.^^^^',
-        assignment: 'Tech Only',
-        status: 'Precise',
-        // proofreading: '',
-        action: '',
-        checked: false,
+        "study_iuid": '',
+        "patient_id": '',
+        "patient_name": '',
+        "patient_dob": '',
+        "study_date": '',
+        "referral": '',
+        "modalities": '',
+        "images_count": '',
+
     },
 ]
 // export const getLists = createAsyncThunk(
@@ -116,7 +83,7 @@ export const getStudiesThunk = createAsyncThunk(
     async (data:AsyncThunkAction, {rejectWithValue, dispatch}) => {
         try {
             const res = await searchApi.getPatientStudies(JSON.stringify(data));
-            console.log(res);
+            dispatch(setStudies(res));
         } catch (error) {
             return rejectWithValue(error);
         }
@@ -128,9 +95,9 @@ export const studiesSlice = createSlice({
     name: 'studies',
     initialState,
     reducers: {
-        // setLists(state, {payload}) {
-        //     state.lists = payload;
-        // },
+        setStudies(state, {payload}) {
+            state = payload;
+        },
         // setIsCompleted(state, {payload}) {
         //     let selectedList = state.lists.find(list => list.id === payload.id);
         //     if (selectedList) selectedList.attributes.isCompleted = payload.attributes.isCompleted;
@@ -157,5 +124,5 @@ export const studiesSlice = createSlice({
     }
 });
 
-export const {} = studiesSlice.actions;
+export const {setStudies} = studiesSlice.actions;
 export default studiesSlice.reducer

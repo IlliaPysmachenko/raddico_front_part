@@ -31,7 +31,7 @@
 
 .study_grid {
     display: grid;
-    grid-template-columns: repeat(17, minmax(min-content, 1fr));
+    grid-template-columns: repeat(7, minmax(min-content, 1fr));
     grid-template-rows: auto;
     justify-content: space-around;
     //justify-items: center;
