@@ -8,11 +8,13 @@ const instance = axios.create({
 
 export const searchApi = {
     getValues() {
+        debugger
         return instance.get(`search`)
             .then((response) => {
                 console.log(response)
                 return response
             });
+        debugger
     },
     getPatientStudies(data:any) {
         return instance.post(`search`, data)
