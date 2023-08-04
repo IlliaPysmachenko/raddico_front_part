@@ -4,11 +4,12 @@ import { fieldsArr, statuses} from "@/src/data/dataExamples";
 import CheckboxGroup from "@/src/components/checkboxGroup/CheckboxGroup";
 import DateBlock from "@/src/screens/home/searchPanelBlock/dateBlock/DateBlock";
 import {useAppDispatch, useAppSelector} from "@/src/redux/hooks";
-import {toggleCheckboxModality} from "@/src/redux/modalitySlice/modalitySlice";
-import {toggleCheckboxInstitutions} from "@/src/redux/institutionsSlice/institutionsSlice";
+import {setModalities, toggleCheckboxModality} from "@/src/redux/modalitySlice/modalitySlice";
+import {setInstitutions, toggleCheckboxInstitutions} from "@/src/redux/institutionsSlice/institutionsSlice";
 import {getStudiesThunk} from "@/src/redux/studiesSlice/studiesSlice";
 import {useEffect} from "react";
 import {searchApi} from "@/src/api/api";
+import {getToken} from "@/src/redux/commonSlice/commonSlice";
 
 const SearchPanel = () => {
     const dispatch = useAppDispatch();
@@ -16,6 +17,7 @@ const SearchPanel = () => {
     const facilities = useAppSelector((state) => state.institutions)
     const fields = useAppSelector(state => state.fields);
     const dateSlice = useAppSelector((state) =>  state.date );
+    const csrf = useAppSelector((state) =>  state.common.csrf );
 
     // const useInpFieldValue = (id:string) => {
     //     let field =  fields.find(item => item.id === id);
@@ -57,13 +59,22 @@ const SearchPanel = () => {
         data.patient_dob = fields[2].value;
         // @ts-ignore
         data.refferal = fields[3].value;
+        // @ts-ignore
+        data.csrf = csrf;
         // console.log(query);
         dispatch(getStudiesThunk({data}))
     }
 
     useEffect(() => {
         debugger
-        searchApi.getValues();
+        const res = searchApi.getValues();
+        // @ts-ignore
+        dispatch(getToken(res.csrf));
+        // @ts-ignore
+        dispatch(setInstitutions(res.institutions));
+        // @ts-ignore
+        dispatch(setModalities(res.institutions));
+
     },[])
 
 

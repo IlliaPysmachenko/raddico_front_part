@@ -38,6 +38,9 @@ export const modalitySlice = createSlice({
     name: 'modality',
     initialState,
     reducers: {
+        setModalities: (state, action) => {
+            state = action.payload
+        },
         toggleCheckboxModality: (state, action) => {
             const id = action.payload;
             const checkbox = state.find(item => item.id === id);
@@ -49,6 +52,6 @@ export const modalitySlice = createSlice({
 })
 
 
-export const {toggleCheckboxModality} = modalitySlice.actions;
+export const {toggleCheckboxModality, setModalities} = modalitySlice.actions;
 
 export default modalitySlice.reducer;

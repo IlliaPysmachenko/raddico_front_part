@@ -4,7 +4,7 @@ const initialState = {
     csrf: ''
 }
 
-export const institutionsSlice = createSlice({
+export const commonSlice = createSlice({
     name: 'institutions',
     initialState,
     reducers: {
@@ -15,5 +15,5 @@ export const institutionsSlice = createSlice({
 })
 
 
-export const {getToken} = institutionsSlice.actions;
-export default institutionsSlice.reducer;
+export const {getToken} = commonSlice.actions;
+export default commonSlice.reducer;

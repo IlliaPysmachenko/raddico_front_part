@@ -4,6 +4,7 @@ import institutionsSlice from "@/src/redux/institutionsSlice/institutionsSlice";
 import dateSlice from "@/src/redux/dateSlice/dateSlice";
 import fieldsSlice from "@/src/redux/fieldsSlice/fieldsSlice";
 import studiesSlice from "@/src/redux/studiesSlice/studiesSlice";
+import commonSlice from "@/src/redux/commonSlice/commonSlice";
 
 
 export const store = configureStore( {
@@ -13,6 +14,7 @@ export const store = configureStore( {
         date: dateSlice,
         fields: fieldsSlice,
         study: studiesSlice,
+        common: commonSlice,
     }
 });
 

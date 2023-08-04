@@ -82,6 +82,9 @@ export const institutionsSlice = createSlice({
     name: 'institutions',
     initialState,
     reducers: {
+        setInstitutions: (state, action) => {
+            state = action.payload
+        },
         toggleCheckboxInstitutions: (state, action) => {
             const id = action.payload;
             const checkbox = state.find(item => item.id === id);
@@ -93,5 +96,5 @@ export const institutionsSlice = createSlice({
 })
 
 
-export const {toggleCheckboxInstitutions} = institutionsSlice.actions;
+export const {toggleCheckboxInstitutions, setInstitutions} = institutionsSlice.actions;
 export default institutionsSlice.reducer;
