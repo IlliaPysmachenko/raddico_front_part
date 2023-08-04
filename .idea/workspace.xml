@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3bf699e-b4fb-49dd-ad56-118674db30a4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/redux/commonSlice/commonSlice.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/studiesSlice/studiesSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/studiesSlice/studiesSlice.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/home/searchPanelBlock/SearchPanel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/searchPanelBlock/SearchPanel.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/home/studiesBlock/StudiesBlock.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/studiesBlock/StudiesBlock.tsx" afterDir="false" />
-    </list>
+    <list default="true" id="b3bf699e-b4fb-49dd-ad56-118674db30a4" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
