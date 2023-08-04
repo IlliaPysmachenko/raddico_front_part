@@ -46,19 +46,21 @@ import {searchApi} from "@/src/api/api";
 //     isCompleted: boolean
 // }
 
-const initialState = [
-    {
-        "study_iuid": '',
-        "patient_id": '',
-        "patient_name": '',
-        "patient_dob": '',
-        "study_date": '',
-        "referral": '',
-        "modalities": '',
-        "images_count": '',
+const initialState = {
+   studies: [
+        {
+            "study_iuid": '',
+            "patient_id": '',
+            "patient_name": '',
+            "patient_dob": '',
+            "study_date": '',
+            "referral": '',
+            "modalities": '',
+            "images_count": '',
 
-    },
+        },
 ]
+}
 // export const getLists = createAsyncThunk(
 //     'lists/getLists',
 //     async (_, {rejectWithValue, dispatch}) => {
@@ -95,8 +97,8 @@ export const studiesSlice = createSlice({
     name: 'studies',
     initialState,
     reducers: {
-        setStudies(state, {payload}) {
-            state = payload;
+        setStudies(state, action) {
+            state.studies = action.payload;
         },
         // setIsCompleted(state, {payload}) {
         //     let selectedList = state.lists.find(list => list.id === payload.id);

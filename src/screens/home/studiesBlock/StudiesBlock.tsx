@@ -131,7 +131,7 @@ const patientsData = [
 ]
 
 const StudiesBlock = () => {
-    const patientsData = useAppSelector(state => state.study)
+    const patientsData = useAppSelector(state => state.study.studies)
     return(
         <div className={`${style.study_container} ${style.study_grid}`}>
             {studyTitles.map( (item) => {
