@@ -62,7 +62,8 @@ const SearchPanel = () => {
     }
 
     useEffect(() => {
-        searchApi.getValues()
+        debugger
+        searchApi.getValues();
     },[])
 
 
