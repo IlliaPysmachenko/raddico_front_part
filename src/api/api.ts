@@ -2,7 +2,7 @@ import axios from "axios";
 
 
 const instance = axios.create({
-    baseURL: "http://192.168.2.237/",
+    baseURL: "http://192.168.2.237/:8888",
 
 });
 
@@ -14,9 +14,8 @@ export const searchApi = {
                 return response
             });
     },
-    setCompletedList(id: number, completed: boolean) {
-
-        return instance.put(`lists/${id}`, {"data": {"isCompleted": completed}})
-            .then((response) => response.data.data);
+    getPatientStudies(data:any) {
+        return instance.post(`search`, data)
+            .then((response) => response);
     }
 }

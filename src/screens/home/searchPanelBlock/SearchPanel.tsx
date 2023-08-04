@@ -6,6 +6,7 @@ import DateBlock from "@/src/screens/home/searchPanelBlock/dateBlock/DateBlock";
 import {useAppDispatch, useAppSelector} from "@/src/redux/hooks";
 import {toggleCheckboxModality} from "@/src/redux/modalitySlice/modalitySlice";
 import {toggleCheckboxInstitutions} from "@/src/redux/institutionsSlice/institutionsSlice";
+import {getStudiesThunk} from "@/src/redux/studiesSlice/studiesSlice";
 
 const SearchPanel = () => {
     const dispatch = useAppDispatch();
@@ -37,18 +38,25 @@ const SearchPanel = () => {
     })
 
     const SendSearchQuery = () => {
-
-        console.log(patient_name.value)
-        const query = {}
+        const data = {}
         // @ts-ignore
-        query.modalities = [checkedModality.map((item) => item.name)];
+        data.modalities = checkedModality.map((item) => item.name)
         // @ts-ignore
-        query.institutions = [checkedFacilities.map((item) => item.name)];
+        data.institutions = checkedFacilities.map((item) => item.name)
         // @ts-ignore
-        query.study_date_from = dateSlice.between;
+        data.study_date_from = dateSlice.between;
         // @ts-ignore
-        query.study_date_to = dateSlice.and;
-        console.log(query);
+        data.study_date_to = dateSlice.and;
+        // @ts-ignore
+        data.patient_id = fields[0].value;
+        // @ts-ignore
+        data.patient_name = fields[1].value;
+        // @ts-ignore
+        data.patient_dob = fields[2].value;
+        // @ts-ignore
+        data.refferal = fields[3].value;
+        // console.log(query);
+        dispatch(getStudiesThunk({data}))
     }
 
 

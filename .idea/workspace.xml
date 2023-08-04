@@ -5,28 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b3bf699e-b4fb-49dd-ad56-118674db30a4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/redux/dateSlice/dateSlice.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/fieldsSlice/fieldsSlice.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/studiesSlice/studiesSlice.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/checkbox/Checkbox.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/checkbox/Checkbox.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/checkboxGroup/CheckboxGroup.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/checkboxGroup/CheckboxGroup.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/colorTheme/ColorTheme.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/colorTheme/ColorTheme.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/inputFieldItem/InputField.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/inputFieldItem/InputField.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/inputFieldsGroup/InputFieldsGroup.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/inputFieldsGroup/InputFieldsGroup.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/dataExamples.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/dataExamples.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hooks/useTheme.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useTheme.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layout/header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/header/Header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layout/header/nav/Nav.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/header/nav/Nav.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/institutionsSlice/institutionsSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/institutionsSlice/institutionsSlice.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/modalitySlice/modalitySlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/modalitySlice/modalitySlice.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/store.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/home/searchPanelBlock/SearchPanel.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/searchPanelBlock/SearchPanel.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/api.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/studiesSlice/studiesSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/studiesSlice/studiesSlice.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/screens/home/searchPanelBlock/SearchPanel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/searchPanelBlock/SearchPanel.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/home/searchPanelBlock/dateBlock/DateBlock.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/searchPanelBlock/dateBlock/DateBlock.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/home/searchPanelBlock/dateBlock/DateBlock.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/searchPanelBlock/dateBlock/DateBlock.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/home/studiesBlock/StudiesBlock.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/studiesBlock/StudiesBlock.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/home/studiesBlock/StudiesBlock.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/studiesBlock/StudiesBlock.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,7 +112,7 @@
       <workItem from="1690554764011" duration="307000" />
       <workItem from="1690555111178" duration="41710000" />
       <workItem from="1690735250545" duration="47854000" />
-      <workItem from="1691159661641" duration="15159000" />
+      <workItem from="1691159661641" duration="16983000" />
     </task>
     <servers />
   </component>
