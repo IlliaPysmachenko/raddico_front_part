@@ -4,7 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3bf699e-b4fb-49dd-ad56-118674db30a4" name="Changes" comment="" />
+    <list default="true" id="b3bf699e-b4fb-49dd-ad56-118674db30a4" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/api/api.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/checkboxesSlice/checkboxesSlice.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/institutionsSlice/institutionsSlice.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/modalitySlice/modalitySlice.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_08_2023_16_56__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_08_2023_16_56__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/checkboxGroup/CheckboxGroup.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/checkboxGroup/CheckboxGroup.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/inputSelectItem/InputSelectItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/inputSelectItem/InputSelectItem.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useTheme.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useTheme.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useUserColor.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useUserColor.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/home/HomePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/HomePage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/home/searchPanelBlock/SearchPanel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/searchPanelBlock/SearchPanel.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/home/studiesBlock/StudiesBlock.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/studiesBlock/StudiesBlock.module.scss" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,10 +47,9 @@
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="ProjectErrors" />
   </component>
-  <component name="ProjectColorInfo">{
-  &quot;customColor&quot;: &quot;&quot;,
-  &quot;associatedIndex&quot;: -1
-}</component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 0
+}]]></component>
   <component name="ProjectId" id="2T7FjqtHM28u5904vJozSoK0ATK" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -52,18 +66,21 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/Алёна/OneDrive/Рабочий стол/Илья/Projects/Easy-shop-app/easy-shop_front",
+    "last_opened_file_path": "C:/Users/Алёна/OneDrive/Рабочий стол/Илья/Projects/raddico_front_part/src/redux/facilitiesSlice",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "editor.preferences.completion",
-    "ts.external.directory.path": "D:\\Projects\\Raddico front-end part\\node_modules\\typescript\\lib",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "ts.external.directory.path": "C:\\Users\\Алёна\\OneDrive\\Рабочий стол\\Илья\\Projects\\raddico_front_part\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Алёна\OneDrive\Рабочий стол\Илья\Projects\raddico_front_part\src\redux\facilitiesSlice" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Projects\Raddico front-end part\src\screens\home\searchPanelBlock" />
       <recent name="C:\Users\Алёна\OneDrive\Рабочий стол\Илья\Projects\raddico_front_part\src\components" />

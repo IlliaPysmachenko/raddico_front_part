@@ -5,9 +5,6 @@
     margin-top: var(--margin);
 
     .grid_item {
-        //display: flex;
-        //
-        //width: 100%;
         padding: var(--paddingXS);
         border-left: 1px solid var(--colorBorderSecondary);
         border-right: 1px solid var(--colorBorderSecondary);
@@ -22,7 +19,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: var(--paddingXS);
+        //padding: var(--paddingXS);
         background-color: var(--user-background, var(--colorPrimaryBgHover));
         border-left: 1px solid var(--colorBorderSecondary);
         border-right: 1px solid var(--colorBorderSecondary);

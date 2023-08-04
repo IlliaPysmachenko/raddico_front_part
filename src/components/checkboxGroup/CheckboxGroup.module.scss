@@ -10,7 +10,7 @@
 
     .checkboxes_block {
         display: grid;
-        grid-template-columns: repeat(2, minmax(max-content, 1fr));
+        grid-template-columns: repeat(2, minmax(min-content, 1fr));
         width: fit-content;
         padding: var(--paddingXS);
         border: 2px solid var(--colorBorderSecondary);
