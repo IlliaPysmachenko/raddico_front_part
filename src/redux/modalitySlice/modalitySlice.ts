@@ -1,5 +1,5 @@
 import {createSlice} from "@reduxjs/toolkit";
-import {facilitiesSlice} from "@/src/redux/institutionsSlice/institutionsSlice";
+
 
 const initialState = [
     {
@@ -20,7 +20,7 @@ const initialState = [
     {
         "id": "modality_mr",
         "name": "MR",
-        "isChecked": true
+        "isChecked": false
     },
     {
         "id": "modality_pr",
@@ -38,8 +38,8 @@ export const modalitySlice = createSlice({
     name: 'modality',
     initialState,
     reducers: {
-        toggleCheckbox: (state, action) => {
-            const {id} = action.payload;
+        toggleCheckboxModality: (state, action) => {
+            const id = action.payload;
             const checkbox = state.find(item => item.id === id);
             if (checkbox) {
                 checkbox.isChecked = !checkbox.isChecked;
@@ -49,6 +49,6 @@ export const modalitySlice = createSlice({
 })
 
 
-export const {toggleCheckbox} = modalitySlice.actions;
+export const {toggleCheckboxModality} = modalitySlice.actions;
 
 export default modalitySlice.reducer;

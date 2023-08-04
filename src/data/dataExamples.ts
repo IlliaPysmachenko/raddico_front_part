@@ -202,24 +202,20 @@ export const statuses = [
 ]
 export const fieldsArr = [
     {
-        id: 'MRN',
+        id: 'patient_id',
         title: 'Patients MRN',
     },
     {
-        id: 'NAME',
+        id: 'patient_name',
         title: 'Patients Name',
     },
     {
-        id: 'DOB',
+        id: 'patient_dob',
         title: 'Patients DOB',
     },
     {
-        id: 'Physician',
+        id: 'referral',
         title: 'Referring Physician',
-    },
-    {
-        id: 'Action',
-        title: 'Action',
     },
 ]
 //------------------------

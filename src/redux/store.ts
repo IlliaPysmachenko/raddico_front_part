@@ -1,12 +1,16 @@
 import {configureStore} from "@reduxjs/toolkit";
 import modalitySlice from "@/src/redux/modalitySlice/modalitySlice";
 import institutionsSlice from "@/src/redux/institutionsSlice/institutionsSlice";
+import dateSlice from "@/src/redux/dateSlice/dateSlice";
+import fieldsSlice from "@/src/redux/fieldsSlice/fieldsSlice";
 
 
 export const store = configureStore( {
     reducer: {
         modality: modalitySlice,
-        institutions: institutionsSlice
+        institutions: institutionsSlice,
+        date: dateSlice,
+        fields: fieldsSlice
     }
 });
 

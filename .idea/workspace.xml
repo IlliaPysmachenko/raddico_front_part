@@ -5,20 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b3bf699e-b4fb-49dd-ad56-118674db30a4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/api/api.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/checkboxesSlice/checkboxesSlice.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/institutionsSlice/institutionsSlice.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/modalitySlice/modalitySlice.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_08_2023_16_56__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_02_08_2023_16_56__Changes_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/dateSlice/dateSlice.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/fieldsSlice/fieldsSlice.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/studiesSlice/studiesSlice.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/checkboxGroup/CheckboxGroup.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/checkboxGroup/CheckboxGroup.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/inputSelectItem/InputSelectItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/inputSelectItem/InputSelectItem.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/checkbox/Checkbox.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/checkbox/Checkbox.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/checkboxGroup/CheckboxGroup.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/checkboxGroup/CheckboxGroup.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/colorTheme/ColorTheme.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/colorTheme/ColorTheme.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/inputFieldItem/InputField.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/inputFieldItem/InputField.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/inputFieldsGroup/InputFieldsGroup.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/inputFieldsGroup/InputFieldsGroup.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/dataExamples.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/dataExamples.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/hooks/useTheme.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useTheme.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hooks/useUserColor.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useUserColor.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layout/header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/header/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layout/header/nav/Nav.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/header/nav/Nav.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/institutionsSlice/institutionsSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/institutionsSlice/institutionsSlice.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/modalitySlice/modalitySlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/modalitySlice/modalitySlice.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/store.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/home/HomePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/HomePage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/home/searchPanelBlock/SearchPanel.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/searchPanelBlock/SearchPanel.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/screens/home/searchPanelBlock/SearchPanel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/searchPanelBlock/SearchPanel.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/home/searchPanelBlock/dateBlock/DateBlock.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/searchPanelBlock/dateBlock/DateBlock.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/home/searchPanelBlock/dateBlock/DateBlock.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/searchPanelBlock/dateBlock/DateBlock.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/screens/home/studiesBlock/StudiesBlock.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/studiesBlock/StudiesBlock.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/home/studiesBlock/StudiesBlock.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/studiesBlock/StudiesBlock.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,9 +55,9 @@
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="ProjectErrors" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 0
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="2T7FjqtHM28u5904vJozSoK0ATK" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -66,14 +74,14 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/Алёна/OneDrive/Рабочий стол/Илья/Projects/raddico_front_part/src/redux/facilitiesSlice",
+    "last_opened_file_path": "D:/Projects/Easy-Shop-App/easy-shop_front",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "preferences.lookFeel",
-    "ts.external.directory.path": "C:\\Users\\Алёна\\OneDrive\\Рабочий стол\\Илья\\Projects\\raddico_front_part\\node_modules\\typescript\\lib",
+    "ts.external.directory.path": "D:\\Projects\\Raddico front-end part\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -82,6 +90,7 @@
       <recent name="C:\Users\Алёна\OneDrive\Рабочий стол\Илья\Projects\raddico_front_part\src\redux\facilitiesSlice" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Projects\Raddico front-end part\src\redux" />
       <recent name="D:\Projects\Raddico front-end part\src\screens\home\searchPanelBlock" />
       <recent name="C:\Users\Алёна\OneDrive\Рабочий стол\Илья\Projects\raddico_front_part\src\components" />
       <recent name="C:\Users\Алёна\OneDrive\Рабочий стол\Илья\Projects\raddico_front_part\src\assets" />
@@ -121,6 +130,7 @@
       <workItem from="1690554764011" duration="307000" />
       <workItem from="1690555111178" duration="41710000" />
       <workItem from="1690735250545" duration="47854000" />
+      <workItem from="1691159661641" duration="15159000" />
     </task>
     <servers />
   </component>

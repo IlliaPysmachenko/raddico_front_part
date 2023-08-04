@@ -2,77 +2,77 @@ import {createSlice} from "@reduxjs/toolkit";
 
 const initialState = [
     {
-        "id": "institution_bigoakimaging",
+        "id": "institution_BIGOAKIMAGING",
         "name": "BIG OAK IMAGING",
         "isChecked": true
     },
     {
-        "id": "institution_bigoakimaging",
+        "id": "institution_BigOakImaging",
         "name": "Big Oak Imaging",
         "isChecked": true
     },
     {
-        "id": "institution_caduceus",
+        "id": "institution_Caduceus",
         "name": "Caduceus",
         "isChecked": true
     },
     {
-        "id": "institution_granadahillsradiology",
+        "id": "institution_GRANADAHILLSRADIOLOGY",
         "name": "GRANADA HILLS RADIOLOGY",
         "isChecked": true
     },
     {
-        "id": "institution_hendersonradiology",
+        "id": "institution_HENDERSONRADIOLOGY",
         "name": "HENDERSON RADIOLOGY",
         "isChecked": true
     },
     {
-        "id": "institution_medicaldiagnosticimaging",
+        "id": "institution_MedicalDiagnosticImaging",
         "name": "Medical Diagnostic Imaging",
         "isChecked": true
     },
     {
-        "id": "institution_oceanmedicalimaging",
+        "id": "institution_OCEANMEDICALIMAGING",
         "name": "OCEAN MEDICAL IMAGING",
         "isChecked": true
     },
     {
-        "id": "institution_optumlosangeles",
+        "id": "institution_OPTUMLosAngeles",
         "name": "OPTUM Los Angeles",
         "isChecked": true
     },
     {
-        "id": "institution_optummontebello",
+        "id": "institution_OPTUMMontebello",
         "name": "OPTUM Montebello",
         "isChecked": true
     },
     {
-        "id": "institution_oceanmedicalimaging",
+        "id": "institution_OceanMedicalImaging",
         "name": "Ocean Medical Imaging",
         "isChecked": true
     },
     {
-        "id": "institution_raddicothousandoaks",
+        "id": "institution_RaddicoThousandOaks",
         "name": "Raddico Thousand Oaks",
         "isChecked": true
     },
     {
-        "id": "institution_sunsetdiagnosticradiology",
+        "id": "institution_SUNSETDIAGNOSTICRADIOLOGY",
         "name": "SUNSET DIAGNOSTIC RADIOLOGY",
         "isChecked": true
     },
     {
-        "id": "institution_sunsetdiagnosticradiology",
+        "id": "institution_SunsetDiagnosticRadiology",
         "name": "Sunset Diagnostic Radiology",
         "isChecked": true
     },
     {
-        "id": "institution_westerndiagnosticradiology",
+        "id": "institution_WESTERNDIAGNOSTICRADIOLOGY",
         "name": "WESTERN DIAGNOSTIC RADIOLOGY",
         "isChecked": true
     },
     {
-        "id": "institution_woodlandhillsradiology",
+        "id": "institution_WOODLANDHILLSRADIOLOGY",
         "name": "WOODLAND HILLS RADIOLOGY",
         "isChecked": true
     }
@@ -82,8 +82,8 @@ export const institutionsSlice = createSlice({
     name: 'institutions',
     initialState,
     reducers: {
-        toggleCheckboxF: (state, action) => {
-            const { id } = action.payload;
+        toggleCheckboxInstitutions: (state, action) => {
+            const id = action.payload;
             const checkbox = state.find(item => item.id === id);
             if (checkbox) {
                 checkbox.isChecked = !checkbox.isChecked;
@@ -93,5 +93,5 @@ export const institutionsSlice = createSlice({
 })
 
 
-export const {toggleCheckboxF} = institutionsSlice.actions;
+export const {toggleCheckboxInstitutions} = institutionsSlice.actions;
 export default institutionsSlice.reducer;

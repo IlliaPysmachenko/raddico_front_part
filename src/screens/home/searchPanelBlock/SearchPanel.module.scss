@@ -11,6 +11,22 @@
         flex-direction: column;
         width: 100%;
     }
+    .searchBtn_container{
+
+
+        .searchBtn {
+            background: var(--colorInfo);
+            color: var(--colorText);
+            border: 1px solid var(--colorPrimaryBorder);
+            border-radius: var(--borderRadius);
+            padding: var(--paddingXS) var(--padding);
+            transition: all ease 0.3s;
+
+            &:hover {
+                background: var(--colorPrimaryBgHover);
+            }
+        }
+    }
 
     .searchPanel_title {
         display: flex;
@@ -29,6 +45,7 @@
         display: grid;
         //grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
         grid-template-columns: repeat(6, min-content);
+        justify-content: space-around;
         grid-auto-flow: dense;
         justify-items: center;
     }

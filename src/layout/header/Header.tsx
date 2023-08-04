@@ -1,3 +1,4 @@
+'use client'
 import Nav from "@/src/layout/header/nav/Nav";
 
 

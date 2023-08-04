@@ -71,14 +71,14 @@ const studyTitles = [
         id: 'Need Proofreading by',
         title: 'Need Proofreading by',
     },
-    {
-        id: 'Action',
-        title: 'Action',
-    },
-    {
-        id: 'checked',
-        title: 'checked',
-    }
+    // {
+    //     id: 'Action',
+    //     title: 'Action',
+    // },
+    // {
+    //     id: 'checked',
+    //     title: 'checked',
+    // }
 ]
 const patientsData = [
     {
@@ -154,9 +154,9 @@ const StudiesBlock = () => {
                         <div className={style.grid_item}>{item.referrer}</div>
                         <div className={style.grid_item}>{item.assignment}</div>
                         <div className={style.grid_item}>{item.status}</div>
-                        <div className={style.grid_item}>{item.action}</div>
+                        {/*<div className={style.grid_item}>{item.action}</div>*/}
                         <div className={style.grid_item}>{item.proofreading}</div>
-                        <div className={style.grid_item}><Checkbox id={item.id} name={''} isChecked={item.checked}/></div>
+                        {/*<div className={style.grid_item}><Checkbox id={item.id} name={''} isChecked={item.checked}/></div>*/}
                     </React.Fragment>
                 )
             })}
