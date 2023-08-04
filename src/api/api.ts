@@ -19,7 +19,7 @@ export const searchApi = {
     getPatientStudies(data:any) {
         return instance.post(`search`, data)
             .then((response) => {
-                console.log(response)
+                console.log(response.data.data)
                 return response.data.data
             });
     }
