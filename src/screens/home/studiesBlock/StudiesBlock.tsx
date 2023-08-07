@@ -2,6 +2,7 @@ import style from './StudiesBlock.module.scss'
 import React from "react";
 import Checkbox from "@/src/components/checkbox/Checkbox";
 import {useAppSelector} from "@/src/redux/hooks";
+// @ts-ignore
 import {ZipFile} from "@/src/assets/icons";
 import Link from "next/link";
 
@@ -85,52 +86,52 @@ const studyTitles = [
     //     title: 'checked',
     // }
 ]
-const patientsData = [
-    {
-        id: '1',
-        icons: 'i',
-        mrn: 'WDR01285',
-        name: 'GUTIERREZ, JUDITAS',
-        sex: 'M',
-        dob: '1992-11-02',
-        modality: 'MR',
-        procedure: 'CERVICAL SPINE',
-        symptoms: 'MVA NECK PAIN, EPIDURAL TREATMENT AROUND BACK 2017',
-        notes: '[PI LIEN] COMPARISON REPORT REQUESTED BY ATTY, MRN#SDR22538, PRIOR REPORT UPLOADED, YK',
-        lm: '110/110',
-        imgCenter: 'WESTERN DIAGNOSTIC RADIOLOGY',
-        value: '1',
-        studyDate: '2023-08-01 12:55:38',
-        referrer: 'MASROUR, ROUZBEH D.C.^^^^ ',
-        assignment: 'Dr A Bledin',
-        status: 'UNREAD',
-        proofreading: '',
-        action: '',
-        checked: false,
-    },
-    {
-        id: '2',
-        icons: 'i',
-        mrn: 'OMI23251',
-        name: 'LOPEZ, CORINA',
-        sex: 'F',
-        dob: '1987-05-11',
-        modality: 'MR',
-        procedure: 'CERVICAL SPINE',
-        symptoms: 'Neck pain due to injury',
-        notes: '[PRECISE] bb',
-        lm: '269/ 269',
-        imgCenter: 'OCEAN MEDICAL IMAGING',
-        value: '1',
-        studyDate: '2023-08-01 13:28:54',
-        referrer: 'KENLY, MICHAEL M.D.^^^^',
-        assignment: 'Tech Only',
-        status: 'Precise',
-        // proofreading: '',
-        action: '',
-        checked: false,
-    },
-]
+// const patientsData = [
+//     {
+//         id: '1',
+//         icons: 'i',
+//         mrn: 'WDR01285',
+//         name: 'GUTIERREZ, JUDITAS',
+//         sex: 'M',
+//         dob: '1992-11-02',
+//         modality: 'MR',
+//         procedure: 'CERVICAL SPINE',
+//         symptoms: 'MVA NECK PAIN, EPIDURAL TREATMENT AROUND BACK 2017',
+//         notes: '[PI LIEN] COMPARISON REPORT REQUESTED BY ATTY, MRN#SDR22538, PRIOR REPORT UPLOADED, YK',
+//         lm: '110/110',
+//         imgCenter: 'WESTERN DIAGNOSTIC RADIOLOGY',
+//         value: '1',
+//         studyDate: '2023-08-01 12:55:38',
+//         referrer: 'MASROUR, ROUZBEH D.C.^^^^ ',
+//         assignment: 'Dr A Bledin',
+//         status: 'UNREAD',
+//         proofreading: '',
+//         action: '',
+//         checked: false,
+//     },
+//     {
+//         id: '2',
+//         icons: 'i',
+//         mrn: 'OMI23251',
+//         name: 'LOPEZ, CORINA',
+//         sex: 'F',
+//         dob: '1987-05-11',
+//         modality: 'MR',
+//         procedure: 'CERVICAL SPINE',
+//         symptoms: 'Neck pain due to injury',
+//         notes: '[PRECISE] bb',
+//         lm: '269/ 269',
+//         imgCenter: 'OCEAN MEDICAL IMAGING',
+//         value: '1',
+//         studyDate: '2023-08-01 13:28:54',
+//         referrer: 'KENLY, MICHAEL M.D.^^^^',
+//         assignment: 'Tech Only',
+//         status: 'Precise',
+//         // proofreading: '',
+//         action: '',
+//         checked: false,
+//     },
+// ]
 
 const StudiesBlock = () => {
     const patientsData = useAppSelector(state => state.study.studies)
@@ -144,7 +145,7 @@ const StudiesBlock = () => {
             {patientsData.map( (item) => {
                 return (
                     <React.Fragment key={item.study_iuid}>
-                        <div className={style.grid_item}><Link href={`http://192.168.2.237:8888/api/zip/dicom/${item.study_iuid || ''}`}><ZipFile/></Link></div>
+                        <div className={style.grid_item}><Link href={`http://192.168.2.237:8888/api/zip/dicom/${item.study_iuid || ''}`}><ZipFile className={style.zipIcon} /></Link></div>
                         <div className={style.grid_item}>{item.patient_id}</div>
                         <div className={style.grid_item}>{item.patient_name}</div>
                         <div className={style.grid_item}>{item.patient_dob}</div>
