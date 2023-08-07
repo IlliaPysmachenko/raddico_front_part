@@ -3,7 +3,7 @@ import InputSelectItem from "@/src/components/inputSelectItem/InputSelectItem";
 import {filterBy, filterByPeriod, lienStatus} from "@/src/data/dataExamples";
 import {useState} from "react";
 import {useAppDispatch, useAppSelector} from "@/src/redux/hooks";
-import {getDateBetween} from "@/src/redux/dateSlice/dateSlice";
+import {getDateAnd, getDateBetween} from "@/src/redux/dateSlice/dateSlice";
 
 const DateBlock = () => {
     const dateSlice = useAppSelector((state) =>  state.date );
@@ -13,7 +13,7 @@ const DateBlock = () => {
         dispatch(getDateBetween(e.target.value))
     }
     const setDateAndHandler = (e:any) => {
-        dispatch(getDateBetween(e.target.value))
+        dispatch(getDateAnd(e.target.value))
     }
 
     return(

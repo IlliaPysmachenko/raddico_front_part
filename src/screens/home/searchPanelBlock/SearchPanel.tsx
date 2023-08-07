@@ -14,7 +14,7 @@ import {getToken} from "@/src/redux/commonSlice/commonSlice";
 const SearchPanel = () => {
     const dispatch = useAppDispatch();
     const modality = useAppSelector((state) =>  state.modality )
-    const facilities = useAppSelector((state) => state.institutions)
+    const institutions = useAppSelector((state) => state.institutions.institutions)
     const fields = useAppSelector(state => state.fields);
     const dateSlice = useAppSelector((state) =>  state.date );
     const csrf = useAppSelector((state) =>  state.common.csrf );
@@ -25,6 +25,8 @@ const SearchPanel = () => {
     //     if (field) field.value
     //     // console.log(field.value)
     // }
+
+    console.log(institutions)
 
 
     const patient_name = useAppSelector(state => {
@@ -38,7 +40,7 @@ const SearchPanel = () => {
          return state.modality.filter(item => item.isChecked)
     })
     const checkedFacilities = useAppSelector(state => {
-        return state.institutions.filter(item => item.isChecked)
+        return state.institutions.institutions.filter(item => item.isChecked)
     })
 
     const SendSearchQuery = () => {
@@ -66,7 +68,7 @@ const SearchPanel = () => {
     }
 
     useEffect(() => {
-        debugger
+        // debugger
         const res = searchApi.getValues();
         // @ts-ignore
         dispatch(getToken(res.csrf));
@@ -94,7 +96,7 @@ const SearchPanel = () => {
 
                 <div className={style.searchPanel_row}>
                     <InputFieldsGroup title={`Searching Fields`} fields={fields}/>
-                    <CheckboxGroup title={'Institutions'} checkboxArr={facilities} toggleCheckboxHandler={toggleCheckboxHandler}/>
+                    <CheckboxGroup title={'Institutions'} checkboxArr={institutions} toggleCheckboxHandler={toggleCheckboxHandler}/>
                     <DateBlock/>
                     <CheckboxGroup title={'Modality'} checkboxArr={modality} toggleCheckboxHandler={toggleCheckboxHandler}/>
                     {/*<CheckboxGroup title={'Statuses'} checkboxArr={statuses}/>*/}
