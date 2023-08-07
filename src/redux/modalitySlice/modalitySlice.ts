@@ -1,4 +1,5 @@
-import {createSlice} from "@reduxjs/toolkit";
+import {createAsyncThunk, createSlice} from "@reduxjs/toolkit";
+import {searchApi} from "@/src/api/api";
 
 
 const initialState = [
@@ -33,6 +34,20 @@ const initialState = [
         "isChecked": true
     }
 ]
+
+
+export const getModality = createAsyncThunk(
+    'modality/getModality',
+    async (_, {rejectWithValue, dispatch}) => {
+        try {
+            const res = await searchApi.getValues();
+            dispatch(setModalities(res.modalities));
+        } catch (error) {
+            return rejectWithValue(error);
+        }
+    }
+);
+
 
 export const modalitySlice = createSlice({
     name: 'modality',

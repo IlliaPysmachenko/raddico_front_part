@@ -4,12 +4,16 @@ import { fieldsArr, statuses} from "@/src/data/dataExamples";
 import CheckboxGroup from "@/src/components/checkboxGroup/CheckboxGroup";
 import DateBlock from "@/src/screens/home/searchPanelBlock/dateBlock/DateBlock";
 import {useAppDispatch, useAppSelector} from "@/src/redux/hooks";
-import {setModalities, toggleCheckboxModality} from "@/src/redux/modalitySlice/modalitySlice";
-import {setInstitutions, toggleCheckboxInstitutions} from "@/src/redux/institutionsSlice/institutionsSlice";
+import {getModality, setModalities, toggleCheckboxModality} from "@/src/redux/modalitySlice/modalitySlice";
+import {
+    getInstitutions,
+    setInstitutions,
+    toggleCheckboxInstitutions
+} from "@/src/redux/institutionsSlice/institutionsSlice";
 import {getStudiesThunk} from "@/src/redux/studiesSlice/studiesSlice";
 import {useEffect} from "react";
 import {searchApi} from "@/src/api/api";
-import {getToken} from "@/src/redux/commonSlice/commonSlice";
+import {getToken, setToken} from "@/src/redux/commonSlice/commonSlice";
 
 const SearchPanel = () => {
     const dispatch = useAppDispatch();
@@ -40,6 +44,7 @@ const SearchPanel = () => {
          return state.modality.filter(item => item.isChecked)
     })
     const checkedFacilities = useAppSelector(state => {
+        // @ts-ignore
         return state.institutions.institutions.filter(item => item.isChecked)
     })
 
@@ -69,13 +74,10 @@ const SearchPanel = () => {
 
     useEffect(() => {
         // debugger
-        const res = searchApi.getValues();
-        // @ts-ignore
-        dispatch(getToken(res.csrf));
-        // @ts-ignore
-        dispatch(setInstitutions(res.institutions));
-        // @ts-ignore
-        dispatch(setModalities(res.institutions));
+        // const res = searchApi.getValues();
+        dispatch(getInstitutions());
+        dispatch(getModality());
+        dispatch(getToken());
 
     },[])
 
