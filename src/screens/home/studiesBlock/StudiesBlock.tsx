@@ -145,7 +145,7 @@ const StudiesBlock = () => {
             {patientsData.map( (item) => {
                 return (
                     <React.Fragment key={item.study_iuid}>
-                        <div className={style.grid_item}><Link href={`http://192.168.2.237:8888/api/zip/dicom/${item.study_iuid || ''}`}><ZipFile className={style.zipIcon} /></Link></div>
+                        <div className={style.grid_item}><Link href={`http://192.168.2.237:8888/api/zip/dicom/${item.study_iuid || ''}`} target={'_blank'}><ZipFile className={style.zipIcon} /></Link></div>
                         <div className={style.grid_item}>{item.patient_id}</div>
                         <div className={style.grid_item}>{item.patient_name}</div>
                         <div className={style.grid_item}>{item.patient_dob}</div>
