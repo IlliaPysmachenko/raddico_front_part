@@ -1,3 +1,4 @@
+'use client'
 import style from './StudiesBlock.module.scss'
 import React from "react";
 import Checkbox from "@/src/components/checkbox/Checkbox";
