@@ -72,14 +72,14 @@ const SearchPanel = () => {
         dispatch(getStudiesThunk({data}))
     }
 
-    useEffect(() => {
-        // debugger
-        // const res = searchApi.getValues();
-        dispatch(getInstitutions());
-        dispatch(getModality());
-        dispatch(getToken());
-
-    },[])
+    // useEffect(() => {
+    //     // debugger
+    //     // const res = searchApi.getValues();
+    //     dispatch(getInstitutions());
+    //     dispatch(getModality());
+    //     dispatch(getToken());
+    //
+    // },[])
 
 
 

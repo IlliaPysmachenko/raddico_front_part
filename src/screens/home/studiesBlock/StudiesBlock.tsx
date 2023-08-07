@@ -2,12 +2,14 @@ import style from './StudiesBlock.module.scss'
 import React from "react";
 import Checkbox from "@/src/components/checkbox/Checkbox";
 import {useAppSelector} from "@/src/redux/hooks";
+import {ZipFile} from "@/src/assets/icons";
+import Link from "next/link";
 
 const studyTitles = [
-    // {
-    //     id: 'icon',
-    //     title: 'icon',
-    // },
+    {
+        id: 'icon',
+        title: '',
+    },
     {
         id: 'Patient MRN',
         title: 'Patient MRN',
@@ -142,6 +144,7 @@ const StudiesBlock = () => {
             {patientsData.map( (item) => {
                 return (
                     <React.Fragment key={item.study_iuid}>
+                        <div className={style.grid_item}><Link href={`http://192.168.2.237:8888/api/zip/dicom/${item.study_iuid || ''}`}><ZipFile/></Link></div>
                         <div className={style.grid_item}>{item.patient_id}</div>
                         <div className={style.grid_item}>{item.patient_name}</div>
                         <div className={style.grid_item}>{item.patient_dob}</div>
