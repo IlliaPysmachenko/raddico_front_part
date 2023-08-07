@@ -143,7 +143,7 @@ const StudiesBlock = () => {
             })}
 
 
-            {patientsData.map( (item) => {
+            {patientsData && patientsData.map( (item) => {
                 return (
                     <React.Fragment key={item.study_iuid}>
                         <div className={style.grid_item}><Link href={`http://192.168.2.237:8888/api/zip/dicom/${item.study_iuid || ''}`} target={'_blank'}><ZipFile className={style.zipIcon} /></Link></div>

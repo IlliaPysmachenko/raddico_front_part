@@ -47,19 +47,7 @@ import {searchApi} from "@/src/api/api";
 // }
 
 const initialState = {
-   studies: [
-        {
-            "study_iuid": '',
-            "patient_id": '',
-            "patient_name": '',
-            "patient_dob": '',
-            "study_date": '',
-            "referral": '',
-            "modalities": '',
-            "images_count": '',
-
-        },
-]
+    studies: []
 }
 // export const getLists = createAsyncThunk(
 //     'lists/getLists',
@@ -82,7 +70,7 @@ type AsyncThunkAction = {
 }
 export const getStudiesThunk = createAsyncThunk(
     'studies/getStudies',
-    async (data:AsyncThunkAction, {rejectWithValue, dispatch}) => {
+    async (data: AsyncThunkAction, {rejectWithValue, dispatch}) => {
         try {
             const res = await searchApi.getPatientStudies(JSON.stringify(data));
             dispatch(setStudies(res));
