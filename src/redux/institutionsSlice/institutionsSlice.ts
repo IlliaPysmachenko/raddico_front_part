@@ -23,7 +23,6 @@ export const institutionsSlice = createSlice({
     initialState,
     reducers: {
         setInstitutions: (state, action) => {
-            debugger
             state.institutions = action.payload
         },
         toggleCheckboxInstitutions: (state, action) => {
