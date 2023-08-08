@@ -41,10 +41,14 @@ const SearchPanel = () => {
     // })
     // // console.log(patient_name)
     const checkedModality = useAppSelector(state => {
-         return state.searchBlock.modality.filter(item => item.isChecked)
+        let arr = []
+        let checkedItem = state.searchBlock.modality.filter(item => item.isChecked)
+        if(checkedItem) checkedItem.map(item => arr.push(item.name))
     })
     const checkedFacilities = useAppSelector(state => {
-        return state.searchBlock.institutions.filter(item => item.isChecked)
+        let arr = []
+        let checkedItem = state.searchBlock.institutions.filter(item => item.isChecked)
+        if(checkedItem) checkedItem.map(item => arr.push(item.name))
     })
 
     const SendSearchQuery = () => {
