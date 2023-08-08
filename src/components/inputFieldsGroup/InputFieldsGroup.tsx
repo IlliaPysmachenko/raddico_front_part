@@ -2,7 +2,8 @@ import style from './InputFieldsGroup.module.scss'
 import InputField, {InputFieldPropsType} from "@/src/components/inputFieldItem/InputField";
 import {ChangeEvent, FC} from "react";
 import {useAppDispatch} from "@/src/redux/hooks";
-import {setInputField} from "@/src/redux/fieldsSlice/fieldsSlice";
+import {setInputField} from "@/src/redux/searchBlockSlice/searchBlockSlice";
+// import {setInputField} from "@/src/redux/fieldsSlice/fieldsSlice";
 
 type InputFieldType = {
     id: string;

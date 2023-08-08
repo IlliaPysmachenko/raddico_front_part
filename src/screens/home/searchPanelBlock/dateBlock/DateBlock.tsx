@@ -2,28 +2,23 @@ import style from './DateBlock.module.scss'
 
 import {useEffect, useState} from "react";
 import {useAppDispatch, useAppSelector} from "@/src/redux/hooks";
-import {getDateAnd, getDateBetween} from "@/src/redux/dateSlice/dateSlice";
+// import {getDateAnd, getDateBetween} from "@/src/redux/dateSlice/dateSlice";
 import Checkbox from "@/src/components/checkbox/Checkbox";
+import {getCurrentDate} from "@/src/helpers/functions";
+import {setDateFrom, setDateTo} from "@/src/redux/searchBlockSlice/searchBlockSlice";
 
 const DateBlock = () => {
-    const dateSlice = useAppSelector((state) =>  state.date );
+    const date = useAppSelector((state) =>  state.searchBlock.date );
     const dispatch = useAppDispatch();
     const [disabledDate, setDisabledDate] = useState(false)
 
-    function getCurrentDate() {
-        const now = new Date();
-        const year = now.getFullYear();
-        const month = (now.getMonth() + 1).toString().padStart(2, '0');
-        const day = now.getDate().toString().padStart(2, '0');
-        return `${year}-${month}-${day}`;
-    }
 
 
     const setDateBetweenHandler = (e:any) => {
-        dispatch(getDateBetween(e.target.value))
+        dispatch(setDateFrom(e.target.value))
     }
     const setDateAndHandler = (e:any) => {
-        dispatch(getDateAnd(e.target.value))
+        dispatch(setDateTo(e.target.value))
     }
 
     const toggleDateSwitcher = () => {
@@ -32,12 +27,12 @@ const DateBlock = () => {
 
     useEffect(() => {
         if(disabledDate){
-            dispatch(getDateBetween(''));
-            dispatch(getDateAnd(''));
+            dispatch(setDateFrom(''));
+            dispatch(setDateTo(''));
         }
         if(!disabledDate) {
-            dispatch(getDateBetween(getCurrentDate()));
-            dispatch(getDateAnd(getCurrentDate()));
+            dispatch(setDateFrom(getCurrentDate()));
+            dispatch(setDateTo(getCurrentDate()));
         }
 
     }, [disabledDate])
@@ -54,11 +49,11 @@ const DateBlock = () => {
                 {/*</div>*/}
                 <div className={style.dateFilter_row}>
                     <span>Between:</span>
-                    <input type="date" disabled={disabledDate} value={dateSlice.between} onChange={(e) => { setDateBetweenHandler(e)}} />
+                    <input type="date" disabled={disabledDate} value={date.dateFrom} onChange={(e) => { setDateBetweenHandler(e)}} />
                 </div>
                 <div className={style.dateFilter_row}>
                     <span>And:</span>
-                    <input type="date" disabled={disabledDate} value={dateSlice.and} onChange={(e) => { setDateAndHandler(e)}} />
+                    <input type="date" disabled={disabledDate} value={date.dateTo} onChange={(e) => { setDateAndHandler(e)}} />
                 </div>
                 {/*<div className={style.dateFilter_row}>*/}
                 {/*    <span>OR:</span>*/}

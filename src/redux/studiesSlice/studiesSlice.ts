@@ -11,9 +11,7 @@ const initialState: StudiesArrayType = {
 
 
 
-type AsyncThunkAction = {
-    data: any;
-}
+type AsyncThunkAction = any;
 export const getStudiesThunk = createAsyncThunk(
     'studies/getStudies',
     async (data: AsyncThunkAction, {rejectWithValue, dispatch}) => {

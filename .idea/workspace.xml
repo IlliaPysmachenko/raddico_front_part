@@ -30,7 +30,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
@@ -112,7 +112,7 @@
       <workItem from="1691345191148" duration="9860000" />
       <workItem from="1691443308273" duration="943000" />
       <workItem from="1691486793698" duration="289000" />
-      <workItem from="1691487090753" duration="1952000" />
+      <workItem from="1691487090753" duration="11918000" />
     </task>
     <servers />
   </component>
@@ -132,5 +132,17 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/screens/home/studiesBlock/StudiesBlock.tsx</url>
+          <line>29</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
