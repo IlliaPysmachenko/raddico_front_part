@@ -19,8 +19,8 @@ const SearchPanel = () => {
     const dateSlice = useAppSelector((state) => state.searchBlock.date);
     const csrf = useAppSelector((state) => state.searchBlock.csrf);
 
-    const UseInpFieldValue = (id:string) => {
-        let field =  fields.find(item => item.id === id);
+    const UseInpFieldValue = (id: string) => {
+        let field = fields.find(item => item.id === id);
         // console.log(field)
         if (field) {
             return field.value
@@ -41,14 +41,26 @@ const SearchPanel = () => {
     // })
     // // console.log(patient_name)
     const checkedModality = useAppSelector(state => {
-        let arr = []
+        let arr: Array<string> = []
         let checkedItem = state.searchBlock.modality.filter(item => item.isChecked)
-        if(checkedItem) checkedItem.map(item => arr.push(item.name))
+        if (checkedItem) {
+            checkedItem.map(item => {
+                console.log(item.name)
+                arr.push(item.name)
+            })
+        }
+        return arr;
     })
     const checkedFacilities = useAppSelector(state => {
-        let arr = []
+        let arr: Array<string> = []
         let checkedItem = state.searchBlock.institutions.filter(item => item.isChecked)
-        if(checkedItem) checkedItem.map(item => arr.push(item.name))
+        if (checkedItem) {
+            checkedItem.map(item => {
+                console.log(item.name)
+                arr.push(item.name)
+            })
+        }
+        return arr;
     })
 
     const SendSearchQuery = () => {
