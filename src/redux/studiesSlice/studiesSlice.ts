@@ -17,7 +17,6 @@ export const getStudiesThunk = createAsyncThunk(
     async (data: AsyncThunkAction, {rejectWithValue, dispatch}) => {
         try {
             const res = await searchApi.getPatientStudies(JSON.stringify(data));
-            console.log(data);
             dispatch(setStudies(res));
         } catch (error) {
             return rejectWithValue(error);

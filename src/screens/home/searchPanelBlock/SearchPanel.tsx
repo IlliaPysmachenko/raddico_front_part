@@ -30,22 +30,11 @@ const SearchPanel = () => {
 
     }
 
-    // console.log(institutions)
-
-
-    // const patient_name = useAppSelector(state => {
-    //     let field = state.fields.find(item => item.id === 'patient_name')
-    //     if (field) {
-    //         return field
-    //     }
-    // })
-    // // console.log(patient_name)
     const checkedModality = useAppSelector(state => {
         let arr: Array<string> = []
         let checkedItem = state.searchBlock.modality.filter(item => item.isChecked)
         if (checkedItem) {
             checkedItem.map(item => {
-                console.log(item.name)
                 arr.push(item.name)
             })
         }
@@ -56,7 +45,6 @@ const SearchPanel = () => {
         let checkedItem = state.searchBlock.institutions.filter(item => item.isChecked)
         if (checkedItem) {
             checkedItem.map(item => {
-                console.log(item.name)
                 arr.push(item.name)
             })
         }
@@ -76,27 +64,6 @@ const SearchPanel = () => {
             refferal: UseInpFieldValue('referral'),
             csrf,
         });
-
-        // const data = {}
-        // // @ts-ignore
-        // data.modalities = checkedModality.map((item) => item.name)
-        // // @ts-ignore
-        // data.institutions = checkedFacilities.map((item) => item.name)
-        // // @ts-ignore
-        // data.study_date_from = dateSlice.between;
-        // // @ts-ignore
-        // data.study_date_to = dateSlice.and;
-        // // @ts-ignore
-        // data.patient_id = fields[0].value;
-        // // @ts-ignore
-        // data.patient_name = fields[1].value;
-        // // @ts-ignore
-        // data.patient_dob = fields[2].value;
-        // // @ts-ignore
-        // data.refferal = fields[3].value;
-        // // @ts-ignore
-        // data.csrf = csrf;
-        // // console.log(query);
         dispatch(getStudiesThunk(createPayload()))
     }
 
