@@ -1,11 +1,13 @@
 import style from './DateBlock.module.scss'
 
-import {useEffect, useState} from "react";
+import {ChangeEvent, useEffect, useState} from "react";
 import {useAppDispatch, useAppSelector} from "@/src/redux/hooks";
 // import {getDateAnd, getDateBetween} from "@/src/redux/dateSlice/dateSlice";
 import Checkbox from "@/src/components/checkbox/Checkbox";
 import {getCurrentDate} from "@/src/helpers/functions";
-import {setDateFrom, setDateTo} from "@/src/redux/searchBlockSlice/searchBlockSlice";
+import {setDateFrom, setDatePeriod, setDateTo} from "@/src/redux/searchBlockSlice/searchBlockSlice";
+import InputSelectItem from "@/src/components/inputSelectItem/InputSelectItem";
+import {filterByPeriod} from "@/src/data/dataExamples";
 
 const DateBlock = () => {
     const date = useAppSelector((state) =>  state.searchBlock.date );
@@ -13,6 +15,9 @@ const DateBlock = () => {
     const [disabledDate, setDisabledDate] = useState(false)
 
 
+    const setDatePeriodValueHandler = (id:string, e:ChangeEvent<HTMLSelectElement>) => {
+        dispatch(setDatePeriod(e.target.value))
+    }
 
     const setDateBetweenHandler = (e:any) => {
         dispatch(setDateFrom(e.target.value))
@@ -20,11 +25,9 @@ const DateBlock = () => {
     const setDateAndHandler = (e:any) => {
         dispatch(setDateTo(e.target.value))
     }
-
     const toggleDateSwitcher = () => {
         setDisabledDate(!disabledDate);
     }
-
     useEffect(() => {
         if(disabledDate){
             dispatch(setDateFrom(''));
@@ -36,6 +39,9 @@ const DateBlock = () => {
         }
 
     }, [disabledDate])
+
+
+    //TODO: -Add date block with ‘yesterday’, ‘this week’, ‘last week’, ‘this month’, ‘last month’
 
     return(
         <div className={style.dateFilter_container}>
@@ -55,10 +61,10 @@ const DateBlock = () => {
                     <span>And:</span>
                     <input type="date" disabled={disabledDate} value={date.dateTo} onChange={(e) => { setDateAndHandler(e)}} />
                 </div>
-                {/*<div className={style.dateFilter_row}>*/}
-                {/*    <span>OR:</span>*/}
-                {/*    <InputSelectItem id={filterByPeriod.id} name={filterByPeriod.name} optionsArr={filterByPeriod.optionsArr}/>*/}
-                {/*</div>*/}
+                <div className={style.dateFilter_row}>
+                    <span>OR:</span>
+                    <InputSelectItem id={filterByPeriod.id} name={filterByPeriod.name} optionsArr={filterByPeriod.optionsArr} selectValueHandler={setDatePeriodValueHandler}/>
+                </div>
                 {/*<div className={style.dateFilter_row}>*/}
                 {/*    <span>Lien Status:</span>*/}
                 {/*    <InputSelectItem id={lienStatus.id} name={lienStatus.name} optionsArr={lienStatus.optionsArr}/>*/}

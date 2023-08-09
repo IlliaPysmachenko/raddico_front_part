@@ -75,6 +75,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*--------------------*/
+/* TODO: -Шрифты сделай тот шо побольше 11пх, тот шо поменьше (в лейблах, инпутах и тд) 10пх,
+*   плюс марджины чи пединги меньше (к примеру для чекбокс лейблов мне норм пединг 1пх 5пх
+*/
 
 html[data-theme='dark'] {
     //Brand Color
@@ -249,7 +252,7 @@ html[data-theme='light'] {
 :root {
     //Font
     --fontSize: 14px;
-    --fontSizeSM: 12px;
+    --fontSizeSM: 11px;
     --fontSizeXS: 10px;
     --fontSizeLG: 16px;
     --fontSizeXL: 20px;

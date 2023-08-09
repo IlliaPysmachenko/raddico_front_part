@@ -19,7 +19,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        //padding: var(--paddingXS);
+        padding: var(--paddingSM);
         background-color: var(--user-background, var(--colorPrimaryBgHover));
         border-left: 1px solid var(--colorBorderSecondary);
         border-right: 1px solid var(--colorBorderSecondary);
@@ -31,7 +31,11 @@
     .zipIcon{
         width: 24px;
         height: 24px;
-        fill: var(--colorText)
+        fill: var(--colorText);
+
+        &:hover {
+            fill: var(--colorPrimaryHover);
+        }
     }
 }
 

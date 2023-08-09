@@ -58,6 +58,7 @@ const SearchPanel = () => {
             institutions: checkedFacilities,
             study_date_from: dateSlice.dateFrom,
             study_date_to: dateSlice.dateTo,
+            study_date_period: dateSlice.datePeriod,
             patient_id: UseInpFieldValue('patient_id'),
             patient_name: UseInpFieldValue('patient_name'),
             patient_dob: UseInpFieldValue('patient_dob'),
@@ -79,8 +80,11 @@ const SearchPanel = () => {
 
     return (
         <div className={style.searchPanel_container}>
+
             <div className={style.searchPanel_column}>
+
                 <div className={style.searchPanel_title}>
+
                     <h5>Advanced Search Panel</h5>
                 </div>
 
@@ -92,11 +96,15 @@ const SearchPanel = () => {
                     <CheckboxGroup title={'Modality'} checkboxArr={modality}
                                    toggleCheckboxHandler={toggleCheckboxHandler}/>
                     {/*<CheckboxGroup title={'Statuses'} checkboxArr={statuses}/>*/}
-                    <div className={style.searchBtn_container}>
-                        <button className={style.searchBtn} onClick={SendSearchQuery}>Search</button>
-                    </div>
+
                 </div>
+
+                <div className={style.searchBtn_container}>
+                    <button className={style.searchBtn} onClick={SendSearchQuery}>Search</button>
+                </div>
+
             </div>
+
         </div>
     )
 }

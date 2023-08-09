@@ -7,7 +7,8 @@ const initialState: SearchBlockStateType = {
     modality: [],
     date: {
         dateFrom: '',
-        dateTo: ''
+        dateTo: '',
+        datePeriod: '',
     },
     fields: [
         {
@@ -89,10 +90,14 @@ export const searchBlockSlice = createSlice({
         setDateTo: (state, action) => {
             const date = action.payload;
             state.date.dateTo = date;
-        }
+        },
+        setDatePeriod: (state, action) => {
+            const date = action.payload;
+            state.date.datePeriod = date;
+        },
     }
 })
 
 
-export const { setDateTo,setDateFrom,setInputField, setToggleCheckboxModality, setToggleCheckboxInstitutions, setInstitutions, setModality, setToken} = searchBlockSlice.actions;
+export const { setDatePeriod, setDateTo,setDateFrom,setInputField, setToggleCheckboxModality, setToggleCheckboxInstitutions, setInstitutions, setModality, setToken} = searchBlockSlice.actions;
 export default searchBlockSlice.reducer;

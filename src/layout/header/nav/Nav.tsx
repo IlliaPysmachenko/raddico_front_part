@@ -8,7 +8,6 @@ import ColorTheme from "@/src/components/colorTheme/ColorTheme";
 
 const Nav:FC = () => {
     const {pathname} = useRouter();
-
     const navArr = [
         {
             name: 'Home',
@@ -18,46 +17,46 @@ const Nav:FC = () => {
             name: 'Configuration',
             path: '/configuration',
         },
-        {
-            name: 'Uploader',
-            path: '/uploader',
-        },
-        {
-            name: 'Report & Analytics',
-            path: '/report-analytics',
-        },
-        {
-            name: 'Marketing',
-            path: '/marketing',
-        },
-        {
-            name: 'Faxes',
-            path: '/faxes',
-        },
-        {
-            name: 'Archive (2015-2021)',
-            path: '/archive1',
-        },
-        {
-            name: 'Archive (<2015)',
-            path: '/archive2',
-        },
-        {
-            name: 'Scheduler',
-            path: '/scheduler',
-        },
-        {
-            name: 'Equipment',
-            path: '/equipment',
-        },
-        {
-            name: 'Support',
-            path: '/support',
-        },
-        {
-            name: 'Docs',
-            path: '/docs',
-        },
+        // {
+        //     name: 'Uploader',
+        //     path: '/uploader',
+        // },
+        // {
+        //     name: 'Report & Analytics',
+        //     path: '/report-analytics',
+        // },
+        // {
+        //     name: 'Marketing',
+        //     path: '/marketing',
+        // },
+        // {
+        //     name: 'Faxes',
+        //     path: '/faxes',
+        // },
+        // {
+        //     name: 'Archive (2015-2021)',
+        //     path: '/archive1',
+        // },
+        // {
+        //     name: 'Archive (<2015)',
+        //     path: '/archive2',
+        // },
+        // {
+        //     name: 'Scheduler',
+        //     path: '/scheduler',
+        // },
+        // {
+        //     name: 'Equipment',
+        //     path: '/equipment',
+        // },
+        // {
+        //     name: 'Support',
+        //     path: '/support',
+        // },
+        // {
+        //     name: 'Docs',
+        //     path: '/docs',
+        // },
     ]
     return(
         <div >

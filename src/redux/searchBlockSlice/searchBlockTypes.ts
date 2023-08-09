@@ -8,6 +8,7 @@ type CheckboxesType = {
 type DateType = {
     dateFrom: string;
     dateTo: string;
+    datePeriod: string;
 }
 
 type FieldsType = {
