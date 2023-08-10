@@ -1,0 +1,28 @@
+.errorContainer {
+    width: fit-content;
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+    padding: var(--padding);
+    border: 2px solid var(--colorErrorBorder);
+    border-radius: var(--borderRadius);
+    background: var(--colorErrorBg);
+
+    .errorBlock{
+        position: relative;
+
+        .errorTitle {
+            font-size: var(--fontSizeHeading3);
+            line-height: var(--lineHeightHeading3);
+            color: var(--colorErrorText);
+            padding-right: var(--padding);
+        }
+
+        p {
+            padding-top: var(--paddingSM);
+            color: var(--colorErrorText);
+        }
+
+    }
+
+}
