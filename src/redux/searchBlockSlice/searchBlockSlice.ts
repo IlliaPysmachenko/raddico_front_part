@@ -1,10 +1,40 @@
 import {createAsyncThunk, createSlice} from "@reduxjs/toolkit";
 import {searchApi} from "@/src/api/api";
-import {SearchBlockStateType} from "@/src/redux/searchBlockSlice/searchBlockTypes";
+import {CheckboxesType, SearchBlockStateType} from "@/src/redux/searchBlockSlice/searchBlockTypes";
+import {toggleAllCheckbox, toggleCheckbox} from "@/src/helpers/functions";
+
+
+// const toggleCheckbox = (state: SearchBlockStateType, id: string, collection: Array<CheckboxesType>) => {
+//     const checkbox = collection.find(item => item.id === id);
+//     if (checkbox) {
+//         checkbox.isChecked = !checkbox.isChecked;
+//     }
+// };
+//
+// const toggleAllCheckbox = (state: SearchBlockStateType, id: string) => {
+//     state[id].isAllChecked = !state[id].isAllChecked;
+//     if(!state[id].isAllChecked) {
+//         state[id].checkboxArr.map( (item) => {item.isChecked = false})
+//     }
+//
+//     if(state[id].isAllChecked) {
+//         state[id].checkboxArr.map( (item) => {item.isChecked = true})
+//     }
+// }
 
 const initialState: SearchBlockStateType = {
-    institutions: [],
-    modality: [],
+    institutions: {
+        id: 'institutions',
+        institutionsCount: 0,
+        isAllChecked: true,
+        checkboxArr: [],
+    },
+    modality: {
+        id: 'modality',
+        modalityCount: 0,
+        checkboxArr: [],
+        isAllChecked: true,
+    },
     date: {
         dateFrom: '',
         dateTo: '',
@@ -54,27 +84,27 @@ export const searchBlockSlice = createSlice({
     initialState,
     reducers: {
         setInstitutions: (state, action) => {
-            state.institutions = action.payload
+            state.institutions.checkboxArr = action.payload;
+            state.institutions.institutionsCount = action.payload.length;
         },
         setModality: (state, action) => {
-            state.modality = action.payload
-        },
-        setToken: (state, action) => {
-            state.csrf = action.payload
+            state.modality.checkboxArr = action.payload;
+            state.modality.modalityCount = action.payload.length;
         },
         setToggleCheckboxInstitutions: (state, action) => {
-            const id = action.payload;
-            const checkbox = state.institutions.find(item => item.id === id);
-            if (checkbox) {
-                checkbox.isChecked = !checkbox.isChecked;
-            }
+            toggleCheckbox(state, action.payload, state.institutions.checkboxArr);
         },
         setToggleCheckboxModality: (state, action) => {
-            const id = action.payload;
-            const checkbox = state.modality.find(item => item.id === id);
-            if (checkbox) {
-                checkbox.isChecked = !checkbox.isChecked;
-            }
+            toggleCheckbox(state, action.payload, state.modality.checkboxArr);
+        },
+
+        setToggleAllCheckbox: (state, {payload}) => {
+            const id = payload;
+            toggleAllCheckbox( state, id);
+        },
+
+        setToken: (state, action) => {
+            state.csrf = action.payload
         },
         setInputField: (state, action) => {
             const {id, payload} = action.payload;
@@ -83,21 +113,30 @@ export const searchBlockSlice = createSlice({
                 field.value = payload;
             }
         },
+
         setDateFrom: (state, action) => {
-            const date = action.payload;
-            state.date.dateFrom = date;
+            state.date.dateFrom = action.payload;
         },
         setDateTo: (state, action) => {
-            const date = action.payload;
-            state.date.dateTo = date;
+            state.date.dateTo = action.payload;
         },
         setDatePeriod: (state, action) => {
-            const date = action.payload;
-            state.date.datePeriod = date;
+            state.date.datePeriod = action.payload;
         },
     }
 })
 
 
-export const { setDatePeriod, setDateTo,setDateFrom,setInputField, setToggleCheckboxModality, setToggleCheckboxInstitutions, setInstitutions, setModality, setToken} = searchBlockSlice.actions;
+export const {
+    setDatePeriod,
+    setDateTo,
+    setDateFrom,
+    setInputField,
+    setToggleCheckboxModality,
+    setToggleCheckboxInstitutions,
+    setInstitutions,
+    setModality,
+    setToken,
+    setToggleAllCheckbox,
+} = searchBlockSlice.actions;
 export default searchBlockSlice.reducer;

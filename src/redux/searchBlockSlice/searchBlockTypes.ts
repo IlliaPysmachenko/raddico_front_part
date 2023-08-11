@@ -1,5 +1,5 @@
 
-type CheckboxesType = {
+export type CheckboxesType = {
     id: string;
     name: string;
     isChecked: boolean;
@@ -18,8 +18,18 @@ type FieldsType = {
 }
 
 export type SearchBlockStateType = {
-    modality: Array<CheckboxesType>;
-    institutions: Array<CheckboxesType>;
+    modality: {
+        id: string;
+        checkboxArr: Array<CheckboxesType>;
+        isAllChecked: boolean;
+        modalityCount: number;
+    };
+    institutions: {
+        id: string;
+        checkboxArr: Array<CheckboxesType>;
+        isAllChecked: boolean;
+        institutionsCount: number;
+    };
     date: DateType;
     fields: Array<FieldsType>;
     csrf: string;

@@ -10,59 +10,37 @@ import {
     setToggleCheckboxInstitutions,
     setToggleCheckboxModality
 } from "@/src/redux/searchBlockSlice/searchBlockSlice";
+import {CheckboxesType} from "@/src/redux/searchBlockSlice/searchBlockTypes";
 
 const SearchPanel = () => {
     const dispatch = useAppDispatch();
-    const modality = useAppSelector((state) => state.searchBlock.modality)
-    const institutions = useAppSelector((state) => state.searchBlock.institutions)
-    const fields = useAppSelector(state => state.searchBlock.fields);
-    const dateSlice = useAppSelector((state) => state.searchBlock.date);
-    const csrf = useAppSelector((state) => state.searchBlock.csrf);
+    const {modality, institutions, fields, date, csrf} = useAppSelector(
+        (state) => state.searchBlock
+    );
 
-    const UseInpFieldValue = (id: string) => {
-        let field = fields.find(item => item.id === id);
-        // console.log(field)
-        if (field) {
-            return field.value
-        } else {
-            return
-        }
+    const inpFieldValue = (id: string) => {
+        const field = fields.find((item) => item.id === id);
+        return field ? field.value : "";
+    };
+    const useCheckedItems = (items: Array<CheckboxesType>) => {
+        return items.filter((item) => item.isChecked).map((item) => item.name);
+    };
 
-    }
+    const checkedModality = useCheckedItems(modality.checkboxArr);
+    const checkedFacilities = useCheckedItems(institutions.checkboxArr);
 
-    const checkedModality = useAppSelector(state => {
-        let arr: Array<string> = []
-        let checkedItem = state.searchBlock.modality.filter(item => item.isChecked)
-        if (checkedItem) {
-            checkedItem.map(item => {
-                arr.push(item.name)
-            })
-        }
-        return arr;
-    })
-    const checkedFacilities = useAppSelector(state => {
-        let arr: Array<string> = []
-        let checkedItem = state.searchBlock.institutions.filter(item => item.isChecked)
-        if (checkedItem) {
-            checkedItem.map(item => {
-                arr.push(item.name)
-            })
-        }
-        return arr;
-    })
 
     const SendSearchQuery = () => {
-
         const createPayload = () => ({
             modalities: checkedModality,
             institutions: checkedFacilities,
-            study_date_from: dateSlice.dateFrom,
-            study_date_to: dateSlice.dateTo,
-            study_date_period: dateSlice.datePeriod,
-            patient_id: UseInpFieldValue('patient_id'),
-            patient_name: UseInpFieldValue('patient_name'),
-            patient_dob: UseInpFieldValue('patient_dob'),
-            refferal: UseInpFieldValue('referral'),
+            study_date_from: date.dateFrom,
+            study_date_to: date.dateTo,
+            study_date_period: date.datePeriod,
+            patient_id: inpFieldValue('patient_id'),
+            patient_name: inpFieldValue('patient_name'),
+            patient_dob: inpFieldValue('patient_dob'),
+            refferal: inpFieldValue('referral'),
             csrf,
         });
         dispatch(getStudiesThunk(createPayload()))
@@ -90,17 +68,17 @@ const SearchPanel = () => {
 
                 <div className={style.searchPanel_row}>
                     <InputFieldsGroup title={`Searching Fields`} fields={fields}/>
-                    <CheckboxGroup title={'Institutions'} checkboxArr={institutions}
+                    <CheckboxGroup id={institutions.id} isAllChecked={institutions.isAllChecked} title={'Institutions'} checkboxArr={institutions.checkboxArr}
                                    toggleCheckboxHandler={toggleCheckboxHandler}/>
                     <DateBlock/>
-                    <CheckboxGroup title={'Modality'} checkboxArr={modality}
+                    <CheckboxGroup id={modality.id} isAllChecked={modality.isAllChecked} title={'Modality'} checkboxArr={modality.checkboxArr}
                                    toggleCheckboxHandler={toggleCheckboxHandler}/>
                     {/*<CheckboxGroup title={'Statuses'} checkboxArr={statuses}/>*/}
 
-                </div>
+                    <div className={style.searchBtn_container}>
+                        <button className={style.searchBtn} onClick={SendSearchQuery}>Search</button>
+                    </div>
 
-                <div className={style.searchBtn_container}>
-                    <button className={style.searchBtn} onClick={SendSearchQuery}>Search</button>
                 </div>
 
             </div>

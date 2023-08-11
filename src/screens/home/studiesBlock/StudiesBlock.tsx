@@ -42,17 +42,23 @@ const studyTitles = [
 
 
 const StudiesBlock = () => {
-    const patientsData = useAppSelector(state => state.study.studies)
+    const {studies, totalStudiesCount, totalImagesCount} = useAppSelector(state => state.study)
     return (
         <>
+            {studies && (<div className={style.additionalInfo}>
+                <span>Total studies count: {totalStudiesCount}; </span>
+                <span>Total images count: {totalImagesCount}; </span>
+            </div>)}
 
-            {patientsData && (<div className={`${style.study_container} ${style.study_grid}`}>
+            {studies && (<div className={`${style.study_container}`}>
+
+
                 {studyTitles.map((item) => {
                     return (<div key={item.id} className={style.study_header}>{item.title}</div>)
                 })}
 
 
-                {patientsData.map((item) => {
+                {studies.map((item) => {
                     return (
                         <React.Fragment key={item.study_iuid}>
                             <div className={style.grid_item}>

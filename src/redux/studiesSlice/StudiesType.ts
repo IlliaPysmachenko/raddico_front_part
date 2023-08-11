@@ -10,5 +10,7 @@ export type StudiesType = {
 }
 
 export type StudiesArrayType = {
-    studies: Array<StudiesType> | null
+    studies: Array<StudiesType> | null;
+    totalStudiesCount: number;
+    totalImagesCount: number;
 }

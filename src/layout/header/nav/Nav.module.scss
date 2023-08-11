@@ -1,8 +1,9 @@
 .navRow{
     display: flex;
-    padding: var(--paddingXL) 0px;
+    padding: var(--paddingMD) 0px;
     background-color: var(--user-background, var(--colorPrimaryBgHover));
     border-radius: var(--borderRadius);
+    border: 2px solid var(--colorBorder);
 
     &  li {
         padding: 5px 10px;
