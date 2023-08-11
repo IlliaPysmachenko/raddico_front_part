@@ -1,26 +1,8 @@
 import {createAsyncThunk, createSlice} from "@reduxjs/toolkit";
 import {searchApi} from "@/src/api/api";
-import {CheckboxesType, SearchBlockStateType} from "@/src/redux/searchBlockSlice/searchBlockTypes";
+import { SearchBlockStateType} from "@/src/redux/searchBlockSlice/searchBlockTypes";
 import {toggleAllCheckbox, toggleCheckbox} from "@/src/helpers/functions";
 
-
-// const toggleCheckbox = (state: SearchBlockStateType, id: string, collection: Array<CheckboxesType>) => {
-//     const checkbox = collection.find(item => item.id === id);
-//     if (checkbox) {
-//         checkbox.isChecked = !checkbox.isChecked;
-//     }
-// };
-//
-// const toggleAllCheckbox = (state: SearchBlockStateType, id: string) => {
-//     state[id].isAllChecked = !state[id].isAllChecked;
-//     if(!state[id].isAllChecked) {
-//         state[id].checkboxArr.map( (item) => {item.isChecked = false})
-//     }
-//
-//     if(state[id].isAllChecked) {
-//         state[id].checkboxArr.map( (item) => {item.isChecked = true})
-//     }
-// }
 
 const initialState: SearchBlockStateType = {
     institutions: {

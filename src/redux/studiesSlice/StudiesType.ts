@@ -9,8 +9,14 @@ export type StudiesType = {
     images_count : string;
 }
 
+type StudyTitlesType = {
+    id: string;
+    title: string;
+}
+
 export type StudiesArrayType = {
-    studies: Array<StudiesType> | null;
+    studies: Array<StudiesType>;
     totalStudiesCount: number;
     totalImagesCount: number;
+    studyTitles: Array<StudyTitlesType>
 }

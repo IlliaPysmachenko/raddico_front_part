@@ -22,7 +22,7 @@ const InputSelectItem: FC<SelectItemType> = ({id, name, optionsArr,selectValueHa
         <div className={style.selectItem_container}>
             <select name={name} id={id} onChange={(e) => {selectValueHandler(id, e)}}>
                 {optionsArr.map((option) => <option key={option.value}
-                                                    defaultValue={option.value}
+                                                    value={option.value}
                                                     selected={option.checked}>{option.title}</option>)}
             </select>
         </div>

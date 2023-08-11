@@ -6,9 +6,43 @@ import {StudiesArrayType, StudiesType} from "@/src/redux/studiesSlice/StudiesTyp
 
 
 const initialState: StudiesArrayType = {
-    studies: null,
+    studies: [],
     totalImagesCount: 0,
     totalStudiesCount: 0,
+    studyTitles: [
+        {
+            id: 'icon',
+            title: '',
+        },
+        {
+            id: 'Patient MRN',
+            title: 'Patient MRN',
+        },
+        {
+            id: 'Name',
+            title: 'Name',
+        },
+        {
+            id: 'DOB',
+            title: 'DOB',
+        },
+        {
+            id: 'Study Date',
+            title: 'Study Date',
+        },
+        {
+            id: 'Modality',
+            title: 'Modality',
+        },
+        {
+            id: 'Referer',
+            title: 'Referer',
+        },
+        {
+            id: 'images_count',
+            title: 'Images count',
+        },
+    ],
 }
 
 
@@ -47,29 +81,6 @@ export const studiesSlice = createSlice({
             })
             state.totalImagesCount = count;
         }
-        // setIsCompleted(state, {payload}) {
-        //     let selectedList = state.lists.find(list => list.id === payload.id);
-        //     if (selectedList) selectedList.attributes.isCompleted = payload.attributes.isCompleted;
-        // },
-        // setTotalProductsCount(state){
-        //     state.lists.forEach(list => {
-        //         list.attributes.totalProductsCount = list.attributes.products.length;
-        //     })
-        // },
-        // setIsAddedProductsCount (state) {
-        //     state.lists.forEach((list) => {
-        //         let addedCount = 0;
-        //
-        //         for (const product of list.attributes.products) {
-        //             const [productId, productData] = Object.entries(product)[0]; // Получение данных продукта
-        //             const { isAdded } = productData; // Получение значения isAdded
-        //             if (isAdded) {
-        //                 addedCount++;
-        //             }
-        //         }
-        //         list.attributes.isAddedProductsCount = addedCount;
-        //     });
-        // },
     }
 });
 

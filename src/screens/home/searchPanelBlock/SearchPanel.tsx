@@ -41,7 +41,7 @@ const SearchPanel = () => {
             patient_name: inpFieldValue('patient_name'),
             patient_dob: inpFieldValue('patient_dob'),
             refferal: inpFieldValue('referral'),
-            csrf,
+            _token: csrf,
         });
         dispatch(getStudiesThunk(createPayload()))
     }
