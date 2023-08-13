@@ -1,13 +1,12 @@
-'use client'
-import Nav from "@/src/layout/header/nav/Nav";
+'use client';
 
+import React from 'react';
+import Nav from '@/src/layout/header/nav/Nav';
 
-const Header = () => {
-    return (
-        <>
-            <Nav/>
-        </>
-    )
+function Header() {
+  return (
+    <Nav />
+  );
 }
 
 export default Header;

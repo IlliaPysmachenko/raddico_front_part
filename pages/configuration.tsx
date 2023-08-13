@@ -1,10 +1,8 @@
-import ConfigurationPage from "@/src/screens/configuration/ConfigurationPage";
+import React from 'react';
+import ConfigurationPage from '@/src/screens/configuration/ConfigurationPage';
 
-
-const configuration = () => {
-    return (
-        <ConfigurationPage/>
-    )
-}
+const configuration = () => (
+  <ConfigurationPage />
+);
 
 export default configuration;

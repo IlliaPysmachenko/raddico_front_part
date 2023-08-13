@@ -1,11 +1,11 @@
-import style from './InputSelectGroup.module.scss';
+import React from 'react';
 
-const InputSelectGroup = () => {
-    return(
-        <>
+function InputSelectGroup() {
+  return (
+    <>
 
-        </>
-    )
+    </>
+  );
 }
 
 export default InputSelectGroup;
