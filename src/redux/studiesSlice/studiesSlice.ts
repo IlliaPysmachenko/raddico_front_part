@@ -96,12 +96,12 @@ export const studiesSlice = createSlice({
           // @ts-ignore
           if (a[state.sortConfig.key] < b[state.sortConfig.key]) {
             // @ts-ignore
-            return state.sortConfig.direction === 'ascending' ? -1 : 1;
+            return state.sortConfig.direction === 'ASC' ? -1 : 1;
           }
           // @ts-ignore
           if (a[state.sortConfig.key] > b[state.sortConfig.key]) {
             // @ts-ignore
-            return state.sortConfig.direction === 'ascending' ? 1 : -1;
+            return state.sortConfig.direction === 'ASC' ? 1 : -1;
           }
           return 0;
         });

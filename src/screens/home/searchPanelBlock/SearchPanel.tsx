@@ -15,10 +15,13 @@ import style from './SearchPanel.module.scss';
 function SearchPanel() {
   const dispatch = useAppDispatch();
   const {
-    modality, institutions, fields, date, csrf,
-  } = useAppSelector(
-    (state) => state.searchBlock,
-  );
+    modality,
+    institutions,
+    fields,
+    date,
+    csrf,
+  } = useAppSelector((state) => state.searchBlock);
+  const { key: sort_key, direction: sort_direction } = useAppSelector((state) => state.study.sortConfig);
 
   const inpFieldValue = (id: string) => {
     const field = fields.find((item) => item.id === id);
@@ -41,6 +44,8 @@ function SearchPanel() {
       patient_name: inpFieldValue('patient_name'),
       patient_dob: inpFieldValue('patient_dob'),
       refferal: inpFieldValue('referral'),
+      sort_direction,
+      sort_key,
       _token: csrf,
     });
     dispatch(getStudiesThunk(createPayload()));

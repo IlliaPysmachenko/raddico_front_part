@@ -31,6 +31,33 @@
         border-bottom: 1px solid var(--colorBorderSecondary);
         text-align: center;
         height: 100%;
+
+        .sortingBtn {
+            color: var(--colorText);
+            background-color: transparent;
+
+            &:hover {
+                color: var(--colorPrimaryHover);
+            }
+        }
+
+        .ascending:after {
+            content: "\2193";
+            padding-left: var(--paddingXS);
+            text-decoration: none;
+            color: var(--colorText);
+        }
+
+        .descending:after {
+            content: "\2191";
+            padding-left: var(--paddingXS);
+            text-decoration: none;
+            color: var(--colorText);
+        }
+
+        .activeSorting {
+            border-bottom: 1px solid var(--colorText);
+        }
     }
 
     .grid_item {

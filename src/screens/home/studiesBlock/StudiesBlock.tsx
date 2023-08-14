@@ -16,8 +16,15 @@ function StudiesBlock() {
     sortConfig,
   } = useAppSelector((state) => state.study);
   const dispatch = useAppDispatch();
-  // @ts-ignore
-  // const { items, requestSort, sortConfig } = useSortableData(studies);
+  const requestSortHandler = (sortingBy: string) => {
+    let direction;
+    if (sortConfig.direction === 'ASC') {
+      direction = 'DESC';
+    } else {
+      direction = 'ASC';
+    }
+    dispatch(requestSort([sortingBy, direction]));
+  };
 
   const additionalInfo = studies && (
     <div className={style.additionalInfo}>
@@ -27,7 +34,6 @@ function StudiesBlock() {
       <span>Total images count: {totalImagesCount};</span>
     </div>
   );
-
   const studiesTable = studies && studies.map((item) => (
     <React.Fragment key={item.study_iuid}>
       <div className={style.grid_item}>
@@ -70,24 +76,22 @@ function StudiesBlock() {
       {/* <div className={style.grid_item}><Checkbox id={item.id} name={''} isChecked={item.checked}/></div> */}
     </React.Fragment>
   ));
-
-  // const getClassNamesFor = (name: string) => {
-  //   if (!sortConfig) {
-  //     return;
-  //   }
-  //   // eslint-disable-next-line consistent-return
-  //   return sortConfig.key === name ? sortConfig.direction : undefined;
-  // };
-
-  const requestSortHandler = (sortingBy: string) => {
-    let direction;
-    if (sortConfig.direction === 'ascending') {
-      direction = 'descending';
-    } else {
-      direction = 'ascending';
-    }
-    dispatch(requestSort([sortingBy, direction]));
-  };
+  const studiesTableHeader = studyTitles.map((item) => (
+    <div key={item.id} className={style.study_header}>
+      <button
+        type="button"
+        onClick={() => requestSortHandler(item.id)}
+        className={
+          `${style.sortingBtn} 
+           ${sortConfig.key === item.id ? `${style.activeSorting}` : ''} 
+           ${(sortConfig.key === item.id && sortConfig.direction === 'ASC') ? `${style.ascending}` : ''}
+           ${(sortConfig.key === item.id && sortConfig.direction === 'DESC') ? `${style.descending}` : ''}`
+        }
+      >
+        {item.title}
+      </button>
+    </div>
+  ));
 
   return (
     <>
@@ -95,19 +99,8 @@ function StudiesBlock() {
 
       {studies && (
         <div className={`${style.study_container}`}>
-          {studyTitles.map((item) => (
-            <div key={item.id} className={style.study_header}>
-              <button
-                type="button"
-                onClick={() => requestSortHandler(item.id)}
-                className=""
-              >
-                {item.title}
-              </button>
-            </div>
-          ))}
+          {studiesTableHeader}
           {studiesTable}
-
         </div>
       )}
     </>
@@ -115,43 +108,3 @@ function StudiesBlock() {
 }
 
 export default StudiesBlock;
-
-// export const useSortableData = (items, config = null) => {
-//   const [sortConfig, setSortConfig] = React.useState(config);
-//
-//   const sortedItems = React.useMemo(() => {
-//     const sortableItems = [...items];
-//     if (sortConfig !== null) {
-//       sortableItems.sort((a, b) => {
-//         if (a[sortConfig.key] < b[sortConfig.key]) {
-//           return sortConfig.direction === 'ascending' ? -1 : 1;
-//         }
-//         if (a[sortConfig.key] > b[sortConfig.key]) {
-//           return sortConfig.direction === 'ascending' ? 1 : -1;
-//         }
-//         return 0;
-//       });
-//     }
-//     return sortableItems;
-//   }, [items, sortConfig]);
-//
-//   const requestSort = (key: any) => {
-//     let direction = 'ascending';
-//     if (sortConfig && sortConfig.key === key && sortConfig.direction === 'ascending') {
-//       direction = 'descending';
-//     }
-//     setSortConfig({ key, direction });
-//   };
-//
-//   return { items: sortedItems, requestSort, sortConfig };
-// };
-
-// const ProductTable = (props) => {
-//   const { items, requestSort, sortConfig } = useSortableData(props.products);
-//   const getClassNamesFor = (name) => {
-//     if (!sortConfig) {
-//       return;
-//     }
-//     return sortConfig.key === name ? sortConfig.direction : undefined;
-//   };
-// };
