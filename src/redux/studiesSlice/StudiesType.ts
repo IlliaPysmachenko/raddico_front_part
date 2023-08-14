@@ -14,9 +14,15 @@ type StudyTitlesType = {
   title: string;
 };
 
+export type SortConfigType = {
+  direction: string | null;
+  key: string;
+};
+
 export type StudiesArrayType = {
   studies: Array<StudiesType> | null;
   totalStudiesCount: number;
   totalImagesCount: number;
-  studyTitles: Array<StudyTitlesType>
+  studyTitles: Array<StudyTitlesType>;
+  sortConfig: SortConfigType;
 };

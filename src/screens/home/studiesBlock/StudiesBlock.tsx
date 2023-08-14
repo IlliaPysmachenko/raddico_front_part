@@ -2,8 +2,9 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { useAppSelector } from '@/src/redux/hooks';
+import { useAppDispatch, useAppSelector } from '@/src/redux/hooks';
 import { Search, ZipFile } from '@/src/assets/icons';
+import { requestSort } from '@/src/redux/studiesSlice/studiesSlice';
 import style from './StudiesBlock.module.scss';
 
 function StudiesBlock() {
@@ -12,14 +13,18 @@ function StudiesBlock() {
     totalStudiesCount,
     totalImagesCount,
     studyTitles,
+    sortConfig,
   } = useAppSelector((state) => state.study);
+  const dispatch = useAppDispatch();
+  // @ts-ignore
+  // const { items, requestSort, sortConfig } = useSortableData(studies);
 
   const additionalInfo = studies && (
     <div className={style.additionalInfo}>
       {/* eslint-disable-next-line */}
-      <span>Total studies count: { totalStudiesCount }; </span>
+      <span>Total studies count: {totalStudiesCount}; </span>
       {/* eslint-disable-next-line */}
-      <span>Total images count: { totalImagesCount };</span>
+      <span>Total images count: {totalImagesCount};</span>
     </div>
   );
 
@@ -66,6 +71,24 @@ function StudiesBlock() {
     </React.Fragment>
   ));
 
+  // const getClassNamesFor = (name: string) => {
+  //   if (!sortConfig) {
+  //     return;
+  //   }
+  //   // eslint-disable-next-line consistent-return
+  //   return sortConfig.key === name ? sortConfig.direction : undefined;
+  // };
+
+  const requestSortHandler = (sortingBy: string) => {
+    let direction;
+    if (sortConfig.direction === 'ascending') {
+      direction = 'descending';
+    } else {
+      direction = 'ascending';
+    }
+    dispatch(requestSort([sortingBy, direction]));
+  };
+
   return (
     <>
       {additionalInfo}
@@ -73,7 +96,16 @@ function StudiesBlock() {
       {studies && (
         <div className={`${style.study_container}`}>
           {studyTitles.map((item) => (
-            <div key={item.id} className={style.study_header}>{item.title}</div>))}
+            <div key={item.id} className={style.study_header}>
+              <button
+                type="button"
+                onClick={() => requestSortHandler(item.id)}
+                className=""
+              >
+                {item.title}
+              </button>
+            </div>
+          ))}
           {studiesTable}
 
         </div>
@@ -83,3 +115,43 @@ function StudiesBlock() {
 }
 
 export default StudiesBlock;
+
+// export const useSortableData = (items, config = null) => {
+//   const [sortConfig, setSortConfig] = React.useState(config);
+//
+//   const sortedItems = React.useMemo(() => {
+//     const sortableItems = [...items];
+//     if (sortConfig !== null) {
+//       sortableItems.sort((a, b) => {
+//         if (a[sortConfig.key] < b[sortConfig.key]) {
+//           return sortConfig.direction === 'ascending' ? -1 : 1;
+//         }
+//         if (a[sortConfig.key] > b[sortConfig.key]) {
+//           return sortConfig.direction === 'ascending' ? 1 : -1;
+//         }
+//         return 0;
+//       });
+//     }
+//     return sortableItems;
+//   }, [items, sortConfig]);
+//
+//   const requestSort = (key: any) => {
+//     let direction = 'ascending';
+//     if (sortConfig && sortConfig.key === key && sortConfig.direction === 'ascending') {
+//       direction = 'descending';
+//     }
+//     setSortConfig({ key, direction });
+//   };
+//
+//   return { items: sortedItems, requestSort, sortConfig };
+// };
+
+// const ProductTable = (props) => {
+//   const { items, requestSort, sortConfig } = useSortableData(props.products);
+//   const getClassNamesFor = (name) => {
+//     if (!sortConfig) {
+//       return;
+//     }
+//     return sortConfig.key === name ? sortConfig.direction : undefined;
+//   };
+// };

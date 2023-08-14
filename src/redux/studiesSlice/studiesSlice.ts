@@ -12,27 +12,27 @@ const initialState: StudiesArrayType = {
       title: '',
     },
     {
-      id: 'Patient MRN',
+      id: 'patient_id',
       title: 'Patient MRN',
     },
     {
-      id: 'Name',
+      id: 'patient_name',
       title: 'Name',
     },
     {
-      id: 'DOB',
+      id: 'patient_dob',
       title: 'DOB',
     },
     {
-      id: 'Study Date',
+      id: 'study_date',
       title: 'Study Date',
     },
     {
-      id: 'Modality',
+      id: 'modalities',
       title: 'Modality',
     },
     {
-      id: 'Referer',
+      id: 'referral',
       title: 'Referer',
     },
     {
@@ -40,6 +40,10 @@ const initialState: StudiesArrayType = {
       title: 'Images count',
     },
   ],
+  sortConfig: {
+    direction: null,
+    key: '',
+  },
 };
 
 type AsyncThunkAction = any;
@@ -80,8 +84,36 @@ export const studiesSlice = createSlice({
       });
       state.totalImagesCount = count;
     },
+    requestSort: (state, { payload }) => {
+      const [key, direction] = payload;
+      state.sortConfig.direction = direction;
+      state.sortConfig.key = key;
+
+      // @ts-ignore
+      if (state.sortConfig) {
+        // @ts-ignore
+        state.studies.sort((a: StudiesType[], b: StudiesType[]) => {
+          // @ts-ignore
+          if (a[state.sortConfig.key] < b[state.sortConfig.key]) {
+            // @ts-ignore
+            return state.sortConfig.direction === 'ascending' ? -1 : 1;
+          }
+          // @ts-ignore
+          if (a[state.sortConfig.key] > b[state.sortConfig.key]) {
+            // @ts-ignore
+            return state.sortConfig.direction === 'ascending' ? 1 : -1;
+          }
+          return 0;
+        });
+      }
+    },
   },
 });
 
-export const { setStudies, setTotalStudiesCount, setTotalImagesCount } = studiesSlice.actions;
+export const {
+  requestSort,
+  setStudies,
+  setTotalStudiesCount,
+  setTotalImagesCount,
+} = studiesSlice.actions;
 export default studiesSlice.reducer;
