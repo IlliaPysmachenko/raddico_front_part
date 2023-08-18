@@ -7,6 +7,7 @@ export type StudiesType = {
   modalities: string;
   referral: string;
   images_count: string;
+  isChecked: boolean;
 };
 
 type StudyTitlesType = {

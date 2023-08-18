@@ -39,6 +39,10 @@ const initialState: StudiesArrayType = {
       id: 'images_count',
       title: 'Images count',
     },
+    {
+      id: 'study_action',
+      title: 'Action',
+    },
   ],
   sortConfig: {
     direction: null,
@@ -72,6 +76,11 @@ export const studiesSlice = createSlice({
   reducers: {
     setStudies: (state, action) => {
       state.studies = action.payload;
+      if (state.studies) {
+        state.studies.forEach((item) => {
+          item.isChecked = false;
+        });
+      }
     },
     setTotalStudiesCount: (state, action) => {
       state.totalStudiesCount = action.payload.length;
@@ -89,22 +98,26 @@ export const studiesSlice = createSlice({
       state.sortConfig.direction = direction;
       state.sortConfig.key = key;
 
-      // @ts-ignore
-      if (state.sortConfig) {
-        // @ts-ignore
-        state.studies.sort((a: StudiesType[], b: StudiesType[]) => {
-          // @ts-ignore
-          if (a[state.sortConfig.key] < b[state.sortConfig.key]) {
-            // @ts-ignore
+      if (state.sortConfig && state.studies) {
+        state.studies.sort((a: StudiesType, b: StudiesType) => {
+          // eslint-disable-next-line max-len
+          if (a[state.sortConfig.key as keyof StudiesType] < b[state.sortConfig.key as keyof StudiesType]) {
             return state.sortConfig.direction === 'ASC' ? -1 : 1;
           }
-          // @ts-ignore
-          if (a[state.sortConfig.key] > b[state.sortConfig.key]) {
-            // @ts-ignore
+          // eslint-disable-next-line max-len
+          if (a[state.sortConfig.key as keyof StudiesType] > b[state.sortConfig.key as keyof StudiesType]) {
             return state.sortConfig.direction === 'ASC' ? 1 : -1;
           }
           return 0;
         });
+      }
+    },
+    setToggleStudyChecked: (state, { payload }) => {
+      const { id, isChecked } = payload;
+
+      if (state.studies) {
+        const checkedStudy = state.studies.find((item) => item.study_iuid === id);
+        if (checkedStudy) checkedStudy.isChecked = isChecked;
       }
     },
   },
@@ -115,5 +128,6 @@ export const {
   setStudies,
   setTotalStudiesCount,
   setTotalImagesCount,
+  setToggleStudyChecked
 } = studiesSlice.actions;
 export default studiesSlice.reducer;
