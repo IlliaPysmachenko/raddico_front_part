@@ -1,3 +1,5 @@
+import { OptionsArrType } from '@/src/components/inputSelectItem/InputSelectItem';
+
 export type StudiesType = {
   study_iuid: string;
   patient_id: string;
@@ -8,6 +10,12 @@ export type StudiesType = {
   referral: string;
   images_count: string;
   isChecked: boolean;
+};
+
+export type DestinationServerType = {
+  id: string;
+  name: string;
+  optionsArr: Array<OptionsArrType>;
 };
 
 type StudyTitlesType = {
@@ -25,5 +33,6 @@ export type StudiesArrayType = {
   totalStudiesCount: number;
   totalImagesCount: number;
   studyTitles: Array<StudyTitlesType>;
+  destinationServer: DestinationServerType;
   sortConfig: SortConfigType;
 };

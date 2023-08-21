@@ -1,17 +1,17 @@
 import React, { ChangeEvent } from 'react';
 import style from './InputSelectItem.module.scss';
 
-type OptionsArrType = {
+export type OptionsArrType = {
   value: string;
   title: string;
-  checked: boolean;
+  selected: boolean;
 };
 
-type SelectItemType = {
+type SelectItemPropsType = {
   id: string;
   name: string;
   optionsArr: Array<OptionsArrType>;
-  selectValueHandler: (id: string, e: ChangeEvent<HTMLSelectElement>) => void;
+  selectValueHandler: (e: ChangeEvent<HTMLSelectElement>, id?: string) => void;
 };
 
 function InputSelectItem({
@@ -19,7 +19,7 @@ function InputSelectItem({
   name,
   optionsArr,
   selectValueHandler,
-}: SelectItemType) {
+}: SelectItemPropsType) {
   return (
     <div className={style.selectItem_container}>
       {/* eslint-disable-next-line react/react-in-jsx-scope */}
@@ -27,14 +27,14 @@ function InputSelectItem({
         name={name}
         id={id}
         onChange={(e) => {
-          selectValueHandler(id, e);
+          selectValueHandler(e, id);
         }}
       >
         {optionsArr.map((option) => (
           <option
             key={option.value}
             value={option.value}
-            selected={option.checked}
+            selected={option.selected}
           >
             {option.title}
           </option>

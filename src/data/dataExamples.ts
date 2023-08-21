@@ -7,32 +7,32 @@ export const filterByPeriod = {
     {
       value: '',
       title: '*',
-      checked: true,
+      selected: true,
     },
     {
       value: 'Yesterday',
       title: 'Yesterday',
-      checked: false,
+      selected: false,
     },
     {
       value: 'This_Week',
       title: 'This Week',
-      checked: false,
+      selected: false,
     },
     {
       value: 'Last_Week',
       title: 'Last Week',
-      checked: false,
+      selected: false,
     },
     {
       value: 'This_Month',
       title: 'This Month',
-      checked: false,
+      selected: false,
     },
     {
       value: 'Last_Month',
       title: 'Last Month',
-      checked: false,
+      selected: false,
     },
   ],
 };

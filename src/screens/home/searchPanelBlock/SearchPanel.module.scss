@@ -11,26 +11,26 @@
         flex-direction: column;
         width: 100%;
     }
-    .searchBtn_container{
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-        padding: var(--padding);
-
-
-        .searchBtn {
-            background: var(--colorInfo);
-            color: white;
-            border: 1px solid var(--colorPrimaryBorder);
-            border-radius: var(--borderRadius);
-            padding: var(--paddingXS) var(--padding);
-            transition: all ease 0.3s;
-
-            &:hover {
-                background: var(--colorPrimaryBgHover);
-            }
-        }
-    }
+    //.searchBtn_container{
+    //    display: flex;
+    //    justify-content: center;
+    //    align-items: flex-start;
+    //    padding: var(--padding);
+    //
+    //
+    //    .searchBtn {
+    //        background: var(--colorInfo);
+    //        color: white;
+    //        border: 1px solid var(--colorPrimaryBorder);
+    //        border-radius: var(--borderRadius);
+    //        padding: var(--paddingXS) var(--padding);
+    //        transition: all ease 0.3s;
+    //
+    //        &:hover {
+    //            background: var(--colorPrimaryBgHover);
+    //        }
+    //    }
+    //}
 
     .searchPanel_title {
         display: flex;

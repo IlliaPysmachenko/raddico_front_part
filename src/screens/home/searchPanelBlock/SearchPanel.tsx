@@ -10,6 +10,7 @@ import {
   setToggleCheckboxModality,
 } from '@/src/redux/searchBlockSlice/searchBlockSlice';
 import { CheckboxesType } from '@/src/redux/searchBlockSlice/searchBlockTypes';
+import Button from '@/src/components/button/Button';
 import style from './SearchPanel.module.scss';
 
 function SearchPanel() {
@@ -21,6 +22,7 @@ function SearchPanel() {
     date,
     csrf,
   } = useAppSelector((state) => state.searchBlock);
+  // eslint-disable-next-line max-len,@typescript-eslint/naming-convention
   const { key: sort_key, direction: sort_direction } = useAppSelector((state) => state.study.sortConfig);
 
   const inpFieldValue = (id: string) => {
@@ -53,7 +55,7 @@ function SearchPanel() {
 
   useEffect(() => {
     dispatch(getOptions());
-  }, []);
+  }, [dispatch]);
 
   const toggleCheckboxHandler = (id: string, title: string) => {
     if (title === 'Modality') dispatch(setToggleCheckboxModality(id));
@@ -87,11 +89,8 @@ function SearchPanel() {
             checkboxArr={modality.checkboxArr}
             toggleCheckboxHandler={toggleCheckboxHandler}
           />
-          {/* <CheckboxGroup title={'Statuses'} checkboxArr={statuses}/> */}
 
-          <div className={style.searchBtn_container}>
-            <button type="submit" className={style.searchBtn} onClick={SendSearchQuery}>Search</button>
-          </div>
+          <Button title="Search" handler={SendSearchQuery} />
 
         </div>
 

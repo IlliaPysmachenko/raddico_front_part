@@ -1,9 +1,18 @@
-.additionalInfo {
+.additionalInfo_container {
+    display: flex;
+    justify-content: space-around;
     padding: var(--padding);
     margin-top: var(--margin);
     border: 2px solid var(--colorBorder);
     border-radius: var(--borderRadius);
     background: var(--colorBgContainer);
+
+    .additionalActions {
+        flex: 1 1 auto;
+        display: flex;
+        max-width: 30%;
+        justify-content: space-around;
+    }
 }
 
 .study_container {

@@ -4,9 +4,11 @@ import React from 'react';
 import Link from 'next/link';
 import { useAppDispatch, useAppSelector } from '@/src/redux/hooks';
 import { Search, ZipFile } from '@/src/assets/icons';
-import { requestSort, setToggleStudyChecked } from '@/src/redux/studiesSlice/studiesSlice';
+import { requestSort, setDestinationServer, setToggleStudyChecked } from '@/src/redux/studiesSlice/studiesSlice';
 import Checkbox from '@/src/components/checkbox/Checkbox';
+import WithSelect from '@/src/hoc/withSelect';
 import style from './StudiesBlock.module.scss';
+import Button from "@/src/components/button/Button";
 
 function StudiesBlock() {
   const {
@@ -15,6 +17,7 @@ function StudiesBlock() {
     totalImagesCount,
     studyTitles,
     sortConfig,
+    destinationServer,
   } = useAppSelector((state) => state.study);
   const dispatch = useAppDispatch();
   const requestSortHandler = (sortingBy: string) => {
@@ -28,13 +31,26 @@ function StudiesBlock() {
   };
 
   const additionalInfo = studies && (
-    <div className={style.additionalInfo}>
-      {/* eslint-disable-next-line */}
-      <span>Total studies count: {totalStudiesCount}; </span>
-      {/* eslint-disable-next-line */}
-      <span>Total images count: {totalImagesCount};</span>
+    <div className={style.additionalInfo_container}>
+      <div className={style.additionalInfo}>
+        {/* eslint-disable-next-line */}
+        <span>Total studies count: {totalStudiesCount}; </span>
+        {/* eslint-disable-next-line */}
+        <span>Total images count: {totalImagesCount};</span>
+      </div>
+      <div className={style.additionalActions}>
+        <WithSelect
+          id={destinationServer.id}
+          name={destinationServer.name}
+          optionsArr={destinationServer.optionsArr}
+          action={setDestinationServer}
+        />
+
+        <Button title="Send exams" />
+      </div>
     </div>
   );
+
   const studiesTable = studies && studies.map((item) => {
     const toggleCheckboxHandler = (id: String) => {
       // debugger
