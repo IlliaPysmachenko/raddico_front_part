@@ -6,13 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="b3bf699e-b4fb-49dd-ad56-118674db30a4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/api.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/checkboxGroup/CheckboxGroup.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/checkboxGroup/CheckboxGroup.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/inputFieldsGroup/InputFieldsGroup.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/inputFieldsGroup/InputFieldsGroup.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/inputSelectItem/InputSelectItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/inputSelectItem/InputSelectItem.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/dataExamples.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/dataExamples.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/hoc/withSelect.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/hoc/withSelect.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/studiesSlice/StudiesType.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/studiesSlice/StudiesType.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/studiesSlice/studiesSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/studiesSlice/studiesSlice.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/home/searchPanelBlock/SearchPanel.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/searchPanelBlock/SearchPanel.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/screens/home/searchPanelBlock/SearchPanel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/searchPanelBlock/SearchPanel.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/home/searchPanelBlock/dateBlock/DateBlock.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/searchPanelBlock/dateBlock/DateBlock.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/screens/home/studiesBlock/StudiesBlock.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/studiesBlock/StudiesBlock.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/screens/home/studiesBlock/StudiesBlock.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/studiesBlock/StudiesBlock.tsx" afterDir="false" />
     </list>
@@ -54,30 +55,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "D:/Projects/FSD examples/React + RTK todo app",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "ts.external.directory.path": "D:\\Projects\\Raddico front-end part\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Projects/FSD examples/React + RTK todo app&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;D:\\Projects\\Raddico front-end part\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
-      "TypeScript"
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;TypeScript&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Алёна\OneDrive\Рабочий стол\Илья\Projects\raddico_front_part\src\redux\facilitiesSlice" />
@@ -150,7 +151,8 @@
       <workItem from="1692626054504" duration="3961000" />
       <workItem from="1692636370629" duration="975000" />
       <workItem from="1692643395692" duration="254000" />
-      <workItem from="1692643673282" duration="8917000" />
+      <workItem from="1692643673282" duration="9034000" />
+      <workItem from="1692694504143" duration="9878000" />
     </task>
     <servers />
   </component>

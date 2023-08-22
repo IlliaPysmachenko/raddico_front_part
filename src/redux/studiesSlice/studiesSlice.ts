@@ -41,13 +41,13 @@ const initialState: StudiesArrayType = {
     },
     {
       id: 'study_action',
-      title: 'Action',
+      title: '',
     },
   ],
   destinationServer: {
     id: 'destinationServer',
     name: 'aetitles',
-    selectedOption: 'Destination Server',
+    selectedOption: '',
     optionsArr: null,
   },
   sortConfig: {

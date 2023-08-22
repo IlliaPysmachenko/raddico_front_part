@@ -10,7 +10,7 @@ export type OptionsArrType = {
 type SelectItemPropsType = {
   id: string;
   name: string;
-  optionsArr: Array<OptionsArrType>;
+  optionsArr: Array<OptionsArrType> | null;
   selectValueHandler: (e: ChangeEvent<HTMLSelectElement>, id?: string) => void;
 };
 
@@ -20,26 +20,31 @@ function InputSelectItem({
   optionsArr,
   selectValueHandler,
 }: SelectItemPropsType) {
+  const showOptions = optionsArr && optionsArr.map((option) => (
+    <option
+      key={option.id}
+      value={option.name}
+      // selected={option.selected}
+    >
+      {option.name}
+    </option>
+  ));
+
+  const displaySelect = (
+    <select
+      name={name}
+      id={id}
+      onChange={(e) => {
+        selectValueHandler(e, id);
+      }}
+    >
+      {showOptions}
+    </select>
+  );
+
   return (
     <div className={style.selectItem_container}>
-      {/* eslint-disable-next-line react/react-in-jsx-scope */}
-      <select
-        name={name}
-        id={id}
-        onChange={(e) => {
-          selectValueHandler(e, id);
-        }}
-      >
-        {optionsArr.map((option) => (
-          <option
-            key={option.id}
-            value={option.id}
-            // selected={option.selected}
-          >
-            {option.name}
-          </option>
-        ))}
-      </select>
+      {displaySelect}
     </div>
   );
 }

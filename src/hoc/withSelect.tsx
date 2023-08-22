@@ -1,4 +1,4 @@
-import React, { ChangeEvent } from 'react';
+import React, { ChangeEvent, useEffect } from 'react';
 import { ActionCreatorWithPayload } from '@reduxjs/toolkit';
 import InputSelectItem, { OptionsArrType } from '@/src/components/inputSelectItem/InputSelectItem';
 import { useAppDispatch } from '@/src/redux/hooks';
@@ -21,6 +21,12 @@ const WithSelect: React.FC<WithSelectProps> = ({
   const selectValueHandler = (e: ChangeEvent<HTMLSelectElement>) => {
     dispatch(action(e.target.value));
   };
+
+  useEffect(() => {
+    if (optionsArr) {
+      dispatch(action(optionsArr[0].id));
+    }
+  }, []);
 
   return (
     <InputSelectItem

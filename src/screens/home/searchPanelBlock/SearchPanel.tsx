@@ -69,7 +69,6 @@ function SearchPanel() {
       <div className={style.searchPanel_column}>
 
         <div className={style.searchPanel_title}>
-
           <h5>Advanced Search Panel</h5>
         </div>
 

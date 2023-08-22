@@ -60,7 +60,9 @@ function StudiesBlock() {
           action={setDestinationServer}
         />
 
-        <Button title="Send exams" handler={sendExamsHandler} />
+        <div className={style.additionalInfo_btn}>
+          <Button title="Send exams" handler={sendExamsHandler} />
+        </div>
       </div>
     </div>
   );
@@ -96,39 +98,34 @@ function StudiesBlock() {
         <div className={style.grid_item}>{item.modalities}</div>
         <div className={style.grid_item}>{item.referral}</div>
         <div className={style.grid_item}>{item.images_count}</div>
-        {/* <div className={style.grid_item}>{item.symptoms}</div> */}
-        {/* <div className={style.grid_item}>{item.notes}</div> */}
-        {/* <div className={style.grid_item}>{item.lm}</div> */}
-        {/* <div className={style.grid_item}>{item.imgCenter}</div> */}
-        {/* <div className={style.grid_item}>{item.value}</div> */}
-        {/* <div className={style.grid_item}>{item.studyDate}</div> */}
-        {/* <div className={style.grid_item}>{item.referrer}</div> */}
-        {/* <div className={style.grid_item}>{item.assignment}</div> */}
-        {/* <div className={style.grid_item}>{item.status}</div> */}
-        {/* /!*<div className={style.grid_item}>{item.action}</div>*!/ */}
-        {/* <div className={style.grid_item}>{item.proofreading}</div> */}
-        <div className={style.grid_item}>
+        <div className={`${style.grid_item} ${style.centered}`}>
           <Checkbox id={item.study_iuid} name="" isChecked={item.isChecked} toggleCheckboxHandler={toggleCheckboxHandler} title="" />
         </div>
       </React.Fragment>
     );
   });
-  const studiesTableHeader = studyTitles.map((item) => (
-    <div key={item.id} className={style.study_header}>
-      <button
-        type="button"
-        onClick={() => requestSortHandler(item.id)}
-        className={
-          `${style.sortingBtn} 
+  const studiesTableHeader = studyTitles.map((item) => {
+    const toggleCheckboxHandler = () => {};
+    return (
+      <div key={item.id} className={style.study_header}>
+        {item.id === 'study_action'
+          ? <Checkbox id={item.id} name="" isChecked={false} toggleCheckboxHandler={toggleCheckboxHandler} title="" /> : (
+            <button
+              type="button"
+              onClick={() => requestSortHandler(item.id)}
+              className={
+                `${style.sortingBtn} 
            ${sortConfig.key === item.id ? `${style.activeSorting}` : ''} 
            ${(sortConfig.key === item.id && sortConfig.direction === 'ASC') ? `${style.ascending}` : ''}
            ${(sortConfig.key === item.id && sortConfig.direction === 'DESC') ? `${style.descending}` : ''}`
-        }
-      >
-        {item.title}
-      </button>
-    </div>
-  ));
+              }
+            >
+              {item.title}
+            </button>
+          )}
+      </div>
+    );
+  });
 
   return (
     <>
