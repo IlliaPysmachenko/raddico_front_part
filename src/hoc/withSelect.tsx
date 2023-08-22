@@ -24,7 +24,7 @@ const WithSelect: React.FC<WithSelectProps> = ({
 
   useEffect(() => {
     if (optionsArr) {
-      dispatch(action(optionsArr[0].id));
+      dispatch(action(optionsArr[0].name));
     }
   }, []);
 

@@ -44,6 +44,7 @@ const initialState: StudiesArrayType = {
       title: '',
     },
   ],
+  checkAllStudies: false,
   destinationServer: {
     id: 'destinationServer',
     name: 'aetitles',
@@ -93,7 +94,7 @@ export const getTitles = createAsyncThunk(
 export const sendStudyActions = createAsyncThunk(
   'studies/sendStudyActions',
   // eslint-disable-next-line consistent-return
-  async (data: AsyncThunkAction, { rejectWithValue, dispatch }) => {
+  async (data: AsyncThunkAction, { rejectWithValue }) => {
     try {
       const res = await studiesActionsApi.sendStudyAction(JSON.stringify(data));
       // eslint-disable-next-line @typescript-eslint/no-use-before-define
@@ -162,6 +163,13 @@ export const studiesSlice = createSlice({
         state.destinationServer.selectedOption = payload;
       }
     },
+    checkAllStudiesToggle: (state, { payload }) => {
+      state.checkAllStudies = payload;
+      if (state.studies) {
+        // eslint-disable-next-line no-return-assign
+        state.studies.map((item) => item.isChecked = payload);
+      }
+    },
   },
 });
 
@@ -173,5 +181,6 @@ export const {
   setToggleStudyChecked,
   setAeTitles,
   setDestinationServer,
+  checkAllStudiesToggle,
 } = studiesSlice.actions;
 export default studiesSlice.reducer;

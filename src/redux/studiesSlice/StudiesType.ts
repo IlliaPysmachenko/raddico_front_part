@@ -33,6 +33,7 @@ export type StudiesArrayType = {
   studies: Array<StudiesType> | null;
   totalStudiesCount: number;
   totalImagesCount: number;
+  checkAllStudies: boolean;
   studyTitles: Array<StudyTitlesType>;
   destinationServer: DestinationServerType;
   sortConfig: SortConfigType;

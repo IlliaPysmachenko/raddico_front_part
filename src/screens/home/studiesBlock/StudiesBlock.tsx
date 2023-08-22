@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { useAppDispatch, useAppSelector } from '@/src/redux/hooks';
 import { Search, ZipFile } from '@/src/assets/icons';
 import {
+  checkAllStudiesToggle,
   requestSort,
   sendStudyActions,
   setDestinationServer,
@@ -23,6 +24,7 @@ function StudiesBlock() {
     studyTitles,
     sortConfig,
     destinationServer,
+    checkAllStudies,
   } = useAppSelector((state) => state.study);
   const dispatch = useAppDispatch();
   const requestSortHandler = (sortingBy: string) => {
@@ -105,19 +107,21 @@ function StudiesBlock() {
     );
   });
   const studiesTableHeader = studyTitles.map((item) => {
-    const toggleCheckboxHandler = () => {};
+    const toggleCheckboxHandler = () => {
+      dispatch(checkAllStudiesToggle(!checkAllStudies));
+    };
     return (
       <div key={item.id} className={style.study_header}>
         {item.id === 'study_action'
-          ? <Checkbox id={item.id} name="" isChecked={false} toggleCheckboxHandler={toggleCheckboxHandler} title="" /> : (
+          ? <Checkbox id={item.id} name="" isChecked={checkAllStudies} toggleCheckboxHandler={toggleCheckboxHandler} title="" /> : (
             <button
               type="button"
               onClick={() => requestSortHandler(item.id)}
               className={
                 `${style.sortingBtn} 
-           ${sortConfig.key === item.id ? `${style.activeSorting}` : ''} 
-           ${(sortConfig.key === item.id && sortConfig.direction === 'ASC') ? `${style.ascending}` : ''}
-           ${(sortConfig.key === item.id && sortConfig.direction === 'DESC') ? `${style.descending}` : ''}`
+                 ${sortConfig.key === item.id ? `${style.activeSorting}` : ''} 
+                 ${(sortConfig.key === item.id && sortConfig.direction === 'ASC') ? `${style.ascending}` : ''}
+                 ${(sortConfig.key === item.id && sortConfig.direction === 'DESC') ? `${style.descending}` : ''}`
               }
             >
               {item.title}
