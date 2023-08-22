@@ -6,7 +6,7 @@ import { useAppDispatch } from '@/src/redux/hooks';
 type WithSelectProps = {
   id: string;
   name: string;
-  optionsArr: Array<OptionsArrType>;
+  optionsArr: Array<OptionsArrType> | null;
   action: ActionCreatorWithPayload<any, any>;
 };
 

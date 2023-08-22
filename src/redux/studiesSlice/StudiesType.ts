@@ -15,7 +15,8 @@ export type StudiesType = {
 export type DestinationServerType = {
   id: string;
   name: string;
-  optionsArr: Array<OptionsArrType>;
+  selectedOption: string;
+  optionsArr: Array<OptionsArrType> | null;
 };
 
 type StudyTitlesType = {

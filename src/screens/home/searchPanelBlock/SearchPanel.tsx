@@ -3,7 +3,7 @@ import InputFieldsGroup from '@/src/components/inputFieldsGroup/InputFieldsGroup
 import CheckboxGroup from '@/src/components/checkboxGroup/CheckboxGroup';
 import DateBlock from '@/src/screens/home/searchPanelBlock/dateBlock/DateBlock';
 import { useAppDispatch, useAppSelector } from '@/src/redux/hooks';
-import { getStudiesThunk } from '@/src/redux/studiesSlice/studiesSlice';
+import { getStudiesThunk, getTitles } from '@/src/redux/studiesSlice/studiesSlice';
 import {
   getOptions,
   setToggleCheckboxInstitutions,
@@ -55,6 +55,7 @@ function SearchPanel() {
 
   useEffect(() => {
     dispatch(getOptions());
+    dispatch(getTitles());
   }, [dispatch]);
 
   const toggleCheckboxHandler = (id: string, title: string) => {

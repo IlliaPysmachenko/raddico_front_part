@@ -18,3 +18,16 @@ export const searchApi = {
     return response.data;
   },
 };
+
+export const studiesActionsApi = {
+  async getAeTitles() {
+    const response = await instance.get('aetitles');
+    console.log(response);
+    return response.data;
+  },
+  async sendStudyAction(data: any) {
+    const response = await instance.post('aetitles', data);
+    console.log(response.data);
+    return response.data;
+  },
+};

@@ -1,6 +1,6 @@
 .additionalInfo_container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     padding: var(--padding);
     margin-top: var(--margin);
     border: 2px solid var(--colorBorder);
@@ -11,7 +11,7 @@
         flex: 1 1 auto;
         display: flex;
         max-width: 30%;
-        justify-content: space-around;
+        justify-content: space-between;
     }
 }
 

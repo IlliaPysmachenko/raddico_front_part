@@ -2,9 +2,9 @@ import React, { ChangeEvent } from 'react';
 import style from './InputSelectItem.module.scss';
 
 export type OptionsArrType = {
-  value: string;
-  title: string;
-  selected: boolean;
+  id: string;
+  name: string;
+  // selected: boolean;
 };
 
 type SelectItemPropsType = {
@@ -32,11 +32,11 @@ function InputSelectItem({
       >
         {optionsArr.map((option) => (
           <option
-            key={option.value}
-            value={option.value}
-            selected={option.selected}
+            key={option.id}
+            value={option.id}
+            // selected={option.selected}
           >
-            {option.title}
+            {option.name}
           </option>
         ))}
       </select>

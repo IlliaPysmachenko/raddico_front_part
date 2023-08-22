@@ -5,18 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b3bf699e-b4fb-49dd-ad56-118674db30a4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/button/Button.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/button/Button.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hoc/withSelect.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.eslintrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/api.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/inputSelectItem/InputSelectItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/inputSelectItem/InputSelectItem.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/data/dataExamples.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/dataExamples.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hoc/withSelect.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/hoc/withSelect.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/studiesSlice/StudiesType.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/studiesSlice/StudiesType.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/studiesSlice/studiesSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/studiesSlice/studiesSlice.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/home/searchPanelBlock/SearchPanel.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/searchPanelBlock/SearchPanel.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/screens/home/searchPanelBlock/SearchPanel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/searchPanelBlock/SearchPanel.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/home/searchPanelBlock/dateBlock/DateBlock.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/searchPanelBlock/dateBlock/DateBlock.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/screens/home/studiesBlock/StudiesBlock.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/studiesBlock/StudiesBlock.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/screens/home/studiesBlock/StudiesBlock.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/studiesBlock/StudiesBlock.tsx" afterDir="false" />
     </list>
@@ -72,7 +68,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "settings.codegpt",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
     "ts.external.directory.path": "D:\\Projects\\Raddico front-end part\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   },
@@ -151,6 +147,10 @@
       <workItem from="1692353314666" duration="7494000" />
       <workItem from="1692444347636" duration="15763000" />
       <workItem from="1692608548100" duration="7714000" />
+      <workItem from="1692626054504" duration="3961000" />
+      <workItem from="1692636370629" duration="975000" />
+      <workItem from="1692643395692" duration="254000" />
+      <workItem from="1692643673282" duration="8917000" />
     </task>
     <servers />
   </component>

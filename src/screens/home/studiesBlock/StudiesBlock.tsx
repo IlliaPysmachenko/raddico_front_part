@@ -4,11 +4,16 @@ import React from 'react';
 import Link from 'next/link';
 import { useAppDispatch, useAppSelector } from '@/src/redux/hooks';
 import { Search, ZipFile } from '@/src/assets/icons';
-import { requestSort, setDestinationServer, setToggleStudyChecked } from '@/src/redux/studiesSlice/studiesSlice';
+import {
+  requestSort,
+  sendStudyActions,
+  setDestinationServer,
+  setToggleStudyChecked,
+} from '@/src/redux/studiesSlice/studiesSlice';
 import Checkbox from '@/src/components/checkbox/Checkbox';
 import WithSelect from '@/src/hoc/withSelect';
+import Button from '@/src/components/button/Button';
 import style from './StudiesBlock.module.scss';
-import Button from "@/src/components/button/Button";
 
 function StudiesBlock() {
   const {
@@ -30,6 +35,15 @@ function StudiesBlock() {
     dispatch(requestSort([sortingBy, direction]));
   };
 
+  const sendExamsHandler = () => {
+    const createPayload = () => ({
+      // eslint-disable-next-line max-len
+      send_to: destinationServer.selectedOption,
+      selected_studies: studies?.filter((item) => item.isChecked).map((item) => item.study_iuid),
+    });
+    dispatch(sendStudyActions(createPayload()));
+  };
+
   const additionalInfo = studies && (
     <div className={style.additionalInfo_container}>
       <div className={style.additionalInfo}>
@@ -46,14 +60,13 @@ function StudiesBlock() {
           action={setDestinationServer}
         />
 
-        <Button title="Send exams" />
+        <Button title="Send exams" handler={sendExamsHandler} />
       </div>
     </div>
   );
 
   const studiesTable = studies && studies.map((item) => {
     const toggleCheckboxHandler = (id: String) => {
-      // debugger
       dispatch(setToggleStudyChecked({ id, isChecked: !item.isChecked }));
     };
     return (
@@ -94,8 +107,9 @@ function StudiesBlock() {
         {/* <div className={style.grid_item}>{item.status}</div> */}
         {/* /!*<div className={style.grid_item}>{item.action}</div>*!/ */}
         {/* <div className={style.grid_item}>{item.proofreading}</div> */}
-        {/* eslint-disable-next-line max-len */}
-        <div className={style.grid_item}><Checkbox id={item.study_iuid} name="" isChecked={item.isChecked} toggleCheckboxHandler={toggleCheckboxHandler} title="" /></div>
+        <div className={style.grid_item}>
+          <Checkbox id={item.study_iuid} name="" isChecked={item.isChecked} toggleCheckboxHandler={toggleCheckboxHandler} title="" />
+        </div>
       </React.Fragment>
     );
   });

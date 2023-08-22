@@ -5,34 +5,28 @@ export const filterByPeriod = {
   name: 'filterByPeriod',
   optionsArr: [
     {
-      value: '',
-      title: '*',
-      selected: true,
+      id: '',
+      name: '*',
     },
     {
-      value: 'Yesterday',
-      title: 'Yesterday',
-      selected: false,
+      id: 'Yesterday',
+      name: 'Yesterday',
     },
     {
-      value: 'This_Week',
-      title: 'This Week',
-      selected: false,
+      id: 'This_Week',
+      name: 'This Week',
     },
     {
-      value: 'Last_Week',
-      title: 'Last Week',
-      selected: false,
+      id: 'Last_Week',
+      name: 'Last Week',
     },
     {
-      value: 'This_Month',
-      title: 'This Month',
-      selected: false,
+      id: 'This_Month',
+      name: 'This Month',
     },
     {
-      value: 'Last_Month',
-      title: 'Last Month',
-      selected: false,
+      id: 'Last_Month',
+      name: 'Last Month',
     },
   ],
 };

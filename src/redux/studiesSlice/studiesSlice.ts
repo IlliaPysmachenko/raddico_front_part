@@ -1,5 +1,5 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import { searchApi } from '@/src/api/api';
+import { searchApi, studiesActionsApi } from '@/src/api/api';
 import { StudiesArrayType, StudiesType } from '@/src/redux/studiesSlice/StudiesType';
 
 const initialState: StudiesArrayType = {
@@ -46,124 +46,9 @@ const initialState: StudiesArrayType = {
   ],
   destinationServer: {
     id: 'destinationServer',
-    name: 'Destination Server',
-    optionsArr: [
-      {
-        value: '',
-        title: '[Select Destination]',
-        selected: true,
-      },
-      {
-        value: '612RRPL238',
-        title: '612RRPL238',
-        selected: false,
-      },
-      {
-        value: 'AWS118_SS',
-        title: 'AWS118_SS',
-        selected: false,
-      },
-      {
-        value: 'AWS168_SS@192.168.2.168',
-        title: 'AWS168_SS@192.168.2.168',
-        selected: false,
-      },
-      {
-        value: 'AWS19_DCMREC',
-        title: 'AWS19_DCMREC',
-        selected: false,
-      },
-      {
-        value: 'AWS19_SS',
-        title: 'AWS19_SS',
-        selected: false,
-      },
-      {
-        value: 'AWS45_SS',
-        title: 'AWS45_SS',
-        selected: false,
-      },
-      {
-        value: 'AWS48_SS',
-        title: 'AWS48_SS',
-        selected: false,
-      },
-      {
-        value: 'AWS51_SS',
-        title: 'AWS51_SS',
-        selected: false,
-      },
-      {
-        value: 'AWS80_SS',
-        title: 'AWS80_SS',
-        selected: false,
-      },
-      {
-        value: 'Brit_DS',
-        title: 'Brit_DS',
-        selected: false,
-      },
-      {
-        value: 'Media Creation Server (part of dcm4chee)',
-        title: 'Media Creation Server (part of dcm4chee)',
-        selected: false,
-      },
-      {
-        value: 'CQ612243',
-        title: 'CQ612243',
-        selected: false,
-      },
-      {
-        value: 'CQBOI125@10.0.10.125',
-        title: 'CQBOI125@10.0.10.125',
-        selected: false,
-      },
-      {
-        value: 'DCM4CHEE',
-        title: 'DCM4CHEE',
-        selected: false,
-      },
-      {
-        value: 'DCM4CHEE-VMC39-TEST',
-        title: 'DCM4CHEE-VMC39-TEST',
-        selected: false,
-      },
-      {
-        value: 'EF_WS48',
-        title: 'EF_WS48',
-        selected: false,
-      },
-      {
-        value: 'Ahmad 1 - Integrad',
-        title: 'Ahmad 1 - Integrad',
-        selected: false,
-      },
-      {
-        value: 'Codys KP',
-        title: 'Codys KP',
-        selected: false,
-      },
-      {
-        value: 'Precise',
-        title: 'Precise',
-        selected: false,
-      },
-      {
-        value: 'RRPLBOI122',
-        title: 'RRPLBOI122',
-        selected: false,
-      },
-      {
-        value: 'Ahmad 2 - TeleraMed2',
-        title: 'Ahmad 2 - TeleraMed2',
-        selected: false,
-      },
-      {
-        value: 'WS118_KP',
-        title: 'WS118_KP',
-        selected: false,
-      },
-    ],
+    name: 'aetitles',
+    selectedOption: 'Destination Server',
+    optionsArr: null,
   },
   sortConfig: {
     direction: null,
@@ -185,6 +70,34 @@ export const getStudiesThunk = createAsyncThunk(
       dispatch(setTotalStudiesCount(res));
       // eslint-disable-next-line @typescript-eslint/no-use-before-define
       dispatch(setTotalImagesCount(res));
+    } catch (error) {
+      return rejectWithValue(error);
+    }
+  },
+);
+
+export const getTitles = createAsyncThunk(
+  'studies/getTitles',
+  // eslint-disable-next-line consistent-return
+  async (_, { rejectWithValue, dispatch }) => {
+    try {
+      const res = await studiesActionsApi.getAeTitles();
+      // eslint-disable-next-line @typescript-eslint/no-use-before-define
+      dispatch(setAeTitles(res));
+    } catch (error) {
+      return rejectWithValue(error);
+    }
+  },
+);
+
+export const sendStudyActions = createAsyncThunk(
+  'studies/sendStudyActions',
+  // eslint-disable-next-line consistent-return
+  async (data: AsyncThunkAction, { rejectWithValue, dispatch }) => {
+    try {
+      const res = await studiesActionsApi.sendStudyAction(JSON.stringify(data));
+      // eslint-disable-next-line @typescript-eslint/no-use-before-define
+      console.log(res);
     } catch (error) {
       return rejectWithValue(error);
     }
@@ -241,11 +154,13 @@ export const studiesSlice = createSlice({
         if (checkedStudy) checkedStudy.isChecked = isChecked;
       }
     },
+    setAeTitles: (state, { payload }) => {
+      state.destinationServer.optionsArr = payload;
+    },
     setDestinationServer: (state, { payload }) => {
-      state.destinationServer.optionsArr.map((item) => item.selected = false);
-      // eslint-disable-next-line max-len
-      const selectedServer = state.destinationServer.optionsArr.find((item) => item.value === payload);
-      if (selectedServer) selectedServer.selected = true;
+      if (state.destinationServer.optionsArr) {
+        state.destinationServer.selectedOption = payload;
+      }
     },
   },
 });
@@ -256,6 +171,7 @@ export const {
   setTotalStudiesCount,
   setTotalImagesCount,
   setToggleStudyChecked,
+  setAeTitles,
   setDestinationServer,
 } = studiesSlice.actions;
 export default studiesSlice.reducer;
