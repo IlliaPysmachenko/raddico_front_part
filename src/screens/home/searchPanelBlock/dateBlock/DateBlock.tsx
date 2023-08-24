@@ -34,10 +34,9 @@ function DateBlock() {
 
   return (
     <div className={style.dateFilter_container}>
-      <h5>Date filter</h5>
       <Checkbox
         id="DateOff"
-        name=""
+        name="Date filter"
         title="Date"
         isChecked={!disabledDate}
         toggleCheckboxHandler={toggleDateSwitcher}

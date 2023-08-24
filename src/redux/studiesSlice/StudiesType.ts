@@ -31,10 +31,11 @@ export type SortConfigType = {
 
 export type StudiesArrayType = {
   studies: Array<StudiesType> | null;
+  selectedStudies: Set<string>;
   totalStudiesCount: number;
   totalImagesCount: number;
-  checkAllStudies: boolean;
   studyTitles: Array<StudyTitlesType>;
+  checkAllStudies: boolean;
   destinationServer: DestinationServerType;
   sortConfig: SortConfigType;
 };

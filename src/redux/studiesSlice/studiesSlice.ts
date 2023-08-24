@@ -4,6 +4,7 @@ import { StudiesArrayType, StudiesType } from '@/src/redux/studiesSlice/StudiesT
 
 const initialState: StudiesArrayType = {
   studies: null,
+  selectedStudies: new Set(),
   totalImagesCount: 0,
   totalStudiesCount: 0,
   studyTitles: [
@@ -152,7 +153,13 @@ export const studiesSlice = createSlice({
 
       if (state.studies) {
         const checkedStudy = state.studies.find((item) => item.study_iuid === id);
-        if (checkedStudy) checkedStudy.isChecked = isChecked;
+        if (checkedStudy) checkedStudy.isChecked = !isChecked;
+        // if (checkedStudy && checkedStudy.isChecked) {
+        //   state.selectedStudies.add(checkedStudy.study_iuid);
+        // }
+        // if (checkedStudy && !checkedStudy.isChecked) {
+        //   state.selectedStudies.delete(checkedStudy.study_iuid);
+        // }
       }
     },
     setAeTitles: (state, { payload }) => {
@@ -164,6 +171,8 @@ export const studiesSlice = createSlice({
       }
     },
     checkAllStudiesToggle: (state, { payload }) => {
+      // eslint-disable-next-line max-len
+      // TODO: -сделать рефакторниг логики после добавления погинации, чтобы выбирались только стади которые показаны на странице.
       state.checkAllStudies = payload;
       if (state.studies) {
         // eslint-disable-next-line no-return-assign

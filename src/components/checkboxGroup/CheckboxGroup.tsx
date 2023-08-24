@@ -25,10 +25,9 @@ function CheckboxGroup({
 
   return (
     <div className={style.checkboxGroup_container}>
-      <h5>{title}</h5>
       <Checkbox
         id={id}
-        name=""
+        name={title}
         isChecked={isAllChecked}
         title={title}
         toggleCheckboxHandler={toggleAllCheckboxHandler}

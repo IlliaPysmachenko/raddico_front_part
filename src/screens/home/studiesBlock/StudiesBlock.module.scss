@@ -1,3 +1,15 @@
+.icon {
+  width: 24px;
+  height: 24px;
+  fill: var(--colorText);
+  transition: all ease .3s;
+  cursor: pointer;
+
+  &:hover {
+    fill: var(--colorPrimaryHover);
+  }
+}
+
 .additionalInfo_container {
   display: flex;
   justify-content: space-between;
@@ -21,16 +33,19 @@
     max-width: 30%;
     justify-content: flex-end;
 
-    .additionalInfo_btn {
+    .additionalInfo_select, .additionalInfo_icon, .additionalInfo_btn {
       padding-left: var(--paddingSM);
+      align-self: center;
     }
+
+    //.additionalInfo_btn {
+    //  padding-left: var(--paddingSM);
+    //}
   }
 }
 
 .study_container {
   display: grid;
-  //grid-template-columns: repeat(9, minmax(min-content, 1fr));
-  //grid-template-columns: repeat(9, max-content);
   grid-template-columns: minmax(max-content, 0.7fr) minmax(min-content, 1fr) minmax(min-content, 2fr) minmax(min-content, 1fr) minmax(min-content, 1fr) minmax(min-content, 1fr) minmax(min-content, 2fr) minmax(min-content, 1fr) minmax(min-content, 0.1fr);
   grid-template-rows: auto;
   justify-content: space-around;
@@ -99,15 +114,4 @@
   .centered {
     justify-content: center;
   }
-
-  .zipIcon {
-    width: 24px;
-    height: 24px;
-    fill: var(--colorText);
-
-    &:hover {
-      fill: var(--colorPrimaryHover);
-    }
-  }
-
 }
