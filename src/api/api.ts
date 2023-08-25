@@ -30,6 +30,10 @@ export const studiesActionsApi = {
   },
   async zipStudies(data: any) {
     const response = await instance.post('zip/dicom-multiple', data);
-    return response;
+    return response.data;
+  },
+  async trackZipStatus(id: string) {
+    const response = await instance.get(`zip/dicom-multiple/${id}`);
+    return response.data;
   },
 };

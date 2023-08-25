@@ -24,7 +24,11 @@ const AdditionalInfo = () => {
   };
 
   const requestZipStudyHandler = () => {
-    dispatch(requestZipStudy(selectedStudies));
+    selectedStudies.forEach((item) => {
+      const link = `http://192.168.2.237:8888/api/zip/dicom/${item}`;
+      window.open(link, '_blank');
+    });
+    // dispatch(requestZipStudy(selectedStudies));
   };
 
   return (

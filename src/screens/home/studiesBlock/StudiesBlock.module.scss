@@ -1,6 +1,6 @@
 .downloadStudy_container {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   padding: var(--padding);
   margin-top: var(--marginXXS);
   border: 2px solid var(--colorBorder);
@@ -11,23 +11,47 @@
     padding: var(--paddingXXS) var(--paddingXS);
     border: 2px solid var(--colorBorder);
     border-radius: var(--borderRadiusSM);
+    margin-right: var(--marginSM);
+
+    .downloadStudy_title {
+      display: flex;
+      justify-content: space-between;
+      padding: var(--paddingXXS) 0 var(--paddingXS);
+    }
   }
 
   .downloadStudy_disabled {
     cursor: wait;
     color: var(--colorTextTertiary);
     background: var(--colorFillSecondary);
+    & a{
+      color: var(--colorTextTertiary);
+      cursor: wait;
+    }
   }
   .downloadStudy_enabled {
     color: white;
-    cursor: pointer;
+    //cursor: pointer;
     border: 2px solid var(--colorInfoBorder);
     background: var(--colorInfo);
+    & a{
+      cursor: pointer;
+      color: white;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    .deleteZipStudy {
+      cursor: pointer;
+    }
   }
 
   .progressBar {
     width: 100px;
     height: 10px;
+    padding-right: var(--paddingXS);
 
     &::-webkit-meter-bar {
       background-color: lightgray;

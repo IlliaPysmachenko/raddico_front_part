@@ -56,6 +56,7 @@ const initialState: StudiesArrayType = {
     direction: null,
     key: '',
   },
+  zipItems: [],
 };
 
 type AsyncThunkAction = any;
@@ -109,14 +110,29 @@ export const sendStudyActions = createAsyncThunk(
 export const requestZipStudy = createAsyncThunk(
   'studies/requestZipStudy',
   // eslint-disable-next-line consistent-return
-  async (data: AsyncThunkAction, { rejectWithValue }) => {
+  async (data: AsyncThunkAction, { rejectWithValue, dispatch }) => {
     try {
       const res = await studiesActionsApi.zipStudies(JSON.stringify(data));
-      console.log(res);
+      // eslint-disable-next-line @typescript-eslint/no-use-before-define
+      dispatch(setZipItems(res));
     } catch (error) {
       return rejectWithValue(error);
     }
-  }
+  },
+);
+
+export const checkZipStatus = createAsyncThunk(
+  'studies/checkZipStatus',
+  // eslint-disable-next-line consistent-return
+  async (id: AsyncThunkAction, { rejectWithValue, dispatch }) => {
+    try {
+      const res = await studiesActionsApi.trackZipStatus(id);
+      // eslint-disable-next-line @typescript-eslint/no-use-before-define
+      dispatch(setZipItems(res));
+    } catch (error) {
+      return rejectWithValue(error);
+    }
+  },
 );
 
 export const studiesSlice = createSlice({
@@ -202,6 +218,14 @@ export const studiesSlice = createSlice({
         });
       }
     },
+    setZipItems: (state, { payload }) => {
+      const { id, name, prepared } = payload;
+      state.zipItems.push({ id, name, prepared });
+    },
+    removeZip: (state, { payload }) => {
+      const updatedZip = state.zipItems.filter((item) => item.id !== payload);
+      state.zipItems = updatedZip;
+    },
   },
 });
 
@@ -214,5 +238,7 @@ export const {
   setAeTitles,
   setDestinationServer,
   checkAllStudiesToggle,
+  setZipItems,
+  removeZip,
 } = studiesSlice.actions;
 export default studiesSlice.reducer;

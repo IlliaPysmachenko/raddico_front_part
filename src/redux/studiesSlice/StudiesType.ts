@@ -24,6 +24,12 @@ type StudyTitlesType = {
   title: string;
 };
 
+type ZipType = {
+  id: string;
+  name: string;
+  prepared: string;
+};
+
 export type SortConfigType = {
   direction: string | null;
   key: string;
@@ -38,4 +44,5 @@ export type StudiesArrayType = {
   checkAllStudies: boolean;
   destinationServer: DestinationServerType;
   sortConfig: SortConfigType;
+  zipItems: Array<ZipType>;
 };
