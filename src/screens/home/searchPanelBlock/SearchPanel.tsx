@@ -56,7 +56,7 @@ function SearchPanel() {
   useEffect(() => {
     dispatch(getOptions());
     dispatch(getTitles());
-  }, [dispatch]);
+  }, []);
 
   const toggleCheckboxHandler = (id: string, title: string) => {
     if (title === 'Modality') dispatch(setToggleCheckboxModality(id));

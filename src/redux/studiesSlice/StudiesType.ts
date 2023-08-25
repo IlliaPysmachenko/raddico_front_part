@@ -31,7 +31,7 @@ export type SortConfigType = {
 
 export type StudiesArrayType = {
   studies: Array<StudiesType> | null;
-  selectedStudies: Set<string>;
+  selectedStudies: Array<string>;
   totalStudiesCount: number;
   totalImagesCount: number;
   studyTitles: Array<StudyTitlesType>;

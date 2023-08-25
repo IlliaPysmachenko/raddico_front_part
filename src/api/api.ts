@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const instance = axios.create({
-  baseURL: 'http://192.168.2.237:8888/api',
+  baseURL: 'http://192.168.2.237:8888/api/',
 
 });
 
@@ -22,12 +22,14 @@ export const searchApi = {
 export const studiesActionsApi = {
   async getAeTitles() {
     const response = await instance.get('aetitles');
-    console.log(response);
     return response.data;
   },
   async sendStudyAction(data: any) {
     const response = await instance.post('aetitles', data);
-    console.log(response.data);
     return response.data;
+  },
+  async zipStudies(data: any) {
+    const response = await instance.post('zip/dicom-multiple', data);
+    return response;
   },
 };

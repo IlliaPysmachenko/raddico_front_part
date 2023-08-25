@@ -1,117 +1,52 @@
-.icon {
-  width: 24px;
-  height: 24px;
-  fill: var(--colorText);
-  transition: all ease .3s;
-  cursor: pointer;
-
-  &:hover {
-    fill: var(--colorPrimaryHover);
-  }
-}
-
-.additionalInfo_container {
+.downloadStudy_container {
   display: flex;
   justify-content: space-between;
   padding: var(--padding);
-  margin-top: var(--margin);
+  margin-top: var(--marginXXS);
   border: 2px solid var(--colorBorder);
   border-radius: var(--borderRadius);
   background: var(--colorBgContainer);
 
-  .additionalInfo {
-    align-self: center;
-
-    & span {
-      padding-right: var(--paddingSM);
-    }
+  .downloadStudy_itemContainer {
+    padding: var(--paddingXXS) var(--paddingXS);
+    border: 2px solid var(--colorBorder);
+    border-radius: var(--borderRadiusSM);
   }
 
-  .additionalActions {
-    flex: 1 1 auto;
-    display: flex;
-    max-width: 30%;
-    justify-content: flex-end;
-
-    .additionalInfo_select, .additionalInfo_icon, .additionalInfo_btn {
-      padding-left: var(--paddingSM);
-      align-self: center;
-    }
-
-    //.additionalInfo_btn {
-    //  padding-left: var(--paddingSM);
-    //}
+  .downloadStudy_disabled {
+    cursor: wait;
+    color: var(--colorTextTertiary);
+    background: var(--colorFillSecondary);
   }
-}
-
-.study_container {
-  display: grid;
-  grid-template-columns: minmax(max-content, 0.7fr) minmax(min-content, 1fr) minmax(min-content, 2fr) minmax(min-content, 1fr) minmax(min-content, 1fr) minmax(min-content, 1fr) minmax(min-content, 2fr) minmax(min-content, 1fr) minmax(min-content, 0.1fr);
-  grid-template-rows: auto;
-  justify-content: space-around;
-
-  border: 2px solid var(--colorBorder);
-  border-radius: var(--borderRadius);
-  background: var(--colorBgContainer);
-  margin: var(--margin) 0;
-
-  .study_header {
-    justify-items: center;
-    align-self: center;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: var(--paddingXS);
-    background-color: var(--user-background, var(--colorPrimaryBgHover));
-    border-left: 1px solid var(--colorBorderSecondary);
-    border-right: 1px solid var(--colorBorderSecondary);
-    border-bottom: 1px solid var(--colorBorderSecondary);
-    text-align: center;
-    height: 100%;
-
-    .sortingBtn {
-      color: var(--colorText);
-      background-color: transparent;
-
-      &:hover {
-        color: var(--colorPrimaryHover);
-      }
-    }
-
-    .ascending:after {
-      content: "\2193";
-      padding-left: var(--paddingXS);
-      text-decoration: none;
-      color: var(--colorText);
-    }
-
-    .descending:after {
-      content: "\2191";
-      padding-left: var(--paddingXS);
-      text-decoration: none;
-      color: var(--colorText);
-    }
-
-    .activeSorting {
-      border-bottom: 1px solid var(--colorText);
-    }
+  .downloadStudy_enabled {
+    color: white;
+    cursor: pointer;
+    border: 2px solid var(--colorInfoBorder);
+    background: var(--colorInfo);
   }
 
-  @media (max-width: 1100px) {
-    .study_container {
-      display: grid;
-      grid-template-columns: repeat(9, minmax(min-content, max-content));
-    }
-  }
+  .progressBar {
+    width: 100px;
+    height: 10px;
 
-  .grid_item {
-    padding: var(--paddingXS);
-    border-left: 1px solid var(--colorBorderSecondary);
-    border-right: 1px solid var(--colorBorderSecondary);
-    border-bottom: 1px solid var(--colorBorderSecondary);
-  }
-  .centered {
-    justify-content: center;
+    &::-webkit-meter-bar {
+      background-color: lightgray;
+    }
+
+    &::-webkit-meter-optimum-value {
+      background-color: var(--colorSuccessTextHover);
+    }
+
+    &::-webkit-meter-suboptimum-value {
+      background-color: var(--colorWarning);
+    }
+
+    &::-webkit-meter-even-less-good-value {
+      background-color: var(--colorError);
+    }
   }
 }
+
+
+
+

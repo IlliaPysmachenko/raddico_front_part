@@ -1,0 +1,29 @@
+.additionalInfo_container {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--padding);
+  margin-top: var(--margin);
+  border: 2px solid var(--colorBorder);
+  border-radius: var(--borderRadius);
+  background: var(--colorBgContainer);
+
+  .additionalInfo {
+    align-self: center;
+
+    & span {
+      padding-right: var(--paddingSM);
+    }
+  }
+
+  .additionalActions {
+    flex: 1 1 auto;
+    display: flex;
+    max-width: 30%;
+    justify-content: flex-end;
+
+    .additionalInfo_select, .additionalInfo_icon, .additionalInfo_btn {
+      padding-left: var(--paddingSM);
+      align-self: center;
+    }
+  }
+}

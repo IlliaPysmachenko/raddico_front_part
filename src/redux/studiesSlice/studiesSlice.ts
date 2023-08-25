@@ -4,7 +4,7 @@ import { StudiesArrayType, StudiesType } from '@/src/redux/studiesSlice/StudiesT
 
 const initialState: StudiesArrayType = {
   studies: null,
-  selectedStudies: new Set(),
+  selectedStudies: [],
   totalImagesCount: 0,
   totalStudiesCount: 0,
   studyTitles: [
@@ -106,6 +106,19 @@ export const sendStudyActions = createAsyncThunk(
   },
 );
 
+export const requestZipStudy = createAsyncThunk(
+  'studies/requestZipStudy',
+  // eslint-disable-next-line consistent-return
+  async (data: AsyncThunkAction, { rejectWithValue }) => {
+    try {
+      const res = await studiesActionsApi.zipStudies(JSON.stringify(data));
+      console.log(res);
+    } catch (error) {
+      return rejectWithValue(error);
+    }
+  }
+);
+
 export const studiesSlice = createSlice({
   name: 'studies',
   initialState,
@@ -117,6 +130,7 @@ export const studiesSlice = createSlice({
           item.isChecked = false;
         });
       }
+      state.selectedStudies = [];
     },
     setTotalStudiesCount: (state, action) => {
       state.totalStudiesCount = action.payload.length;
@@ -154,12 +168,13 @@ export const studiesSlice = createSlice({
       if (state.studies) {
         const checkedStudy = state.studies.find((item) => item.study_iuid === id);
         if (checkedStudy) checkedStudy.isChecked = !isChecked;
-        // if (checkedStudy && checkedStudy.isChecked) {
-        //   state.selectedStudies.add(checkedStudy.study_iuid);
-        // }
-        // if (checkedStudy && !checkedStudy.isChecked) {
-        //   state.selectedStudies.delete(checkedStudy.study_iuid);
-        // }
+        if (checkedStudy && checkedStudy.isChecked) {
+          state.selectedStudies.push(checkedStudy.study_iuid);
+        }
+        if (checkedStudy && !checkedStudy.isChecked) {
+          const index = state.selectedStudies.indexOf(checkedStudy.study_iuid);
+          state.selectedStudies.splice(index, 1);
+        }
       }
     },
     setAeTitles: (state, { payload }) => {
@@ -171,12 +186,20 @@ export const studiesSlice = createSlice({
       }
     },
     checkAllStudiesToggle: (state, { payload }) => {
-      // eslint-disable-next-line max-len
       // TODO: -сделать рефакторниг логики после добавления погинации, чтобы выбирались только стади которые показаны на странице.
       state.checkAllStudies = payload;
       if (state.studies) {
-        // eslint-disable-next-line no-return-assign
-        state.studies.map((item) => item.isChecked = payload);
+        // eslint-disable-next-line no-return-assign,array-callback-return
+        state.studies.map((item) => {
+          item.isChecked = payload;
+          if (item.isChecked) {
+            state.selectedStudies.push(item.study_iuid);
+          }
+          if (!item.isChecked) {
+            const index = state.selectedStudies.indexOf(item.study_iuid);
+            state.selectedStudies.splice(index, 1);
+          }
+        });
       }
     },
   },

@@ -5,6 +5,9 @@ import studiesSlice from '@/src/redux/studiesSlice/studiesSlice';
 import searchBlockSlice from '@/src/redux/searchBlockSlice/searchBlockSlice';
 // eslint-disable-next-line import/no-named-as-default
 import loadingSlice from '@/src/redux/loading/loading';
+import { enableMapSet } from 'immer';
+
+enableMapSet();
 
 export const store = configureStore({
   reducer: {

@@ -336,3 +336,22 @@ input[type='date'] {
         cursor: pointer;
     }
 }
+
+.iconCommonStyle {
+    width: 24px;
+    height: 24px;
+    fill: var(--colorText);
+    transition: all ease .3s;
+    cursor: pointer;
+
+    &:hover {
+        fill: var(--colorPrimaryHover);
+    }
+}
+
+.downloadStudy_disabled {
+    background: var(--colorFillSecondary);
+}
+.downloadStudy_enabled {
+    background: var(--colorPrimary);
+}
