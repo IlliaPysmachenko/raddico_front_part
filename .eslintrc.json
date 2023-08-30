@@ -8,15 +8,17 @@
     "project": "./tsconfig.json"
   },
   "rules": {
-    "react/function-component-definition": "off"
+    "react/function-component-definition": "off",
+    "max-len": ["error", {"code": 120}]
   },
   "overrides": [
     {
       // feel free to replace with your preferred file pattern - eg. 'src/**/*Slice.ts'
       "files": [
         "src/redux/loading/loading.ts",
-        "src/redux/searchBlockSlice/searchBlockSlice.ts",
-        "src/redux/studiesSlice/studiesSlice.ts"
+        "src/screens/home/searchPanelBlock/slice/searchBlockSlice.ts",
+        "src/screens/home/studiesBlock/slice/studiesSlice.ts",
+        "src/screens/home/studiesBlock/slice/thunkCreators.ts"
       ],
       // avoid state param assignment
       "rules": {

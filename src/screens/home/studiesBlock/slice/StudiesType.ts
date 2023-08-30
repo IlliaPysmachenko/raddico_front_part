@@ -24,7 +24,7 @@ type StudyTitlesType = {
   title: string;
 };
 
-type ZipType = {
+export type ZipType = {
   id: string;
   name: string;
   prepared: string;

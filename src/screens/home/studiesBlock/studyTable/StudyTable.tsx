@@ -1,4 +1,5 @@
-import { checkAllStudiesToggle, requestSort, setToggleStudyChecked } from '@/src/redux/studiesSlice/studiesSlice';
+// eslint-disable-next-line max-len
+import { checkAllStudiesToggle, setSort, setToggleStudyChecked } from '@/src/screens/home/studiesBlock/slice/studiesSlice';
 import Checkbox from '@/src/components/checkbox/Checkbox';
 import React from 'react';
 import Link from 'next/link';
@@ -21,16 +22,19 @@ const StudyTable = () => {
     } else {
       direction = 'ASC';
     }
-    dispatch(requestSort([sortingBy, direction]));
+    // @ts-ignore
+    dispatch(setSort([sortingBy, direction]));
   };
 
   const studiesTableHeader = studyTitles.map((item) => {
     const toggleCheckboxHandler = () => {
+      // @ts-ignore
       dispatch(checkAllStudiesToggle(!checkAllStudies));
     };
     return (
       <div key={item.id} className={style.study_header}>
         {item.id === 'study_action'
+          // eslint-disable-next-line max-len
           ? <Checkbox id={item.id} name="" isChecked={checkAllStudies} toggleCheckboxHandler={toggleCheckboxHandler} title="" /> : (
             <button
               type="button"
@@ -51,6 +55,7 @@ const StudyTable = () => {
 
   const studiesTable = studies && studies.map((item) => {
     const toggleCheckboxHandler = (id: String) => {
+      // @ts-ignore
       dispatch(setToggleStudyChecked({ id, isChecked: item.isChecked }));
     };
     return (
@@ -84,6 +89,7 @@ const StudyTable = () => {
         <div className={style.grid_item}>{item.referral}</div>
         <div className={style.grid_item}>{item.images_count}</div>
         <div className={`${style.grid_item} ${style.centered}`}>
+          {/* eslint-disable-next-line max-len */}
           <Checkbox id={item.study_iuid} name="" isChecked={item.isChecked} toggleCheckboxHandler={toggleCheckboxHandler} title="" />
         </div>
       </React.Fragment>

@@ -1,16 +1,19 @@
 import React, { useEffect } from 'react';
+
 import InputFieldsGroup from '@/src/components/inputFieldsGroup/InputFieldsGroup';
 import CheckboxGroup from '@/src/components/checkboxGroup/CheckboxGroup';
 import DateBlock from '@/src/screens/home/searchPanelBlock/dateBlock/DateBlock';
+import Button from '@/src/components/button/Button';
+
 import { useAppDispatch, useAppSelector } from '@/src/redux/hooks';
-import { getStudiesThunk, getTitles } from '@/src/redux/studiesSlice/studiesSlice';
 import {
-  getOptions,
   setToggleCheckboxInstitutions,
   setToggleCheckboxModality,
-} from '@/src/redux/searchBlockSlice/searchBlockSlice';
-import { CheckboxesType } from '@/src/redux/searchBlockSlice/searchBlockTypes';
-import Button from '@/src/components/button/Button';
+} from '@/src/screens/home/searchPanelBlock/slice/searchBlockSlice';
+import { CheckboxesType } from '@/src/screens/home/searchPanelBlock/slice/searchBlockTypes';
+import { getStudiesThunk, getTitles } from '@/src/screens/home/studiesBlock/slice/thunkCreators';
+import { getOptions } from '@/src/screens/home/searchPanelBlock/slice/thunkCreators';
+
 import style from './SearchPanel.module.scss';
 
 function SearchPanel() {

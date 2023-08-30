@@ -1,8 +1,15 @@
 import React from 'react';
-import ConfigurationPage from '@/src/screens/configuration/ConfigurationPage';
+import ConfigurationPage from '@/src/screens/configurationPage/ConfigurationPage';
+import Head from 'next/head';
 
 const configuration = () => (
-  <ConfigurationPage />
+  <>
+    <Head>
+      <title>Raddico App | Configuration</title>
+      <meta property="og:title" content="Raddico App | Configuration" key="title" />
+    </Head>
+    <ConfigurationPage />
+  </>
 );
 
 export default configuration;

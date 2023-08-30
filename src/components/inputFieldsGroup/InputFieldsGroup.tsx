@@ -1,7 +1,7 @@
 import React, { ChangeEvent } from 'react';
 import InputField from '@/src/components/inputFieldItem/InputField';
 import { useAppDispatch } from '@/src/redux/hooks';
-import { setInputField } from '@/src/redux/searchBlockSlice/searchBlockSlice';
+import { setInputField } from '@/src/screens/home/searchPanelBlock/slice/searchBlockSlice';
 import style from './InputFieldsGroup.module.scss';
 // import {setInputField} from "@/src/redux/fieldsSlice/fieldsSlice";
 

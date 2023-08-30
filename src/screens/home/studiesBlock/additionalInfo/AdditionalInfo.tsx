@@ -1,9 +1,13 @@
 import { ZipFile } from '@/src/assets/icons';
 import WithSelect from '@/src/hoc/withSelect';
-import { requestZipStudy, sendStudyActions, setDestinationServer } from '@/src/redux/studiesSlice/studiesSlice';
+import { setDestinationServer } from '@/src/screens/home/studiesBlock/slice/studiesSlice';
 import Button from '@/src/components/button/Button';
 import React from 'react';
 import { useAppDispatch, useAppSelector } from '@/src/redux/hooks';
+import {
+  requestZipStudy,
+  sendStudyActions,
+} from '@/src/screens/home/studiesBlock/slice/thunkCreators';
 import style from './AdditionalInfo.module.scss';
 
 const AdditionalInfo = () => {
@@ -28,7 +32,7 @@ const AdditionalInfo = () => {
       const link = `http://192.168.2.237:8888/api/zip/dicom/${item}`;
       window.open(link, '_blank');
     });
-    // dispatch(requestZipStudy(selectedStudies));
+    dispatch(requestZipStudy(selectedStudies));
   };
 
   return (

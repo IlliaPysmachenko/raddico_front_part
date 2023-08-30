@@ -24,7 +24,8 @@
     cursor: wait;
     color: var(--colorTextTertiary);
     background: var(--colorFillSecondary);
-    & a{
+    & a {
+      pointer-events: none;
       color: var(--colorTextTertiary);
       cursor: wait;
     }

@@ -1,13 +1,11 @@
 import React from 'react';
 import Head from 'next/head';
-// import Image from 'next/image';
-// import { Inter } from 'next/font/google';
-// import styles from '@/styles/Home.module.scss';
 import HomePage from '@/src/screens/home/HomePage';
-
-// const inter = Inter({ subsets: ['latin'] });
+import { useRouter } from 'next/router';
 
 export default function Home() {
+  const path = useRouter();
+  console.log(path);
   return (
     <>
       <Head>

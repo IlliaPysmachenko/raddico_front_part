@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useAppDispatch, useAppSelector } from '@/src/redux/hooks';
 import Checkbox from '@/src/components/checkbox/Checkbox';
 import { getCurrentDate } from '@/src/helpers/functions';
-import { setDateFrom, setDatePeriod, setDateTo } from '@/src/redux/searchBlockSlice/searchBlockSlice';
+import { setDateFrom, setDatePeriod, setDateTo } from '@/src/screens/home/searchPanelBlock/slice/searchBlockSlice';
 import { filterByPeriod } from '@/src/data/dataExamples';
 import WithSelect from '@/src/hoc/withSelect';
 import style from './DateBlock.module.scss';

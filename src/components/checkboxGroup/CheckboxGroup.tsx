@@ -1,8 +1,8 @@
 import React from 'react';
 import Checkbox from '@/src/components/checkbox/Checkbox';
-import { CheckboxesType } from '@/src/redux/searchBlockSlice/searchBlockTypes';
+import { CheckboxesType } from '@/src/screens/home/searchPanelBlock/slice/searchBlockTypes';
 import { useAppDispatch } from '@/src/redux/hooks';
-import { setToggleAllCheckbox } from '@/src/redux/searchBlockSlice/searchBlockSlice';
+import { setToggleAllCheckbox } from '@/src/screens/home/searchPanelBlock/slice/searchBlockSlice';
 import style from './CheckboxGroup.module.scss';
 
 type CheckboxGroupPropsType = {

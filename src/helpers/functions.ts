@@ -1,4 +1,4 @@
-import { SearchBlockStateType, CheckboxesType } from '@/src/redux/searchBlockSlice/searchBlockTypes';
+import { SearchBlockStateType, CheckboxesType } from '@/src/screens/home/searchPanelBlock/slice/searchBlockTypes';
 
 export const getCurrentDate = () => {
   const now = new Date();

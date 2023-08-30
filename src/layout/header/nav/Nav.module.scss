@@ -1,24 +1,27 @@
-.navRow{
+.navContainer {
+  position: relative;
+  .navRow {
     display: flex;
-    padding: var(--paddingSM) 0px;
+    padding: var(--paddingSM) 0;
     background-color: var(--user-background, var(--colorPrimaryBgHover));
     border-radius: var(--borderRadius);
     border: 2px solid var(--colorBorder);
 
-    &  li {
-        padding: 5px 10px;
+    & li {
+      padding: 5px 10px;
 
+      & a {
+        text-decoration: none;
+        color: var(--colorText);
+        //font-size: 14px;
+        line-height: 22px;
 
-        & a {
-            text-decoration: none;
-            color: var(--colorText);
-            //font-size: 14px;
-            line-height: 22px;
-
-            &.activeLink {
-                color: var(--colorPrimary);
-                border-bottom: 2px solid var(--colorPrimary);
-            }
+        &.activeLink {
+          color: var(--colorPrimary);
+          border-bottom: 2px solid var(--colorPrimary);
         }
+      }
     }
+  }
 }
+

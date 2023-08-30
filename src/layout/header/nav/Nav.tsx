@@ -19,7 +19,7 @@ function Nav(): React.JSX.Element {
     },
   ];
   return (
-    <div>
+    <div className={style.navContainer}>
       <nav>
         <ul className={style.navRow}>
           {navArr.map((item, index) => (
@@ -34,9 +34,10 @@ function Nav(): React.JSX.Element {
             </li>
           ))}
         </ul>
-
-        <ColorTheme />
       </nav>
+      {/* <div className={style.colorTheme_block}> */}
+        <ColorTheme />
+      {/* </div> */}
     </div>
   );
 }

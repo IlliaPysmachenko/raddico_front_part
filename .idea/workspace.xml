@@ -5,18 +5,56 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b3bf699e-b4fb-49dd-ad56-118674db30a4" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/assets/icons/deleteIcon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/icons/rewriteIcon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/colorPicker/ColorPicker.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/screens/configurationPage/ConfigurationPage.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/screens/configurationPage/ConfigurationPage.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/screens/configurationPage/aeTitlesTab/AeTitlesTab.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/screens/configurationPage/aeTitlesTab/AeTitlesTab.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/screens/configurationPage/aeTitlesTab/slice/AeTitlesType.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/screens/configurationPage/aeTitlesTab/slice/aeTitlesSlice.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/screens/home/searchPanelBlock/slice/thunkCreators.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/screens/home/studiesBlock/slice/thunkCreators.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/api.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/studiesSlice/StudiesType.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/studiesSlice/StudiesType.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/studiesSlice/studiesSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/studiesSlice/studiesSlice.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/configuration.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/configuration.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/icons/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icons/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/button/Button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/button/Button.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/checkboxGroup/CheckboxGroup.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/checkboxGroup/CheckboxGroup.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/colorPicker/ColorPicker.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/colorPicker/ColorPicker.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/colorTheme/ColorTheme.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/colorTheme/ColorTheme.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/inputFieldsGroup/InputFieldsGroup.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/inputFieldsGroup/InputFieldsGroup.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helpers/functions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/functions.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layout/header/nav/Nav.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/header/nav/Nav.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layout/header/nav/Nav.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/header/nav/Nav.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/loading/loading.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/loading/loading.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/searchBlockSlice/searchBlockSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/searchPanelBlock/slice/searchBlockSlice.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/searchBlockSlice/searchBlockTypes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/searchPanelBlock/slice/searchBlockTypes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/studiesSlice/StudiesType.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/studiesBlock/slice/StudiesType.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/studiesSlice/studiesSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/studiesBlock/slice/studiesSlice.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/configuration/ConfigurationPage.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/home/searchPanelBlock/SearchPanel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/searchPanelBlock/SearchPanel.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/home/searchPanelBlock/dateBlock/DateBlock.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/searchPanelBlock/dateBlock/DateBlock.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/screens/home/studiesBlock/StudiesBlock.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/studiesBlock/StudiesBlock.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/screens/home/studiesBlock/StudiesBlock.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/studiesBlock/StudiesBlock.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/screens/home/studiesBlock/additionalInfo/AdditionalInfo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/studiesBlock/additionalInfo/AdditionalInfo.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/home/studiesBlock/studyTable/StudyTable.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/studiesBlock/studyTable/StudyTable.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/globals.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/globals.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DarkyenusTimeTracker">
+    <option name="totalTimeSeconds" value="19070" />
+    <option name="idleThresholdMs" value="240000" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -59,13 +97,13 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "D:/Projects/FSD examples/React + RTK todo app",
+    "last_opened_file_path": "D:/Projects/Easy-Shop-App",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "copyright.filetypes.XHTML",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "ts.external.directory.path": "D:\\Projects\\Raddico front-end part\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   },
@@ -80,11 +118,11 @@
       <recent name="C:\Users\Алёна\OneDrive\Рабочий стол\Илья\Projects\raddico_front_part\src\redux\facilitiesSlice" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Projects\Raddico front-end part\src\screens\home\searchPanelBlock\slice" />
+      <recent name="D:\Projects\Raddico front-end part\src\screens\home\studiesBlock\slice" />
+      <recent name="D:\Projects\Raddico front-end part\src\screens\home\studiesBlock\studyTable\slice" />
       <recent name="D:\Projects\Raddico front-end part\src\redux" />
       <recent name="D:\Projects\Raddico front-end part\src\screens\home\searchPanelBlock" />
-      <recent name="C:\Users\Алёна\OneDrive\Рабочий стол\Илья\Projects\raddico_front_part\src\components" />
-      <recent name="C:\Users\Алёна\OneDrive\Рабочий стол\Илья\Projects\raddico_front_part\src\assets" />
-      <recent name="C:\Users\Алёна\OneDrive\Рабочий стол\Илья\Projects\raddico_front_part\src\components\icons" />
     </key>
   </component>
   <component name="RunManager">
@@ -100,7 +138,6 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.dev" />
         <item itemvalue="npm.dev" />
       </list>
     </recent_temporary>
@@ -149,7 +186,12 @@
       <workItem from="1692643395692" duration="254000" />
       <workItem from="1692643673282" duration="9034000" />
       <workItem from="1692694504143" duration="12313000" />
-      <workItem from="1692796391241" duration="44114000" />
+      <workItem from="1692796391241" duration="53355000" />
+      <workItem from="1693060495263" duration="117000" />
+      <workItem from="1693060639883" duration="9403000" />
+      <workItem from="1693246385031" duration="2445000" />
+      <workItem from="1693254853179" duration="17590000" />
+      <workItem from="1693329546060" duration="23682000" />
     </task>
     <servers />
   </component>

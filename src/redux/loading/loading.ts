@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { getStudiesThunk } from '@/src/redux/studiesSlice/studiesSlice';
-import { getOptions } from '@/src/redux/searchBlockSlice/searchBlockSlice';
+import { getStudiesThunk } from '@/src/screens/home/studiesBlock/slice/thunkCreators';
+import { getOptions } from '@/src/screens/home/searchPanelBlock/slice/thunkCreators';
 
 const initialState = {
   isLoading: false,
