@@ -4,31 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3bf699e-b4fb-49dd-ad56-118674db30a4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/notificationIcon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/form/FormComponent.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/form/FormComponent.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/modal/ModalComponent.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/modal/ModalComponent.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hooks/useOutsideClick.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.eslintrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/icons/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icons/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/button/Button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/button/Button.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/inputFieldsGroup/InputFieldsGroup.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/inputFieldsGroup/InputFieldsGroup.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/configurationPage/aeTitlesTab/AeTitlesTab.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/configurationPage/aeTitlesTab/AeTitlesTab.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/configurationPage/aeTitlesTab/AeTitlesTab.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/configurationPage/aeTitlesTab/AeTitlesTab.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/configurationPage/aeTitlesTab/slice/AeTitlesType.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/configurationPage/aeTitlesTab/slice/AeTitlesType.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/configurationPage/aeTitlesTab/slice/aeTitlesSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/configurationPage/aeTitlesTab/slice/aeTitlesSlice.ts" afterDir="false" />
-    </list>
+    <list default="true" id="b3bf699e-b4fb-49dd-ad56-118674db30a4" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DarkyenusTimeTracker">
-    <option name="totalTimeSeconds" value="7224" />
+    <option name="totalTimeSeconds" value="7639" />
     <option name="idleThresholdMs" value="240000" />
     <option name="gitIntegration" value="true" />
     <option name="naggedAbout" value="1" />
@@ -170,7 +153,7 @@
       <workItem from="1693254853179" duration="17590000" />
       <workItem from="1693329546060" duration="25194000" />
       <workItem from="1693431468686" duration="23348000" />
-      <workItem from="1693558637008" duration="14936000" />
+      <workItem from="1693558637008" duration="15346000" />
     </task>
     <servers />
   </component>
