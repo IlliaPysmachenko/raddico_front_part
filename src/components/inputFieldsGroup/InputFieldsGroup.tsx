@@ -20,7 +20,7 @@ function InputFieldsGroup({ title, fields }: InputFieldsGroupPropsType) {
   const dispatch = useAppDispatch();
 
   const inputChangeHandler = (id:string, event:ChangeEvent<HTMLInputElement>) => {
-    dispatch(setInputField({ id, payload: event.target.value }));
+    dispatch(setInputField({ id, value: event.target.value }));
   };
 
   return (

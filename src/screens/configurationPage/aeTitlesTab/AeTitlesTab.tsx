@@ -1,50 +1,65 @@
-import React, { FC, useState } from 'react';
-import InputField from '@/src/components/inputFieldItem/InputField';
-import { DeleteIcon, RewriteIcon } from '@/src/assets/icons';
+import React, { useState } from 'react';
+import { DeleteIcon, NotificationIcon, RewriteIcon } from '@/src/assets/icons';
 import { useAppDispatch, useAppSelector } from '@/src/redux/hooks';
 import Button from '@/src/components/button/Button';
-import { deleteAeTitle } from '@/src/screens/configurationPage/aeTitlesTab/slice/aeTitlesSlice';
+import {
+  changeAeTitle,
+  deleteAeTitle,
+  setNewAeTitle
+} from '@/src/screens/configurationPage/aeTitlesTab/slice/aeTitlesSlice';
+import Modal from '@/src/components/modal/ModalComponent';
+import FormComponent from '@/src/components/form/FormComponent';
 import style from './AeTitlesTab.module.scss';
-import { CloseIcon } from "next/dist/client/components/react-dev-overlay/internal/icons/CloseIcon";
-import { useForm } from "react-hook-form";
 
 const AeTitlesTab = () => {
   const aeTitlesArr = useAppSelector((state) => state.aeTitles.aeTitlesArray);
   const dispatch = useAppDispatch();
 
-  const [modalVisible, setModalVisible] = useState(false);
+  const [addNewTitleModalVisible, setAddNewTitleModalVisible] = useState(false);
+  const [modalVisibleArray, setModalVisibleArray] = useState(new Array(aeTitlesArr.length).fill(false));
 
-  const aeTitles = aeTitlesArr.map((item) => {
+  const aeTitles = aeTitlesArr.map((item, index) => {
     const deleteAeTitleHandler = () => {
       // eslint-disable-next-line no-restricted-globals
-      const shouldDelete = confirm(`Are you sure you want to delete ${item.name}`);
+      const shouldDelete = confirm(`Are you sure you want to delete ${item.id}`);
       if (shouldDelete) {
         dispatch(deleteAeTitle(item.id));
       }
     };
-    const toggleOpenModalHandler = (isOpen: boolean) => {
-      setModalVisible(isOpen);
+    const submitFormHandler = ({ id, data }: any) => {
+      dispatch(changeAeTitle({ id, data }));
     };
+
+    const toggleOpenModalHandler = (ind: number, isOpen: boolean) => {
+      const newModalVisibleArray = [...modalVisibleArray];
+      newModalVisibleArray[ind] = isOpen;
+      setModalVisibleArray(newModalVisibleArray);
+    };
+
+    const getAeTitleName = item.fields.find((item) => item.name === 'Name');
+
     return (
       <div className={style.aeTitle_container} key={item.id}>
         <span>
-          {item.name}
-          {' '}
-          -
-          {' '}
-          {item.description}
+          {getAeTitleName?.value}
         </span>
         <div className={style.iconsBlock}>
           <div
             className={style.rewriteIcon}
             title="Change AE Title"
             onClick={() => {
-              toggleOpenModalHandler(true);
+              toggleOpenModalHandler(index, true);
             }}
           >
             <RewriteIcon />
           </div>
-          {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events,jsx-a11y/no-static-element-interactions */}
+          <div
+            className={style.revriteIcon}
+            title="Verify AE Title"
+            onClick={undefined}
+          >
+            <NotificationIcon />
+          </div>
           <div
             className={style.deleteIcon}
             title="Delete AE Title"
@@ -53,70 +68,108 @@ const AeTitlesTab = () => {
             <DeleteIcon />
           </div>
         </div>
-        { modalVisible && <ModalForm toggleOpenModalHandler={toggleOpenModalHandler} /> }
+        { modalVisibleArray[index] && (
+          <Modal key={item.id} toggleOpenModalHandler={(isOpen) => toggleOpenModalHandler(index, isOpen)}>
+            <FormComponent key={item.id} id={item.id} fields={item.fields} handler={submitFormHandler} buttonText="Save changes" />
+          </Modal>
+        ) }
       </div>
     );
   });
 
-  const addNewAeTitleHandler = () => {
+  const aeTitleModalVisible = () => {
+    setAddNewTitleModalVisible(true);
+  };
+  const closeAddNewTitleModal = (isOpen: boolean) => {
+    setAddNewTitleModalVisible(isOpen);
+  };
 
+  const aeTitleNewFields = [
+    {
+      name: 'Name',
+      type: 'text',
+      isRequired: true,
+      isDisabled: false,
+      value: '',
+    },
+    {
+      name: 'Description',
+      type: 'text',
+      isRequired: false,
+      isDisabled: false,
+      value: '',
+    },
+    {
+      name: 'Host',
+      type: 'text',
+      isRequired: true,
+      isDisabled: false,
+      value: '',
+    },
+    {
+      name: 'Port',
+      type: 'number',
+      isRequired: true,
+      isDisabled: false,
+      value: '',
+    },
+  ];
+  const addNewAeTitleHandler = ({ data }: any) => {
+    const aeTitleNew = {
+      id: data['Name'],
+      fields: [
+        {
+          name: 'Name',
+          type: 'text',
+          isRequired: true,
+          isDisabled: false,
+          value: data['Name'],
+        },
+        {
+          name: 'Description',
+          type: 'text',
+          isRequired: false,
+          isDisabled: false,
+          value: data['Description'],
+        },
+        {
+          name: 'Host',
+          type: 'text',
+          isRequired: true,
+          isDisabled: false,
+          value: data['Host'],
+        },
+        {
+          name: 'Port',
+          type: 'number',
+          isRequired: true,
+          isDisabled: false,
+          value: data.Port,
+        },
+      ],
+    };
+
+    dispatch(setNewAeTitle(aeTitleNew));
   };
 
   return (
     <div className={style.container}>
       {aeTitles}
       <div>
-        <Button title="Add application entity" handler={addNewAeTitleHandler} />
+        <Button title="Add application entity" handler={aeTitleModalVisible} type="button" />
       </div>
+      {
+        addNewTitleModalVisible && (
+        <Modal toggleOpenModalHandler={(isOpen) => {
+          closeAddNewTitleModal(isOpen);
+        }}
+        >
+          <FormComponent fields={aeTitleNewFields} handler={addNewAeTitleHandler} buttonText="Add new entity" />
+        </Modal>
+        )
+      }
     </div>
   );
 };
 
 export default AeTitlesTab;
-
-// <div className={style.container}>
-//   <div className={style.titles_container}>
-//     <h5 className={style.titles_title}>Add Application Entity:</h5>
-//   </div>
-//   <div className={style.content_container}>
-//     <InputField id="aetitle" title="AE Title" value=""/>
-//   </div>
-// </div>
-// <div className={style.container}>
-//   <div className={style.titles_container}><h5 className={style.titles_title}>Modify Application Entity:</h5></div>
-// </div>
-
-export type ModalFormPropsType = {
-  toggleOpenModalHandler: (isOpen: boolean) => void;
-};
-
-export const ModalForm: FC<ModalFormPropsType> = ({ toggleOpenModalHandler }) => {
-  const { register, formState: { errors }, handleSubmit} = useForm({
-    mode: 'onBlur',
-  });
-  const onFormSubmitHandler = (data) => {
-    console.log(data);
-  };
-  return (
-    <div className={style.form_wrapper}>
-      <div className={style.form_container}>
-        <div className={style.form_block}>
-          <form onSubmit={handleSubmit(onFormSubmitHandler)}>
-            <div className={style.inputField_container}>
-              <input {...register('test', { value: 'tTEST', required: false })} />
-            </div>
-          </form>
-        </div>
-        <div
-          className={style.closeModalIcon}
-          title="Close"
-          onClick={() => {
-            toggleOpenModalHandler(false);
-          }}
-        >
-          <CloseIcon />
-        </div>
-      </div>
-    </div>
-  );
-};

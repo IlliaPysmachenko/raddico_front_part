@@ -1,11 +1,8 @@
 import React from 'react';
 import Head from 'next/head';
 import HomePage from '@/src/screens/home/HomePage';
-import { useRouter } from 'next/router';
 
 export default function Home() {
-  const path = useRouter();
-  console.log(path);
   return (
     <>
       <Head>
