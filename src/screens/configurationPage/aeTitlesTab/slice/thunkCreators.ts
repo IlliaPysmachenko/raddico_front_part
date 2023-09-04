@@ -35,7 +35,7 @@ export const updateTitle = createAsyncThunk(
   // eslint-disable-next-line consistent-return
   async (data: any, { rejectWithValue, dispatch }) => {
     try {
-      const res = await aeTitlesApi.createAeTitle(JSON.stringify(data));
+      const res = await aeTitlesApi.updateAeTitle(data);
       dispatch(getAeTitles());
       return res;
     } catch (error) {

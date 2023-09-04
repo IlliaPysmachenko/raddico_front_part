@@ -1,6 +1,6 @@
 import { ZipFile } from '@/src/assets/icons';
 import Button from '@/src/components/button/Button';
-import React from 'react';
+import React, { useState } from 'react';
 import { useAppDispatch, useAppSelector } from '@/src/redux/hooks';
 import {
   requestZipStudy,
@@ -17,18 +17,22 @@ const AdditionalInfo = () => {
   } = useAppSelector((state) => state.study);
   const aeTitles = useAppSelector((state) => state.aeTitles.aeTitlesArray);
   const dispatch = useAppDispatch();
+  const [sendToTitle, setSendToTitle] = useState('')
 
   const aeTitlesOptionsArr: any = [];
   // eslint-disable-next-line array-callback-return
   aeTitles.map((item) => {
     aeTitlesOptionsArr.push({ id: item.ae_title, name: item.ae_title });
   });
+  const selectTitleHandler = (e: any) => {
+    setSendToTitle(e.target.value);
+  };
   const sendExamsHandler = () => {
     const createPayload = () => ({
-      // eslint-disable-next-line max-len
-      // send_to: destinationServer.selectedOption,
+      send_to: sendToTitle,
       selected_studies: selectedStudies,
     });
+    console.log(createPayload());
     dispatch(sendStudyActions(createPayload()));
   };
 
@@ -64,7 +68,7 @@ const AdditionalInfo = () => {
           <InputSelectItem
             id="aeTitles"
             optionsArr={aeTitlesOptionsArr}
-            selectValueHandler={() => {}}
+            selectValueHandler={selectTitleHandler}
           />
         </div>
 

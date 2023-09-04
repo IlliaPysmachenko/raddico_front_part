@@ -28,7 +28,7 @@ export const searchApi = {
 
 export const studiesActionsApi = {
   async sendStudyAction(data: any) {
-    const response = await instance.post('aetitles', data);
+    const response = await instance.post('exporters', data);
     return response.data;
   },
   async zipStudies(data: any) {
@@ -59,7 +59,7 @@ export const aeTitlesApi = {
     return response.data;
   },
   async updateAeTitle(data: any) {
-    const response = await instance.put(`aetitles/${data.ae_title}`, data);
+    const response = await instance.put(`aetitles/${data.ae_title}`, JSON.stringify(data));
     return response.data;
   },
 };

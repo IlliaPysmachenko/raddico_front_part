@@ -88,11 +88,13 @@ export const loadingSlice = createSlice({
         const data = {
           type: 'error',
           isShoved: true,
+          // @ts-ignore
           messageBody: action.payload.message,
         };
         state.serverMessage = data;
         state.isLoading = false;
       })
+
       .addCase(deleteTitle.fulfilled, (state) => {
         const data = {
           type: 'success',
@@ -106,6 +108,7 @@ export const loadingSlice = createSlice({
         const data = {
           type: 'error',
           isShoved: true,
+          // @ts-ignore
           messageBody: action.payload.message,
         };
         state.serverMessage = data;
