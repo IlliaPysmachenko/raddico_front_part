@@ -11,10 +11,11 @@ import {
   setToggleCheckboxModality,
 } from '@/src/screens/home/searchPanelBlock/slice/searchBlockSlice';
 import { CheckboxesType } from '@/src/screens/home/searchPanelBlock/slice/searchBlockTypes';
-import { getStudiesThunk, getTitles } from '@/src/screens/home/studiesBlock/slice/thunkCreators';
+import { getStudiesThunk } from '@/src/screens/home/studiesBlock/slice/thunkCreators';
 import { getOptions } from '@/src/screens/home/searchPanelBlock/slice/thunkCreators';
 
 import style from './SearchPanel.module.scss';
+import { getAeTitles } from "@/src/screens/configurationPage/aeTitlesTab/slice/thunkCreators";
 
 function SearchPanel() {
   const dispatch = useAppDispatch();
@@ -58,7 +59,7 @@ function SearchPanel() {
 
   useEffect(() => {
     dispatch(getOptions());
-    dispatch(getTitles());
+    dispatch(getAeTitles());
   }, []);
 
   const toggleCheckboxHandler = (id: string, title: string) => {
@@ -93,7 +94,7 @@ function SearchPanel() {
             toggleCheckboxHandler={toggleCheckboxHandler}
           />
 
-          <Button title="Search" handler={SendSearchQuery} />
+          <Button type="button" title="Search" handler={SendSearchQuery} />
 
         </div>
 

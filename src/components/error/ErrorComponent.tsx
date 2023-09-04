@@ -1,16 +1,31 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect } from 'react';
+import { closeMessage } from '@/src/redux/loading/loading';
+import { useAppDispatch, useAppSelector } from '@/src/redux/hooks';
 import style from './ErrorComponent.module.scss';
 
 function ErrorComponent() {
+  const dispatch = useAppDispatch();
+  const serverMessage = useAppSelector((state) => state.loading.serverMessage);
+
+  // eslint-disable-next-line consistent-return
+  useEffect(() => {
+    if (serverMessage.isShoved) {
+      const timeout = setTimeout(() => {
+        dispatch(closeMessage());
+      }, 3000);
+
+      return () => clearTimeout(timeout);
+    }
+  }, [serverMessage.isShoved]);
   return (
-    <div className={style.errorContainer}>
+    <div className={`${style.container} ${style[serverMessage.type]}`}>
 
-      <div className={style.errorBlock}>
-        <h3 className={style.errorTitle}>Something went wrong...</h3>
+      <div className={style.block}>
+        <h3 className={style.title}>{serverMessage.type}</h3>
 
-        <p>Please try to reload the page</p>
+        <p className={style.messageBody}>{serverMessage.messageBody}</p>
       </div>
 
     </div>

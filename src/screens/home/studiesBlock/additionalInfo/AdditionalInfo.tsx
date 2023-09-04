@@ -1,6 +1,4 @@
 import { ZipFile } from '@/src/assets/icons';
-import WithSelect from '@/src/hoc/withSelect';
-import { setDestinationServer } from '@/src/screens/home/studiesBlock/slice/studiesSlice';
 import Button from '@/src/components/button/Button';
 import React from 'react';
 import { useAppDispatch, useAppSelector } from '@/src/redux/hooks';
@@ -8,6 +6,7 @@ import {
   requestZipStudy,
   sendStudyActions,
 } from '@/src/screens/home/studiesBlock/slice/thunkCreators';
+import InputSelectItem from '@/src/components/inputSelectItem/InputSelectItem';
 import style from './AdditionalInfo.module.scss';
 
 const AdditionalInfo = () => {
@@ -15,13 +14,19 @@ const AdditionalInfo = () => {
     selectedStudies,
     totalStudiesCount,
     totalImagesCount,
-    destinationServer,
   } = useAppSelector((state) => state.study);
+  const aeTitles = useAppSelector((state) => state.aeTitles.aeTitlesArray);
   const dispatch = useAppDispatch();
+
+  const aeTitlesOptionsArr: any = [];
+  // eslint-disable-next-line array-callback-return
+  aeTitles.map((item) => {
+    aeTitlesOptionsArr.push({ id: item.ae_title, name: item.ae_title });
+  });
   const sendExamsHandler = () => {
     const createPayload = () => ({
       // eslint-disable-next-line max-len
-      send_to: destinationServer.selectedOption,
+      // send_to: destinationServer.selectedOption,
       selected_studies: selectedStudies,
     });
     dispatch(sendStudyActions(createPayload()));
@@ -56,16 +61,15 @@ const AdditionalInfo = () => {
           </div>
         </div>
         <div className={style.additionalInfo_select}>
-          <WithSelect
-            id={destinationServer.id}
-            name={destinationServer.name}
-            optionsArr={destinationServer.optionsArr}
-            action={setDestinationServer}
+          <InputSelectItem
+            id="aeTitles"
+            optionsArr={aeTitlesOptionsArr}
+            selectValueHandler={() => {}}
           />
         </div>
 
         <div className={style.additionalInfo_btn}>
-          <Button title="Send exams" handler={sendExamsHandler} />
+          <Button type="button" title="Send exams" handler={sendExamsHandler} />
         </div>
 
       </div>

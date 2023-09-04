@@ -2,14 +2,14 @@ import React, { ChangeEvent } from 'react';
 import style from './InputSelectItem.module.scss';
 
 export type OptionsArrType = {
-  id: string;
+  id?: string;
   name: string;
   // selected: boolean;
 };
 
 type SelectItemPropsType = {
   id: string;
-  name: string;
+  name?: string;
   optionsArr: Array<OptionsArrType> | null;
   selectValueHandler: (e: ChangeEvent<HTMLSelectElement>, id?: string) => void;
 };

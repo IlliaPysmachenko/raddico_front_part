@@ -12,6 +12,7 @@ export const getOptions = createAsyncThunk(
       dispatch(setModality(res.modalities));
       dispatch(setToken(res.csrf));
     } catch (error) {
+      // console.log(error);
       return rejectWithValue(error);
     }
   },

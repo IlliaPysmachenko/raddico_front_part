@@ -1,14 +1,8 @@
-export type AeTitleFieldType = {
-  name: string;
-  type: string;
-  isRequired: boolean;
-  isDisabled: boolean;
-  value: string;
-};
-
 export type AeTitlesType = {
-  id: string;
-  fields: Array<AeTitleFieldType>;
+  ae_title: string;
+  description: string;
+  host: string;
+  port: string;
 };
 
 export type AeTitleSliceType = {

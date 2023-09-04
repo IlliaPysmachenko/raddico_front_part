@@ -8,11 +8,8 @@ type ButtonPropsType = {
 };
 const Button: FC<ButtonPropsType> = ({ title, handler, type = 'button' }) => (
   <div className={style.btn_container}>
-    <button
-      type={type}
-      className={style.btn}
-      onClick={handler ? (event) => handler(event) : undefined}
-    >
+    {/* eslint-disable-next-line react/button-has-type */}
+    <button type={type} className={style.btn} onClick={handler ? (event) => handler(event) : undefined}>
       {title}
     </button>
   </div>

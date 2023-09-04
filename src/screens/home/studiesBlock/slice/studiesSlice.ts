@@ -45,12 +45,6 @@ const initialState: StudiesArrayType = {
     },
   ],
   checkAllStudies: false,
-  destinationServer: {
-    id: 'destinationServer',
-    name: 'aetitles',
-    selectedOption: '',
-    optionsArr: null,
-  },
   sortConfig: {
     direction: null,
     key: '',
@@ -124,14 +118,6 @@ export const studiesSlice = createSlice({
       const count = payload.reduce((total: number, item: StudiesType) => total + +item.images_count, 0);
       state.totalImagesCount = count;
     },
-    setAeTitles: (state, { payload }) => {
-      state.destinationServer.optionsArr = payload;
-    },
-    setDestinationServer: (state, { payload }) => {
-      if (state.destinationServer.optionsArr) {
-        state.destinationServer.selectedOption = payload;
-      }
-    },
     setZipItems: (state, { payload }) => {
       const { id, name, prepared } = payload;
       state.zipItems.push({ id, name, prepared });
@@ -149,8 +135,6 @@ export const {
   setTotalStudiesCount,
   setTotalImagesCount,
   setToggleStudyChecked,
-  setAeTitles,
-  setDestinationServer,
   checkAllStudiesToggle,
   setZipItems,
   removeZip,

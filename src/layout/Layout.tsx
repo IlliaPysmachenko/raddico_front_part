@@ -3,13 +3,13 @@ import Header from '@/src/layout/header/Header';
 import { useAppSelector } from '@/src/redux/hooks';
 import Preloader from '@/src/components/preloader/Preloader';
 import ErrorComponent from '@/src/components/error/ErrorComponent';
-import useErrorHandling from '@/src/hooks/useErrorHandling';
+// import useErrorHandling from '@/src/hooks/useErrorHandling';
 
 function Layout({ children }: any): React.JSX.Element {
   const isLoading = useAppSelector((state) => state.loading.isLoading);
-  const isError = useAppSelector((state) => state.loading.isError);
+  const serverMessage = useAppSelector((state) => state.loading.serverMessage);
 
-  useErrorHandling(isError);
+  // useErrorHandling(isError);
 
   return (
     <>
@@ -21,7 +21,7 @@ function Layout({ children }: any): React.JSX.Element {
         </main>
 
       </div>
-      {isError && <ErrorComponent />}
+      {serverMessage.isShoved && <ErrorComponent serverMessage={serverMessage} />}
     </>
   );
 }

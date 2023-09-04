@@ -1,7 +1,6 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import { searchApi, studiesActionsApi } from '@/src/api/api';
 import {
-  setAeTitles,
   setStudies,
   setTotalImagesCount,
   setTotalStudiesCount, setZipItems,
@@ -21,20 +20,6 @@ export const getStudiesThunk = createAsyncThunk(
       dispatch(setTotalStudiesCount(res));
       // eslint-disable-next-line @typescript-eslint/no-use-before-define
       dispatch(setTotalImagesCount(res));
-    } catch (error) {
-      return rejectWithValue(error);
-    }
-  },
-);
-
-export const getTitles = createAsyncThunk(
-  'studies/getTitles',
-  // eslint-disable-next-line consistent-return
-  async (_, { rejectWithValue, dispatch }) => {
-    try {
-      const res = await studiesActionsApi.getAeTitles();
-      // eslint-disable-next-line @typescript-eslint/no-use-before-define
-      dispatch(setAeTitles(res));
     } catch (error) {
       return rejectWithValue(error);
     }
