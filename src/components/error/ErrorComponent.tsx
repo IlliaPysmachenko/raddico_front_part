@@ -14,7 +14,7 @@ function ErrorComponent() {
     if (serverMessage.isShoved) {
       const timeout = setTimeout(() => {
         dispatch(closeMessage());
-      }, 3000);
+      }, 6000);
 
       return () => clearTimeout(timeout);
     }

@@ -57,10 +57,11 @@ export const loadingSlice = createSlice({
       .addCase(sendStudyActions.pending, (state) => {
         state.isLoading = true;
       })
-      .addCase(sendStudyActions.fulfilled, (state) => {
+      .addCase(sendStudyActions.fulfilled, (state, { payload }) => {
         const data = {
           type: 'success',
           isShoved: true,
+          // eslint-disable-next-line max-len
           messageBody: 'Studies successfully added to the queue!',
         };
         state.serverMessage = data;
@@ -75,12 +76,24 @@ export const loadingSlice = createSlice({
         state.serverMessage = data;
         state.isLoading = false;
       })
-      .addCase(verifyTitle.fulfilled, (state) => {
-        const data = {
-          type: 'success',
-          isShoved: true,
-          messageBody: 'Studies successfully added to the queue!',
-        };
+      .addCase(verifyTitle.fulfilled, (state, { payload }) => {
+        let data;
+        if (payload.result === '0') {
+          data = {
+            type: 'success',
+            isShoved: true,
+            // eslint-disable-next-line max-len
+            messageBody: `Connection time: ${payload.connectionTime}. Echo time: ${payload.echoTime}. Release time: ${payload.releaseTime}`,
+          };
+        }
+        if (payload.result === '3') {
+          data = {
+            type: 'error',
+            isShoved: true,
+            // eslint-disable-next-line max-len
+            messageBody: payload.errorMessage,
+          };
+        }
         state.serverMessage = data;
         state.isLoading = false;
       })

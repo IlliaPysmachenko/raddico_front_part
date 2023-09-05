@@ -63,7 +63,7 @@ const StudyTable = () => {
         <div className={style.grid_item}>
           <Link
             href={`http://192.168.2.237:8888/api/zip/dicom/${item.study_iuid}`}
-            target="_blank"
+            // target="_blank"
             title="Download exam"
             className={style.disabled}
           >

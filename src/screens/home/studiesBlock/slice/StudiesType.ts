@@ -26,9 +26,15 @@ export type SortConfigType = {
   key: string;
 };
 
+type selectedStudies = {
+  study_iuid: string;
+  patient_id: string;
+  patient_name: string;
+};
+
 export type StudiesArrayType = {
   studies: Array<StudiesType> | null;
-  selectedStudies: Array<string>;
+  selectedStudies: Array<selectedStudies>;
   totalStudiesCount: number;
   totalImagesCount: number;
   studyTitles: Array<StudyTitlesType>;

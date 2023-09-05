@@ -19,7 +19,7 @@ const AdditionalInfo = () => {
   const dispatch = useAppDispatch();
   const [sendToTitle, setSendToTitle] = useState('')
 
-  const aeTitlesOptionsArr: any = [];
+  const aeTitlesOptionsArr: any = [{ id: '', name: 'Select exporter' }];
   // eslint-disable-next-line array-callback-return
   aeTitles.map((item) => {
     aeTitlesOptionsArr.push({ id: item.ae_title, name: item.ae_title });
@@ -28,20 +28,40 @@ const AdditionalInfo = () => {
     setSendToTitle(e.target.value);
   };
   const sendExamsHandler = () => {
-    const createPayload = () => ({
-      send_to: sendToTitle,
-      selected_studies: selectedStudies,
-    });
+    const createPayload = () => {
+      const studies: Array<string> = [];
+      selectedStudies.forEach(item => studies.push(item.study_iuid));
+      return {
+        send_to: sendToTitle,
+        selected_studies: studies,
+      };
+    };
     console.log(createPayload());
     dispatch(sendStudyActions(createPayload()));
   };
+  const requestZipStudyHandler = async () => {
+    for (const item of selectedStudies) {
+      const link = `http://192.168.2.237:8888/api/zip/dicom/${item.study_iuid}`;
+      const response = await fetch(link);
+      const blob = await response.blob();
 
-  const requestZipStudyHandler = () => {
-    selectedStudies.forEach((item) => {
-      const link = `http://192.168.2.237:8888/api/zip/dicom/${item}`;
-      window.open(link, '_blank');
-    });
-    dispatch(requestZipStudy(selectedStudies));
+      // Создайте временный элемент <a> для скачивания
+      const anchor = document.createElement('a');
+      anchor.href = URL.createObjectURL(blob);
+      anchor.download = `${item.patient_id}_${item.patient_name}.zip`; // Задайте имя файла для скачивания
+      anchor.style.display = 'none';
+
+      // Добавьте элемент на страницу
+      document.body.appendChild(anchor);
+
+      // Имитируйте клик для скачивания файла
+      anchor.click();
+
+      // Удалите элемент после скачивания
+      document.body.removeChild(anchor);
+    }
+
+    // dispatch(requestZipStudy(selectedStudies));
   };
 
   return (

@@ -6,10 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="b3bf699e-b4fb-49dd-ad56-118674db30a4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/api.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/error/ErrorComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/error/ErrorComponent.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/inputSelectItem/InputSelectItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/inputSelectItem/InputSelectItem.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/loading/loading.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/loading/loading.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/configurationPage/aeTitlesTab/slice/thunkCreators.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/configurationPage/aeTitlesTab/slice/thunkCreators.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/screens/home/studiesBlock/additionalInfo/AdditionalInfo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/studiesBlock/additionalInfo/AdditionalInfo.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/home/studiesBlock/slice/StudiesType.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/studiesBlock/slice/StudiesType.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/home/studiesBlock/slice/studiesSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/studiesBlock/slice/studiesSlice.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/home/studiesBlock/studyTable/StudyTable.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/studiesBlock/studyTable/StudyTable.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/home/studiesBlock/studyTable/StudyTable.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/studiesBlock/studyTable/StudyTable.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,7 +21,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DarkyenusTimeTracker">
-    <option name="totalTimeSeconds" value="27681" />
+    <option name="totalTimeSeconds" value="33231" />
     <option name="idleThresholdMs" value="240000" />
     <option name="gitIntegration" value="true" />
     <option name="naggedAbout" value="1" />
@@ -167,7 +171,8 @@
       <workItem from="1693728450507" duration="10000" />
       <workItem from="1693728467313" duration="3204000" />
       <workItem from="1693827855254" duration="10922000" />
-      <workItem from="1693849498546" duration="15932000" />
+      <workItem from="1693849498546" duration="17993000" />
+      <workItem from="1693907728144" duration="4279000" />
     </task>
     <servers />
   </component>
@@ -187,5 +192,23 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/screens/home/studiesBlock/additionalInfo/AdditionalInfo.tsx</url>
+          <line>82</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/screens/home/studiesBlock/additionalInfo/AdditionalInfo.tsx</url>
+          <line>70</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -37,6 +37,9 @@ function InputSelectItem({
       onChange={(e) => {
         selectValueHandler(e, id);
       }}
+      onLoad={(e) => {
+        selectValueHandler(e, id);
+      }}
     >
       {showOptions}
     </select>

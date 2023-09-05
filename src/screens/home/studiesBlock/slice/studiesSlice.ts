@@ -89,11 +89,16 @@ export const studiesSlice = createSlice({
         const checkedStudy = state.studies.find((item) => item.study_iuid === id);
         if (checkedStudy) checkedStudy.isChecked = !isChecked;
         if (checkedStudy && checkedStudy.isChecked) {
-          state.selectedStudies.push(checkedStudy.study_iuid);
+          const study = {
+            study_iuid: checkedStudy.study_iuid,
+            patient_id: checkedStudy.patient_id,
+            patient_name: checkedStudy.patient_name,
+          };
+          state.selectedStudies.push(study);
         }
         if (checkedStudy && !checkedStudy.isChecked) {
-          const index = state.selectedStudies.indexOf(checkedStudy.study_iuid);
-          state.selectedStudies.splice(index, 1);
+          const filteredStudies = state.selectedStudies.filter((item) => item.study_iuid !== checkedStudy.study_iuid);
+          state.selectedStudies = filteredStudies;
         }
       }
     },
@@ -103,10 +108,15 @@ export const studiesSlice = createSlice({
         state.studies.forEach((item) => {
           item.isChecked = payload;
           if (item.isChecked) {
-            state.selectedStudies.push(item.study_iuid);
+            const study = {
+              study_iuid: item.study_iuid,
+              patient_id: item.patient_id,
+              patient_name: item.patient_name,
+            };
+            state.selectedStudies.push(study);
           } else {
-            const index = state.selectedStudies.indexOf(item.study_iuid);
-            state.selectedStudies.splice(index, 1);
+            const filteredStudies = state.selectedStudies.filter((study) => item.study_iuid !== study.study_iuid);
+            state.selectedStudies = filteredStudies;
           }
         });
       }
