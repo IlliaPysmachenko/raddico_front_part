@@ -4,12 +4,14 @@ import style from './InputSelectItem.module.scss';
 export type OptionsArrType = {
   id?: string;
   name: string;
-  // selected: boolean;
 };
 
 type SelectItemPropsType = {
   id: string;
+  // eslint-disable-next-line react/require-default-props
   name?: string;
+  // eslint-disable-next-line react/no-unused-prop-types,react/require-default-props
+  disabled?: boolean;
   optionsArr: Array<OptionsArrType> | null;
   selectValueHandler: (e: ChangeEvent<HTMLSelectElement>, id?: string) => void;
 };
@@ -17,6 +19,7 @@ type SelectItemPropsType = {
 function InputSelectItem({
   id,
   name,
+  disabled,
   optionsArr,
   selectValueHandler,
 }: SelectItemPropsType) {
@@ -30,14 +33,22 @@ function InputSelectItem({
     </option>
   ));
 
+  // Обработка момента монтирования компонента
+  // useEffect(() => {
+  //   // Здесь можно установить начальное значение вашего <select>, если необходимо
+  //   // Например, выбрать первый элемент из optionsArr
+  //   if (optionsArr && optionsArr.length > 0) {
+  //     // @ts-ignore
+  //     selectValueHandler({ target: { value: optionsArr[0].name } }, id);
+  //   }
+  // }, [optionsArr, id, selectValueHandler]);
+
   const displaySelect = (
     <select
+      disabled={disabled}
       name={name}
       id={id}
       onChange={(e) => {
-        selectValueHandler(e, id);
-      }}
-      onLoad={(e) => {
         selectValueHandler(e, id);
       }}
     >

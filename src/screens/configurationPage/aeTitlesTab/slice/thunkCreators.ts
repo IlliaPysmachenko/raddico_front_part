@@ -8,7 +8,6 @@ export const getAeTitles = createAsyncThunk(
   async (_, { rejectWithValue, dispatch }) => {
     try {
       const res = await aeTitlesApi.getAeTitles();
-      // console.log(res);
       dispatch(setAeTitlesArr(res));
     } catch (error) {
       return rejectWithValue(error);
@@ -64,7 +63,6 @@ export const verifyTitle = createAsyncThunk(
   async (data: any, { rejectWithValue }) => {
     try {
       const res = await aeTitlesApi.verifyAeTitle(data);
-      console.log(res);
       return res;
     } catch (error) {
       return rejectWithValue(error);

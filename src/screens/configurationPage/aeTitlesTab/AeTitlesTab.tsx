@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { DeleteIcon, NotificationIcon, RewriteIcon } from '@/src/assets/icons';
 import { useAppDispatch, useAppSelector } from '@/src/redux/hooks';
 import Button from '@/src/components/button/Button';
-import { changeAeTitle } from '@/src/screens/configurationPage/aeTitlesTab/slice/aeTitlesSlice';
 import Modal from '@/src/components/modal/ModalComponent';
 import FormComponent from '@/src/components/form/FormComponent';
 import {
@@ -32,7 +31,6 @@ const AeTitlesTab = () => {
       }
     };
     const submitFormHandler = (data: any) => {
-      console.log(data);
       dispatch(updateTitle(data));
     };
 
@@ -52,7 +50,6 @@ const AeTitlesTab = () => {
           {item.ae_title}
         </span>
         <div className={style.iconsBlock}>
-          {/* eslint-disable-next-line max-len */}
           <div className={style.rewriteIcon} title="Change AE Title" onClick={() => { toggleOpenModalHandler(index, true); }}>
             <RewriteIcon />
           </div>
@@ -65,7 +62,6 @@ const AeTitlesTab = () => {
         </div>
         { modalVisibleArray[index] && (
           <Modal key={item.ae_title} toggleOpenModalHandler={(isOpen) => toggleOpenModalHandler(index, isOpen)}>
-            {/* eslint-disable-next-line max-len */}
             <FormComponent key={item.ae_title} id={item.ae_title} item={item} handler={submitFormHandler} buttonText="Save changes" />
           </Modal>
         ) }
@@ -87,7 +83,6 @@ const AeTitlesTab = () => {
     port: '',
   };
   const addNewAeTitleHandler = (data : any) => {
-    console.log(data);
     dispatch(createAeTitle(data));
   };
 

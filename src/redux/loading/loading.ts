@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { getStudiesThunk, sendStudyActions } from '@/src/screens/home/studiesBlock/slice/thunkCreators';
 import { getOptions } from '@/src/screens/home/searchPanelBlock/slice/thunkCreators';
-import { deleteTitle, verifyTitle } from "@/src/screens/configurationPage/aeTitlesTab/slice/thunkCreators";
+import { deleteTitle, verifyTitle } from '@/src/screens/configurationPage/aeTitlesTab/slice/thunkCreators';
 
 const initialState = {
   isLoading: false,
@@ -57,7 +57,7 @@ export const loadingSlice = createSlice({
       .addCase(sendStudyActions.pending, (state) => {
         state.isLoading = true;
       })
-      .addCase(sendStudyActions.fulfilled, (state, { payload }) => {
+      .addCase(sendStudyActions.fulfilled, (state) => {
         const data = {
           type: 'success',
           isShoved: true,
@@ -94,6 +94,7 @@ export const loadingSlice = createSlice({
             messageBody: payload.errorMessage,
           };
         }
+        // @ts-ignore
         state.serverMessage = data;
         state.isLoading = false;
       })

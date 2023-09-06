@@ -2,7 +2,7 @@ import React from 'react';
 import Header from '@/src/layout/header/Header';
 import { useAppSelector } from '@/src/redux/hooks';
 import Preloader from '@/src/components/preloader/Preloader';
-import ErrorComponent from '@/src/components/error/ErrorComponent';
+import PopupComponent from '@/src/components/error/PopupComponent';
 // import useErrorHandling from '@/src/hooks/useErrorHandling';
 
 function Layout({ children }: any): React.JSX.Element {
@@ -21,7 +21,7 @@ function Layout({ children }: any): React.JSX.Element {
         </main>
 
       </div>
-      {serverMessage.isShoved && <ErrorComponent serverMessage={serverMessage} />}
+      {serverMessage.isShoved && <PopupComponent serverMessage={serverMessage} />}
     </>
   );
 }

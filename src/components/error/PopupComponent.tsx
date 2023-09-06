@@ -3,9 +3,9 @@
 import React, { useEffect } from 'react';
 import { closeMessage } from '@/src/redux/loading/loading';
 import { useAppDispatch, useAppSelector } from '@/src/redux/hooks';
-import style from './ErrorComponent.module.scss';
+import style from './PopupComponent.module.scss';
 
-function ErrorComponent() {
+function PopupComponent() {
   const dispatch = useAppDispatch();
   const serverMessage = useAppSelector((state) => state.loading.serverMessage);
 
@@ -18,7 +18,7 @@ function ErrorComponent() {
 
       return () => clearTimeout(timeout);
     }
-  }, [serverMessage.isShoved]);
+  }, [serverMessage.isShoved, dispatch]);
   return (
     <div className={`${style.container} ${style[serverMessage.type]}`}>
 
@@ -32,4 +32,4 @@ function ErrorComponent() {
   );
 }
 
-export default ErrorComponent;
+export default PopupComponent;

@@ -2,10 +2,7 @@ import { ZipFile } from '@/src/assets/icons';
 import Button from '@/src/components/button/Button';
 import React, { useState } from 'react';
 import { useAppDispatch, useAppSelector } from '@/src/redux/hooks';
-import {
-  requestZipStudy,
-  sendStudyActions,
-} from '@/src/screens/home/studiesBlock/slice/thunkCreators';
+import { sendStudyActions } from '@/src/screens/home/studiesBlock/slice/thunkCreators';
 import InputSelectItem from '@/src/components/inputSelectItem/InputSelectItem';
 import style from './AdditionalInfo.module.scss';
 
@@ -17,7 +14,7 @@ const AdditionalInfo = () => {
   } = useAppSelector((state) => state.study);
   const aeTitles = useAppSelector((state) => state.aeTitles.aeTitlesArray);
   const dispatch = useAppDispatch();
-  const [sendToTitle, setSendToTitle] = useState('')
+  const [sendToTitle, setSendToTitle] = useState('');
 
   const aeTitlesOptionsArr: any = [{ id: '', name: 'Select exporter' }];
   // eslint-disable-next-line array-callback-return
@@ -30,25 +27,27 @@ const AdditionalInfo = () => {
   const sendExamsHandler = () => {
     const createPayload = () => {
       const studies: Array<string> = [];
-      selectedStudies.forEach(item => studies.push(item.study_iuid));
+      selectedStudies.forEach((item) => studies.push(item.study_iuid));
       return {
         send_to: sendToTitle,
         selected_studies: studies,
       };
     };
-    console.log(createPayload());
     dispatch(sendStudyActions(createPayload()));
   };
   const requestZipStudyHandler = async () => {
+    // eslint-disable-next-line no-restricted-syntax
     for (const item of selectedStudies) {
       const link = `http://192.168.2.237:8888/api/zip/dicom/${item.study_iuid}`;
+      // eslint-disable-next-line no-await-in-loop
       const response = await fetch(link);
+      // eslint-disable-next-line no-await-in-loop
       const blob = await response.blob();
 
       // Создайте временный элемент <a> для скачивания
       const anchor = document.createElement('a');
       anchor.href = URL.createObjectURL(blob);
-      anchor.download = `${item.patient_id}_${item.patient_name}.zip`; // Задайте имя файла для скачивания
+      anchor.download = `${item.patient_id}_${item.patient_name}_${item.study_iuid}.zip`; // Задайте имя файла для скачивания
       anchor.style.display = 'none';
 
       // Добавьте элемент на страницу
@@ -60,8 +59,6 @@ const AdditionalInfo = () => {
       // Удалите элемент после скачивания
       document.body.removeChild(anchor);
     }
-
-    // dispatch(requestZipStudy(selectedStudies));
   };
 
   return (
