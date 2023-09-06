@@ -4,10 +4,10 @@ export const filterByPeriod = {
   id: 'filterByPeriod',
   name: 'filterByPeriod',
   optionsArr: [
-    // {
-    //   id: '',
-    //   name: '*',
-    // },
+    {
+      id: '',
+      name: '*',
+    },
     {
       id: 'Yesterday',
       name: 'Yesterday',
