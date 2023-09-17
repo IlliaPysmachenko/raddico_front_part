@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { DeleteIcon, NotificationIcon, RewriteIcon } from '@/src/assets/icons';
 import { useAppDispatch, useAppSelector } from '@/src/redux/hooks';
 import Button from '@/src/components/button/Button';
@@ -6,7 +6,7 @@ import Modal from '@/src/components/modal/ModalComponent';
 import FormComponent from '@/src/components/form/FormComponent';
 import {
   createAeTitle,
-  deleteTitle, getAeTitles, updateTitle,
+  deleteTitle, updateTitle,
   verifyTitle,
 } from '@/src/screens/configurationPage/aeTitlesTab/slice/thunkCreators';
 import style from './AeTitlesTab.module.scss';
@@ -17,10 +17,6 @@ const AeTitlesTab = () => {
 
   const [addNewTitleModalVisible, setAddNewTitleModalVisible] = useState(false);
   const [modalVisibleArray, setModalVisibleArray] = useState(new Array(aeTitlesArr?.length).fill(false));
-
-  useEffect(() => {
-    dispatch(getAeTitles());
-  }, []);
 
   const aeTitles = aeTitlesArr?.map((item, index) => {
     const deleteTitleHandler = () => {

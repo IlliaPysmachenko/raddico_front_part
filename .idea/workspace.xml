@@ -5,7 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b3bf699e-b4fb-49dd-ad56-118674db30a4" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/layout/header/Header.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/dataExamples.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/dataExamples.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layout/Layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/Layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layout/header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/header/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/configurationPage/aeTitlesTab/AeTitlesTab.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/configurationPage/aeTitlesTab/AeTitlesTab.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/home/searchPanelBlock/SearchPanel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/searchPanelBlock/SearchPanel.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/home/searchPanelBlock/dateBlock/DateBlock.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/searchPanelBlock/dateBlock/DateBlock.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/home/searchPanelBlock/dateBlock/DateBlock.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/searchPanelBlock/dateBlock/DateBlock.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/home/studiesBlock/StudiesBlock.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/studiesBlock/StudiesBlock.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/home/studiesBlock/additionalInfo/AdditionalInfo.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/studiesBlock/additionalInfo/AdditionalInfo.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/home/studiesBlock/additionalInfo/AdditionalInfo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/studiesBlock/additionalInfo/AdditionalInfo.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/globals.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/globals.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,7 +27,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DarkyenusTimeTracker">
-    <option name="totalTimeSeconds" value="40684" />
+    <option name="totalTimeSeconds" value="57811" />
     <option name="idleThresholdMs" value="240000" />
     <option name="gitIntegration" value="true" />
     <option name="naggedAbout" value="1" />
@@ -51,30 +65,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Projects/Easy-Shop-App/easy-shop_front&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;D:\\Projects\\Raddico front-end part\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "D:/Projects/Raddico front-end part",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "ts.external.directory.path": "D:\\Projects\\Raddico front-end part\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
-      &quot;TypeScript&quot;
+  "keyToStringList": {
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "TypeScript"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Алёна\OneDrive\Рабочий стол\Илья\Projects\raddico_front_part\src\redux\facilitiesSlice" />
@@ -164,7 +178,11 @@
       <workItem from="1693728467313" duration="3204000" />
       <workItem from="1693827855254" duration="10922000" />
       <workItem from="1693849498546" duration="17993000" />
-      <workItem from="1693907728144" duration="14319000" />
+      <workItem from="1693907728144" duration="32566000" />
+      <workItem from="1694105063209" duration="1000" />
+      <workItem from="1694105603938" duration="1000" />
+      <workItem from="1694105734850" duration="1000" />
+      <workItem from="1694935508250" duration="4154000" />
     </task>
     <servers />
   </component>

@@ -335,6 +335,12 @@ input[type='date'] {
         filter: invert(var(--invertIconColor));
         cursor: pointer;
     }
+
+    &:disabled {
+        background: var(--colorFillSecondary);
+        border: 1px solid var(--colorBorder);
+        color: var(--colorFill);
+    }
 }
 
 .iconCommonStyle {
@@ -354,4 +360,55 @@ input[type='date'] {
 }
 .downloadStudy_enabled {
     background: var(--colorPrimary);
+}
+
+.react-select {
+    &__control {
+        padding: var(--paddingXXS) var(--paddingXXS) !important;
+        min-height: auto !important;
+        color: var(--colorText) !important;
+        background: var(--colorBgContainer) !important;
+        border-radius: var(--borderRadiusSM) !important;
+        border: 1px solid var(--colorBorder) !important;
+        font-size: var(--fontSize) !important;
+        cursor: pointer !important;
+
+        &:hover {
+            border: 1px solid var(--colorPrimaryBorderHover) !important;
+        }
+
+        &:focus {
+            border: 1px solid var(--colorPrimaryActive) !important;
+            box-shadow: var(--boxShadow) !important;
+        }
+
+        &--is-disabled {
+            background: var(--colorFillSecondary) !important;
+            color: var(--colorFill) !important;
+        }
+    }
+
+    &__menu {
+        height: fit-content !important;
+        background: var(--colorBgContainer) !important;
+        border: 1px solid var(--colorBorderSecondary);
+        border-radius: var(--borderRadius);
+        padding: var(--paddingXS);
+    }
+
+    &__menu-list {
+        overflow-y: unset;
+    }
+
+    &__option {
+        padding: var(--paddingXXS) 0;
+        border-radius: var(--borderRadiusXS);
+        &:hover {
+            background: var(--colorPrimaryHover);
+        }
+
+        &--is-selected {
+            background: var(--colorPrimary);
+        }
+    }
 }

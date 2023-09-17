@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import Select from 'react-select';
 import { useAppDispatch, useAppSelector } from '@/src/redux/hooks';
 import Checkbox from '@/src/components/checkbox/Checkbox';
 import { getCurrentDate } from '@/src/helpers/functions';
 import { setDateFrom, setDatePeriod, setDateTo } from '@/src/screens/home/searchPanelBlock/slice/searchBlockSlice';
-import { filterByPeriod } from '@/src/data/dataExamples';
-import WithSelect from '@/src/hoc/withSelect';
-import InputSelectItem from '@/src/components/inputSelectItem/InputSelectItem';
+import { filterByPeriod, filterByPeriodTest } from '@/src/data/dataExamples';
 import style from './DateBlock.module.scss';
 
 function DateBlock() {
@@ -19,8 +19,8 @@ function DateBlock() {
   const setDateAndHandler = (e: any) => {
     dispatch(setDateTo(e.target.value));
   };
-  const setDatePeriodHandler = (e: any) => {
-    dispatch(setDatePeriod(e.target.value));
+  const setDatePeriodHandler = (data: { value: string, label: string }) => {
+    dispatch(setDatePeriod(data.value));
   };
   const toggleDateSwitcher = () => {
     setDisabledDate(!disabledDate);
@@ -34,7 +34,7 @@ function DateBlock() {
     if (!disabledDate) {
       dispatch(setDateFrom(getCurrentDate()));
       dispatch(setDateTo(getCurrentDate()));
-      dispatch(setDatePeriod(filterByPeriod.optionsArr[0].name));
+      dispatch(setDatePeriod(filterByPeriodTest.optionsArr[0].value));
     }
   }, [disabledDate]);
 
@@ -73,19 +73,19 @@ function DateBlock() {
         </div>
         <div className={style.dateFilter_row}>
           <span>OR:</span>
-          <InputSelectItem
-            id={filterByPeriod.id}
-            disabled={disabledDate}
-            name={filterByPeriod.name}
-            optionsArr={filterByPeriod.optionsArr}
-            selectValueHandler={setDatePeriodHandler}
-          />
-          {/* <WithSelect */}
-          {/*   id={filterByPeriod.id} */}
-          {/*   name={filterByPeriod.name} */}
-          {/*   optionsArr={filterByPeriod.optionsArr} */}
-          {/*   action={setDatePeriod} */}
-          {/* /> */}
+          {!disabledDate && (
+            <Select
+              unstyled
+              isSearchable={false}
+              classNamePrefix="react-select"
+              isDisabled={disabledDate}
+              name={filterByPeriod.name}
+              options={filterByPeriodTest.optionsArr}
+              defaultValue={filterByPeriodTest.optionsArr[0]}
+              // @ts-ignore
+              onChange={setDatePeriodHandler}
+            />
+          )}
         </div>
       </div>
 

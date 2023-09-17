@@ -3,7 +3,8 @@ import Button from '@/src/components/button/Button';
 import React, { useState } from 'react';
 import { useAppDispatch, useAppSelector } from '@/src/redux/hooks';
 import { sendStudyActions } from '@/src/screens/home/studiesBlock/slice/thunkCreators';
-import InputSelectItem from '@/src/components/inputSelectItem/InputSelectItem';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import Select from 'react-select';
 import style from './AdditionalInfo.module.scss';
 
 const AdditionalInfo = () => {
@@ -16,13 +17,13 @@ const AdditionalInfo = () => {
   const dispatch = useAppDispatch();
   const [sendToTitle, setSendToTitle] = useState('');
 
-  const aeTitlesOptionsArr: any = [{ id: '', name: 'Select exporter' }];
+  const aeTitlesOptionsArr: any = [{ value: '', label: 'Select exporter' }];
   // eslint-disable-next-line array-callback-return
   aeTitles.map((item) => {
-    aeTitlesOptionsArr.push({ id: item.ae_title, name: item.ae_title });
+    aeTitlesOptionsArr.push({ label: item.ae_title, value: item.ae_title });
   });
-  const selectTitleHandler = (e: any) => {
-    setSendToTitle(e.target.value);
+  const selectTitleHandler = (data: { value: string; label: string; }) => {
+    setSendToTitle(data.value);
   };
   const sendExamsHandler = () => {
     const createPayload = () => {
@@ -82,10 +83,14 @@ const AdditionalInfo = () => {
           </div>
         </div>
         <div className={style.additionalInfo_select}>
-          <InputSelectItem
-            id="aeTitles"
-            optionsArr={aeTitlesOptionsArr}
-            selectValueHandler={selectTitleHandler}
+          <Select
+            unstyled
+            isSearchable={false}
+            classNamePrefix="react-select"
+            options={aeTitlesOptionsArr}
+            defaultValue={aeTitlesOptionsArr[0]}
+            // @ts-ignore
+            onChange={selectTitleHandler}
           />
         </div>
 

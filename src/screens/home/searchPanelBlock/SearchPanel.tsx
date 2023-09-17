@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
 import InputFieldsGroup from '@/src/components/inputFieldsGroup/InputFieldsGroup';
 import CheckboxGroup from '@/src/components/checkboxGroup/CheckboxGroup';
@@ -12,10 +12,8 @@ import {
 } from '@/src/screens/home/searchPanelBlock/slice/searchBlockSlice';
 import { CheckboxesType } from '@/src/screens/home/searchPanelBlock/slice/searchBlockTypes';
 import { getStudiesThunk } from '@/src/screens/home/studiesBlock/slice/thunkCreators';
-import { getOptions } from '@/src/screens/home/searchPanelBlock/slice/thunkCreators';
 
 import style from './SearchPanel.module.scss';
-import { getAeTitles } from "@/src/screens/configurationPage/aeTitlesTab/slice/thunkCreators";
 
 function SearchPanel() {
   const dispatch = useAppDispatch();
@@ -56,11 +54,6 @@ function SearchPanel() {
     });
     dispatch(getStudiesThunk(createPayload()));
   };
-
-  useEffect(() => {
-    dispatch(getOptions());
-    dispatch(getAeTitles());
-  }, []);
 
   const toggleCheckboxHandler = (id: string, title: string) => {
     if (title === 'Modality') dispatch(setToggleCheckboxModality(id));

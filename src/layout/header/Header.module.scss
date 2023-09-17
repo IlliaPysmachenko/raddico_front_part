@@ -1,0 +1,9 @@
+.versionBlock {
+  position: absolute;
+  top: 4px;
+  right: 10px;
+  font-size: var(--fontSizeSM);
+  span {
+    padding-right: var(--paddingSM);
+  }
+}

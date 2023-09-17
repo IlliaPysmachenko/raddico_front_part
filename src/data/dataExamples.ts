@@ -30,3 +30,34 @@ export const filterByPeriod = {
     },
   ],
 };
+
+export const filterByPeriodTest = {
+  id: 'filterByPeriod',
+  name: 'filterByPeriod',
+  optionsArr: [
+    {
+      value: '',
+      label: '*',
+    },
+    {
+      value: 'Yesterday',
+      label: 'Yesterday',
+    },
+    {
+      value: 'This Week',
+      label: 'This Week',
+    },
+    {
+      value: 'Last Week',
+      label: 'Last Week',
+    },
+    {
+      value: 'This Month',
+      label: 'This Month',
+    },
+    {
+      value: 'Last Month',
+      label: 'Last Month',
+    },
+  ],
+};
