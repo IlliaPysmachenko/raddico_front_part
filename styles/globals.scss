@@ -412,3 +412,16 @@ input[type='date'] {
         }
     }
 }
+
+button {
+    background: var(--colorInfo);
+    color: white;
+    border: 1px solid var(--colorPrimaryBorder);
+    border-radius: var(--borderRadius);
+    padding: var(--paddingXS) var(--padding);
+    transition: all ease 0.3s;
+
+    &:hover {
+        background: var(--colorPrimaryBgHover);
+    }
+}

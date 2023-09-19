@@ -5,20 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b3bf699e-b4fb-49dd-ad56-118674db30a4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/layout/header/Header.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/api/auth/[...nextauth].ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/authStatus.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/encryption.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/sessionPoviderWrapper.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/dataExamples.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/dataExamples.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/layout/Layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/Layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layout/header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/header/Header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/configurationPage/aeTitlesTab/AeTitlesTab.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/configurationPage/aeTitlesTab/AeTitlesTab.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/home/searchPanelBlock/SearchPanel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/searchPanelBlock/SearchPanel.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/home/searchPanelBlock/dateBlock/DateBlock.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/searchPanelBlock/dateBlock/DateBlock.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/home/searchPanelBlock/dateBlock/DateBlock.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/searchPanelBlock/dateBlock/DateBlock.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/home/studiesBlock/StudiesBlock.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/studiesBlock/StudiesBlock.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/home/studiesBlock/additionalInfo/AdditionalInfo.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/studiesBlock/additionalInfo/AdditionalInfo.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/home/studiesBlock/additionalInfo/AdditionalInfo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/studiesBlock/additionalInfo/AdditionalInfo.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/globals.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/globals.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -27,7 +22,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DarkyenusTimeTracker">
-    <option name="totalTimeSeconds" value="57811" />
+    <option name="totalTimeSeconds" value="66890" />
     <option name="idleThresholdMs" value="240000" />
     <option name="gitIntegration" value="true" />
     <option name="naggedAbout" value="1" />
@@ -75,8 +70,10 @@
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "D:/Projects/Raddico front-end part",
     "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "preferences.pluginManager",
@@ -182,7 +179,10 @@
       <workItem from="1694105063209" duration="1000" />
       <workItem from="1694105603938" duration="1000" />
       <workItem from="1694105734850" duration="1000" />
-      <workItem from="1694935508250" duration="4154000" />
+      <workItem from="1694935508250" duration="5208000" />
+      <workItem from="1695037738748" duration="1000" />
+      <workItem from="1695144112854" duration="2918000" />
+      <workItem from="1695147166237" duration="6883000" />
     </task>
     <servers />
   </component>

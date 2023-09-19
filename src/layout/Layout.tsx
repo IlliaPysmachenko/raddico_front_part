@@ -5,6 +5,8 @@ import Preloader from '@/src/components/preloader/Preloader';
 import PopupComponent from '@/src/components/error/PopupComponent';
 import { getOptions } from '@/src/screens/home/searchPanelBlock/slice/thunkCreators';
 import { getAeTitles } from '@/src/screens/configurationPage/aeTitlesTab/slice/thunkCreators';
+import AuthStatus from '@/src/components/authStatus';
+import SessionProviderWrapper from '@/utils/sessionPoviderWrapper';
 // import useErrorHandling from '@/src/hooks/useErrorHandling';
 
 function Layout({ children }: any): React.JSX.Element {
@@ -19,10 +21,11 @@ function Layout({ children }: any): React.JSX.Element {
   }, []);
 
   return (
-    <>
+    <SessionProviderWrapper>
       {isLoading && <Preloader />}
       <div className="container">
         <Header />
+        <AuthStatus />
         <main>
           {children}
         </main>
@@ -32,7 +35,7 @@ function Layout({ children }: any): React.JSX.Element {
         // @ts-ignore
         serverMessage.isShoved && <PopupComponent serverMessage={serverMessage} />
       }
-    </>
+    </SessionProviderWrapper>
   );
 }
 
