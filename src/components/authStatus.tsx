@@ -24,7 +24,7 @@ export default function AuthStatus() {
   return (
     <div>
       Not logged in. {' '}
-      <button onClick={() => signIn('keycloak')}>
+      <button onClick={() => signIn()}>
         Log in
       </button>
     </div>
