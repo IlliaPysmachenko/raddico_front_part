@@ -7,13 +7,12 @@ import { getOptions } from '@/src/screens/home/searchPanelBlock/slice/thunkCreat
 import { getAeTitles } from '@/src/screens/configurationPage/aeTitlesTab/slice/thunkCreators';
 import AuthStatus from '@/src/components/authStatus';
 import SessionProviderWrapper from '@/utils/sessionPoviderWrapper';
-// import useErrorHandling from '@/src/hooks/useErrorHandling';
+
 
 function Layout({ children }: any): React.JSX.Element {
   const isLoading = useAppSelector((state) => state.loading.isLoading);
   const serverMessage = useAppSelector((state) => state.loading.serverMessage);
   const dispatch = useAppDispatch();
-  // useErrorHandling(isError);
 
   useEffect(() => {
     dispatch(getOptions());
@@ -40,3 +39,21 @@ function Layout({ children }: any): React.JSX.Element {
 }
 
 export default Layout;
+
+// Client example
+// import { signIn, useSession } from "next-auth/client";
+// import { useEffect } from "react";
+//
+// const HomePage() {
+//   const [session] = useSession();
+//
+//   useEffect(() => {
+//     if (session?.error === "RefreshAccessTokenError") {
+//       signIn('keycloak', {
+//         callbackUrl: `${process.env.NEXT_PUBLIC_BASE_URL}/application`,
+//       }); // Force sign in to hopefully resolve error
+//     }
+//   }, [session]);
+//
+//   return (...)
+// }
