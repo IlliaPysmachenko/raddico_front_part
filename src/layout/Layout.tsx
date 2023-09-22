@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useEffect } from 'react';
 import Header from '@/src/layout/header/Header';
 import { useAppDispatch, useAppSelector } from '@/src/redux/hooks';
@@ -7,12 +9,13 @@ import { getOptions } from '@/src/screens/home/searchPanelBlock/slice/thunkCreat
 import { getAeTitles } from '@/src/screens/configurationPage/aeTitlesTab/slice/thunkCreators';
 import AuthStatus from '@/src/components/authStatus';
 import SessionProviderWrapper from '@/utils/sessionPoviderWrapper';
-
+import { useSession, signIn, signOut } from 'next-auth/react';
 
 function Layout({ children }: any): React.JSX.Element {
   const isLoading = useAppSelector((state) => state.loading.isLoading);
   const serverMessage = useAppSelector((state) => state.loading.serverMessage);
   const dispatch = useAppDispatch();
+  const { data: session, status } = useSession();
 
   useEffect(() => {
     dispatch(getOptions());
@@ -20,21 +23,23 @@ function Layout({ children }: any): React.JSX.Element {
   }, []);
 
   return (
-    <SessionProviderWrapper>
+    <>
       {isLoading && <Preloader />}
       <div className="container">
         <Header />
         <AuthStatus />
-        <main>
-          {children}
-        </main>
+        {(status === "unauthenticated") ? <div>You are not authorized</div> : (
+          <main>
+            {children}
+          </main>
+        )}
 
       </div>
       {
         // @ts-ignore
         serverMessage.isShoved && <PopupComponent serverMessage={serverMessage} />
       }
-    </SessionProviderWrapper>
+    </>
   );
 }
 

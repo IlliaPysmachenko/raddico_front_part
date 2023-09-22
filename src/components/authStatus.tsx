@@ -5,18 +5,10 @@ import { useSession, signIn, signOut } from 'next-auth/react';
 
 export default function AuthStatus() {
   const { data: session, status } = useSession();
-  console.log(session);
+  // console.log();
   if (status === 'loading') {
     return <div> Loading...</div>;
   }
-
-  // useEffect(() => {
-  //   if (session?.error === 'RefreshAccessTokenError') {
-  //     signIn('keycloak', {
-  //       callbackUrl: `${process.env.NEXT_PUBLIC_BASE_URL}/application`,
-  //     }); // Force sign in to hopefully resolve error
-  //   }
-  // }, [session]);
 
   if (session) {
     return (
