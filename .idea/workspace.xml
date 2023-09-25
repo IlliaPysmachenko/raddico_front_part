@@ -5,15 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b3bf699e-b4fb-49dd-ad56-118674db30a4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/pages/api/auth/signin-keycloak.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/sessionTokenAccessor.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/api/auth/[...nextauth].ts" beforeDir="false" afterPath="$PROJECT_DIR$/pages/api/auth/[...nextauth].ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/api/auth/signin-keycloak.ts" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/authStatus.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/authStatus.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/layout/Layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/Layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/sessionPoviderWrapper.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/utils/sessionPoviderWrapper.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/encryption.ts" beforeDir="false" afterPath="$PROJECT_DIR$/utils/encryption.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,7 +19,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DarkyenusTimeTracker">
-    <option name="totalTimeSeconds" value="101749" />
+    <option name="totalTimeSeconds" value="114741" />
     <option name="idleThresholdMs" value="240000" />
     <option name="gitIntegration" value="true" />
     <option name="naggedAbout" value="1" />
@@ -90,11 +88,11 @@
       <recent name="C:\Users\Алёна\OneDrive\Рабочий стол\Илья\Projects\raddico_front_part\src\redux\facilitiesSlice" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Projects\Raddico front-end part\pages\api" />
       <recent name="D:\Projects\Raddico front-end part\src\screens\home\searchPanelBlock\slice" />
       <recent name="D:\Projects\Raddico front-end part\src\screens\home\studiesBlock\slice" />
       <recent name="D:\Projects\Raddico front-end part\src\screens\home\studiesBlock\studyTable\slice" />
       <recent name="D:\Projects\Raddico front-end part\src\redux" />
-      <recent name="D:\Projects\Raddico front-end part\src\screens\home\searchPanelBlock" />
     </key>
   </component>
   <component name="RunManager">
@@ -184,6 +182,7 @@
       <workItem from="1695147166237" duration="19532000" />
       <workItem from="1695220516320" duration="19405000" />
       <workItem from="1695329216957" duration="3051000" />
+      <workItem from="1695637395249" duration="1870000" />
     </task>
     <servers />
   </component>
