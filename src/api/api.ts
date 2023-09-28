@@ -1,7 +1,8 @@
 import axios from 'axios';
+import { API_BASE_URL } from '@/config';
 
 const instance = axios.create({
-  baseURL: 'http://192.168.2.237:8888/api/',
+  baseURL: API_BASE_URL,
 });
 
 // eslint-disable-next-line import/prefer-default-export

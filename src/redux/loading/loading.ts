@@ -18,6 +18,9 @@ export const loadingSlice = createSlice({
     closeMessage: (state) => {
       state.serverMessage.isShoved = false;
     },
+    setLoading: (state, { payload }: any) => {
+      state.isLoading = payload;
+    },
   },
   extraReducers: (builder) => {
     builder
@@ -43,12 +46,11 @@ export const loadingSlice = createSlice({
       .addCase(getOptions.fulfilled, (state) => {
         state.isLoading = false;
       })
-      .addCase(getOptions.rejected, (state, action) => {
+      .addCase(getOptions.rejected, (state, { payload }: any) => {
         const data = {
           type: 'error',
           isShoved: true,
-          // @ts-ignore
-          messageBody: action.payload.message,
+          messageBody: payload.message,
         };
         state.serverMessage = data;
         state.isLoading = false;
@@ -61,7 +63,6 @@ export const loadingSlice = createSlice({
         const data = {
           type: 'success',
           isShoved: true,
-          // eslint-disable-next-line max-len
           messageBody: 'Studies successfully added to the queue!',
         };
         state.serverMessage = data;
@@ -76,13 +77,13 @@ export const loadingSlice = createSlice({
         state.serverMessage = data;
         state.isLoading = false;
       })
+
       .addCase(verifyTitle.fulfilled, (state, { payload }) => {
         let data;
         if (payload.result === '0') {
           data = {
             type: 'success',
             isShoved: true,
-            // eslint-disable-next-line max-len
             messageBody: `Connection time: ${payload.connectionTime}. Echo time: ${payload.echoTime}. Release time: ${payload.releaseTime}`,
           };
         }
@@ -90,7 +91,6 @@ export const loadingSlice = createSlice({
           data = {
             type: 'error',
             isShoved: true,
-            // eslint-disable-next-line max-len
             messageBody: payload.errorMessage,
           };
         }
@@ -98,12 +98,11 @@ export const loadingSlice = createSlice({
         state.serverMessage = data;
         state.isLoading = false;
       })
-      .addCase(verifyTitle.rejected, (state, action) => {
+      .addCase(verifyTitle.rejected, (state, { payload }: any) => {
         const data = {
           type: 'error',
           isShoved: true,
-          // @ts-ignore
-          messageBody: action.payload.message,
+          messageBody: payload.message,
         };
         state.serverMessage = data;
         state.isLoading = false;
@@ -118,12 +117,11 @@ export const loadingSlice = createSlice({
         state.serverMessage = data;
         state.isLoading = false;
       })
-      .addCase(deleteTitle.rejected, (state, action) => {
+      .addCase(deleteTitle.rejected, (state, { payload }: any) => {
         const data = {
           type: 'error',
           isShoved: true,
-          // @ts-ignore
-          messageBody: action.payload.message,
+          messageBody: payload.message,
         };
         state.serverMessage = data;
         state.isLoading = false;
@@ -131,5 +129,5 @@ export const loadingSlice = createSlice({
   },
 });
 
-export const { closeMessage } = loadingSlice.actions;
+export const { closeMessage, setLoading } = loadingSlice.actions;
 export default loadingSlice.reducer;

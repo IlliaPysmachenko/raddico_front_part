@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { Search, ZipFile } from '@/src/assets/icons';
 import { useAppDispatch, useAppSelector } from '@/src/redux/hooks';
 import style from './StudyTable.module.scss';
+import { API_BASE_URL } from "@/config";
 
 const StudyTable = () => {
   const {
@@ -62,7 +63,7 @@ const StudyTable = () => {
       <React.Fragment key={item.study_iuid}>
         <div className={style.grid_item}>
           <Link
-            href={`http://192.168.2.237:8888/api/zip/dicom/${item.study_iuid}`}
+            href={`${API_BASE_URL}/zip/dicom/${item.study_iuid}`}
             // target="_blank"
             title="Download exam"
             className={style.disabled}
@@ -72,7 +73,7 @@ const StudyTable = () => {
             />
           </Link>
           <Link
-            href={`http://192.168.2.237:8888/api/viewer/oviyam2/${item.study_iuid}`}
+            href={`${API_BASE_URL}/viewer/oviyam2/${item.study_iuid}`}
             target="_blank"
             title="View exam"
           >

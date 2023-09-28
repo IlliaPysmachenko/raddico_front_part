@@ -5,7 +5,6 @@ import Preloader from '@/src/components/preloader/Preloader';
 import PopupComponent from '@/src/components/error/PopupComponent';
 import { getOptions } from '@/src/screens/home/searchPanelBlock/slice/thunkCreators';
 import { getAeTitles } from '@/src/screens/configurationPage/aeTitlesTab/slice/thunkCreators';
-import AuthStatus from '@/src/components/authStatus';
 import { signIn, useSession } from 'next-auth/react';
 
 function Layout({ children }: any): React.JSX.Element {
@@ -30,12 +29,13 @@ function Layout({ children }: any): React.JSX.Element {
     <>
       {isLoading && <Preloader />}
       <div className="container">
-        <Header />
-        <AuthStatus />
         {(status === 'unauthenticated') ? <div>You are not authorized</div> : (
-          <main>
-            {children}
-          </main>
+          <>
+            <Header />
+            <main>
+              {children}
+            </main>
+          </>
         )}
 
       </div>

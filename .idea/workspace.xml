@@ -5,13 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b3bf699e-b4fb-49dd-ad56-118674db30a4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/utils/sessionTokenAccessor.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/logout/Logout.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/logout/Logout.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README rrpl5 (light).md" beforeDir="false" afterPath="$PROJECT_DIR$/README rrpl5 (light).md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/api/auth/[...nextauth].ts" beforeDir="false" afterPath="$PROJECT_DIR$/pages/api/auth/[...nextauth].ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/api/auth/signin-keycloak.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/authStatus.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/authStatus.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/api.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/authStatus.tsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/layout/Layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/Layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/encryption.ts" beforeDir="false" afterPath="$PROJECT_DIR$/utils/encryption.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layout/header/Header.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/header/Header.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layout/header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/header/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layout/header/nav/Nav.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/header/nav/Nav.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layout/header/nav/Nav.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/header/nav/Nav.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/loading/loading.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/loading/loading.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/home/studiesBlock/studyTable/StudyTable.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/studiesBlock/studyTable/StudyTable.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/globals.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/globals.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,7 +29,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DarkyenusTimeTracker">
-    <option name="totalTimeSeconds" value="114741" />
+    <option name="totalTimeSeconds" value="134024" />
     <option name="idleThresholdMs" value="240000" />
     <option name="gitIntegration" value="true" />
     <option name="naggedAbout" value="1" />
@@ -88,11 +98,11 @@
       <recent name="C:\Users\Алёна\OneDrive\Рабочий стол\Илья\Projects\raddico_front_part\src\redux\facilitiesSlice" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Projects\Raddico front-end part\src\components\logout" />
       <recent name="D:\Projects\Raddico front-end part\pages\api" />
       <recent name="D:\Projects\Raddico front-end part\src\screens\home\searchPanelBlock\slice" />
       <recent name="D:\Projects\Raddico front-end part\src\screens\home\studiesBlock\slice" />
       <recent name="D:\Projects\Raddico front-end part\src\screens\home\studiesBlock\studyTable\slice" />
-      <recent name="D:\Projects\Raddico front-end part\src\redux" />
     </key>
   </component>
   <component name="RunManager">
@@ -182,7 +192,7 @@
       <workItem from="1695147166237" duration="19532000" />
       <workItem from="1695220516320" duration="19405000" />
       <workItem from="1695329216957" duration="3051000" />
-      <workItem from="1695637395249" duration="1870000" />
+      <workItem from="1695637395249" duration="26376000" />
     </task>
     <servers />
   </component>

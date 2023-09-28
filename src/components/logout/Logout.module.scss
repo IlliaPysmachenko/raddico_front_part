@@ -1,0 +1,13 @@
+button.logoutBtn {
+  background: var(--colorError);
+  color: white;
+  border: 1px solid var(--colorErrorBorder);
+  border-radius: var(--borderRadiusSM);
+  padding: 1px var(--paddingXS);
+  transition: all ease 0.3s;
+  font-size: var(--fontSizeSM);
+
+  &:hover {
+    background: var(--colorErrorHover);
+  }
+}

@@ -1,11 +1,23 @@
 .navContainer {
   position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--paddingSM) 0;
+  background-color: var(--user-background, var(--colorPrimaryBgHover));
+  border-radius: var(--borderRadius);
+  border: 2px solid var(--colorBorder);
+
+  .logoutBlock {
+    margin-right: 120px;
+  }
+
   .navRow {
     display: flex;
-    padding: var(--paddingSM) 0;
-    background-color: var(--user-background, var(--colorPrimaryBgHover));
-    border-radius: var(--borderRadius);
-    border: 2px solid var(--colorBorder);
+    //padding: var(--paddingSM) 0;
+    //background-color: var(--user-background, var(--colorPrimaryBgHover));
+    //border-radius: var(--borderRadius);
+    //border: 2px solid var(--colorBorder);
 
     & li {
       padding: 5px 10px;

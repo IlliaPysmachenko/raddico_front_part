@@ -1,9 +1,14 @@
 .versionBlock {
-  position: absolute;
-  top: 4px;
-  right: 10px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 4px 0;
   font-size: var(--fontSizeSM);
   span {
     padding-right: var(--paddingSM);
+    &:last-child {
+      padding: 0;
+    }
   }
+
 }
