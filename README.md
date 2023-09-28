@@ -1,38 +1,69 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+**IP addresses configured for each project separate. All configurations should be set up in `config.ts` file in root folder. This file added to '.gitignore' file, so you should create it on your machine**
+Required variables:
+```
+// Keycloak configuration
+export const KEYCLOAK_ID = 'your-client-ID';
+export const KEYCLOAK_SECRET = 'your-client-SECRET';
+export const KEYCLOAK_ISSUER = 'https://example.com/realms/your-realm';
+// API base URL
+export const API_BASE_URL = 'https://your-host:your-port/api';
+```
+**NextAuth library requires special variables that shold be set up in '.env' file in root folder. This file added to '.gitignore' file, so you should create it on your machine**
+```
+// NextAuth configuration
+NEXTAUTH_SECRET=your-secret-key
+NEXTAUTH_URL=http(s)://your-host
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+RRPL5 (light) api docs:
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+#AE Title Requests:
+1). [index] 
+GET api/aetitles
+return list of aetitle info
+[
+    'ae_title'      =>  'aetitle',
+    'description'   =>  'description',
+    'host'          =>  'host',
+    'port'          =>  'port',
+]
+2). [create] (not needed) 
+GET api/aetitles/create
+in theory - should return to you create form, I think for now we don't need it.
+3). [store] 
+POST api/aetitles 
+store (creating) new aetitle and exporter
+[
+    'ae_title'      =>  'aetitle',
+    'description'   =>  'description',
+    'host'          =>  'host',
+    'port'          =>  'port',
+]
+4). [show] (not needed)
+GET api/aetitles/{aetitle}
+in theory - should give you info about single aetitle 
+5). [edit]
+GET api/aetitles/{aetitle}/edit
+return to you info about aetitle to edit
+[
+    'ae_title'      =>  'aetitle',
+    'description'   =>  'description',
+    'host'          =>  'host',
+    'port'          =>  'port',
+]
+6). [update]
+PUT|PATCH api/aetitles/{aetitle}
+going to udpate aetitle and exporter
+[
+    'ae_title'      =>  'aetitle',
+    'description'   =>  'description',
+    'host'          =>  'host',
+    'port'          =>  'port',
+]
+7). [delete]
+DELETE api/aetitles/{aetitle}
+going to delete aetitle and exporter
+8). [echo]
+GET api/aetitles/{aetitle}/echo
+going to echo aetitle
+['result' => 0|1]

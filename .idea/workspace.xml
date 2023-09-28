@@ -4,32 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3bf699e-b4fb-49dd-ad56-118674db30a4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/config.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/logout/Logout.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/logout/Logout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README rrpl5 (light).md" beforeDir="false" afterPath="$PROJECT_DIR$/README rrpl5 (light).md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/api/auth/[...nextauth].ts" beforeDir="false" afterPath="$PROJECT_DIR$/pages/api/auth/[...nextauth].ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/api.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/authStatus.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layout/Layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/Layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layout/header/Header.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/header/Header.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layout/header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/header/Header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layout/header/nav/Nav.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/header/nav/Nav.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layout/header/nav/Nav.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/header/nav/Nav.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/loading/loading.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/loading/loading.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/home/studiesBlock/studyTable/StudyTable.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/studiesBlock/studyTable/StudyTable.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/globals.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/globals.scss" afterDir="false" />
-    </list>
+    <list default="true" id="b3bf699e-b4fb-49dd-ad56-118674db30a4" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DarkyenusTimeTracker">
-    <option name="totalTimeSeconds" value="134024" />
+    <option name="totalTimeSeconds" value="134449" />
     <option name="idleThresholdMs" value="240000" />
     <option name="gitIntegration" value="true" />
     <option name="naggedAbout" value="1" />
@@ -192,7 +174,7 @@
       <workItem from="1695147166237" duration="19532000" />
       <workItem from="1695220516320" duration="19405000" />
       <workItem from="1695329216957" duration="3051000" />
-      <workItem from="1695637395249" duration="26376000" />
+      <workItem from="1695637395249" duration="26793000" />
     </task>
     <servers />
   </component>
