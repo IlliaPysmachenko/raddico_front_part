@@ -8,7 +8,7 @@ export const KEYCLOAK_ISSUER = 'https://example.com/realms/your-realm';
 // API base URL
 export const API_BASE_URL = 'https://your-host:your-port/api';
 ```
-**NextAuth library requires special variables that shold be set up in '.env' file in root folder. This file added to '.gitignore' file, so you should create it on your machine**
+**NextAuth library requires special variables that shold be set up in `.env` file in root folder. This file added to '.gitignore' file, so you should create it on your machine**
 ```
 // NextAuth configuration
 NEXTAUTH_SECRET=your-secret-key
@@ -17,7 +17,7 @@ NEXTAUTH_URL=http(s)://your-host
 
 RRPL5 (light) api docs:
 
-#AE Title Requests:
+## AE Title Requests:
 1). [index] 
 GET api/aetitles
 return list of aetitle info

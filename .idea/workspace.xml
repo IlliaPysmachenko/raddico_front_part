@@ -4,14 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3bf699e-b4fb-49dd-ad56-118674db30a4" name="Changes" comment="" />
+    <list default="true" id="b3bf699e-b4fb-49dd-ad56-118674db30a4" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DarkyenusTimeTracker">
-    <option name="totalTimeSeconds" value="134449" />
+    <option name="totalTimeSeconds" value="135375" />
     <option name="idleThresholdMs" value="240000" />
     <option name="gitIntegration" value="true" />
     <option name="naggedAbout" value="1" />
@@ -174,7 +177,10 @@
       <workItem from="1695147166237" duration="19532000" />
       <workItem from="1695220516320" duration="19405000" />
       <workItem from="1695329216957" duration="3051000" />
-      <workItem from="1695637395249" duration="26793000" />
+      <workItem from="1695637395249" duration="28056000" />
+      <workItem from="1695937184592" duration="1243000" />
+      <workItem from="1695942106277" duration="23000" />
+      <workItem from="1695987008114" duration="537000" />
     </task>
     <servers />
   </component>
