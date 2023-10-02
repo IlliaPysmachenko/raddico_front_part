@@ -5,8 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b3bf699e-b4fb-49dd-ad56-118674db30a4" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitattibutes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/api/auth/[...nextauth].ts" beforeDir="false" afterPath="$PROJECT_DIR$/pages/api/auth/[...nextauth].ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/api.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/colorPicker/ColorPicker.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/colorPicker/ColorPicker.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/logout/Logout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/logout/Logout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useErrorHandling.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useErrorHandling.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useOutsideClick.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useOutsideClick.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layout/Layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/Layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layout/header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/header/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layout/header/nav/Nav.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/header/nav/Nav.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/loading/loading.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/loading/loading.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/configurationPage/ConfigurationPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/configurationPage/ConfigurationPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/home/searchPanelBlock/slice/thunkCreators.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/searchPanelBlock/slice/thunkCreators.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/home/studiesBlock/slice/StudiesType.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/studiesBlock/slice/StudiesType.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/home/studiesBlock/slice/thunkCreators.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/studiesBlock/slice/thunkCreators.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/home/studiesBlock/studyTable/StudyTable.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/studiesBlock/studyTable/StudyTable.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/sessionTokenAccessor.ts" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,7 +33,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DarkyenusTimeTracker">
-    <option name="totalTimeSeconds" value="135375" />
+    <option name="totalTimeSeconds" value="144531" />
     <option name="idleThresholdMs" value="240000" />
     <option name="gitIntegration" value="true" />
     <option name="naggedAbout" value="1" />
@@ -90,7 +109,7 @@
       <recent name="D:\Projects\Raddico front-end part\src\screens\home\studiesBlock\studyTable\slice" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="npm.start">
     <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -101,8 +120,19 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.start" />
         <item itemvalue="npm.dev" />
       </list>
     </recent_temporary>
@@ -180,7 +210,8 @@
       <workItem from="1695637395249" duration="28056000" />
       <workItem from="1695937184592" duration="1243000" />
       <workItem from="1695942106277" duration="23000" />
-      <workItem from="1695987008114" duration="537000" />
+      <workItem from="1695987008114" duration="3575000" />
+      <workItem from="1696160337383" duration="12232000" />
     </task>
     <servers />
   </component>

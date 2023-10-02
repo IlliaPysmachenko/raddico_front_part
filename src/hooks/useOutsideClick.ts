@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 
-const useOutsideClick = (initialState:boolean, buttonId?: string, clickHandle?: (toggleShow: boolean) => void) => {
+const useOutsideClick = (initialState:boolean, buttonId?: string) => {
   const [isShow, setIsShow] = useState(initialState);
   const ref = useRef<HTMLDivElement>(null);
   const handleClickOutside = (event:any) => {

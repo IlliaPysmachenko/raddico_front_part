@@ -129,5 +129,5 @@ export const loadingSlice = createSlice({
   },
 });
 
-export const { closeMessage, setLoading } = loadingSlice.actions;
+export const { closeMessage } = loadingSlice.actions;
 export default loadingSlice.reducer;

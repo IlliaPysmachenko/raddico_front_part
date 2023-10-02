@@ -25,7 +25,7 @@ export default function ColorPicker() {
         onChange={(e) => handleColorChange(e.target.value)}
       />
       <div className={style.resetBtn}>
-        <Button title="Reset to default" handler={resetColorButtonHandle} />
+        <Button type="button" title="Reset to default" handler={resetColorButtonHandle} />
       </div>
       {/* Другие элементы интерфейса */}
     </div>

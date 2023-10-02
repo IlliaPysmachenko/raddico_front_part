@@ -13,7 +13,10 @@ export default function Logout() {
 
   return (
     <button type="button" className={style.logoutBtn} onClick={() => signOut({ callbackUrl: '/' })}>
-      Log out of {session?.user?.name}
+      Log out of
+      {
+      session?.user?.name
+      }
     </button>
   );
 }

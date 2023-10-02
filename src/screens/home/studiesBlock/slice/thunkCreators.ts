@@ -31,8 +31,7 @@ export const sendStudyActions = createAsyncThunk(
   // eslint-disable-next-line consistent-return
   async (data: AsyncThunkAction, { rejectWithValue }) => {
     try {
-      const res = await studiesActionsApi.sendStudyAction(JSON.stringify(data));
-      // eslint-disable-next-line @typescript-eslint/no-use-before-define
+      await studiesActionsApi.sendStudyAction(JSON.stringify(data));
     } catch (error) {
       return rejectWithValue(error);
     }

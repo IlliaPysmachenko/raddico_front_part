@@ -11,7 +11,7 @@ function Layout({ children }: any): React.JSX.Element {
   const isLoading = useAppSelector((state) => state.loading.isLoading);
   const serverMessage = useAppSelector((state) => state.loading.serverMessage);
   const dispatch = useAppDispatch();
-  const { data: session, status } = useSession();
+  const { status } = useSession();
 
   useEffect(() => {
     dispatch(getOptions());

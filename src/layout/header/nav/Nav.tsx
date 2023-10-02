@@ -4,7 +4,6 @@ import React from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import ColorTheme from '@/src/components/colorTheme/ColorTheme';
-import Logout from '@/src/components/logout/Logout';
 import style from './Nav.module.scss';
 
 function Nav(): React.JSX.Element {
@@ -36,9 +35,7 @@ function Nav(): React.JSX.Element {
           ))}
         </ul>
       </nav>
-      <div className={style.logoutBlock}>
-
-      </div>
+      <div className={style.logoutBlock} />
       {/* <div className={style.colorTheme_block}> */}
       <ColorTheme />
       {/* </div> */}

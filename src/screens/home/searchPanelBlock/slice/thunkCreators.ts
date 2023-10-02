@@ -2,6 +2,7 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 import { searchApi } from '@/src/api/api';
 import { setInstitutions, setModality, setToken } from '@/src/screens/home/searchPanelBlock/slice/searchBlockSlice';
 
+// eslint-disable-next-line import/prefer-default-export
 export const getOptions = createAsyncThunk(
   'searchBlock/getOptions',
   // eslint-disable-next-line consistent-return

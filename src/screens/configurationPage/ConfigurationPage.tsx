@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import ColorPicker from '@/src/components/colorPicker/ColorPicker';
+import AeTitlesTab from '@/src/screens/configurationPage/aeTitlesTab/AeTitlesTab';
 import style from './ConfigurationPage.module.scss';
-import AeTitlesTab from "@/src/screens/configurationPage/aeTitlesTab/AeTitlesTab";
 
 const sidebarTabs = [
   {
